@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(50, 21, 95);
+  --foreground: hsl(50, 21, 100);
+  --dark-green: hsl(104, 100, 30);
+  --light-green: hsl(86, 46, 72);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "League Spartan", "Lalezar";
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
