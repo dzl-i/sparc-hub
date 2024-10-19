@@ -2,7 +2,6 @@ import Image from "next/image";
 import wave from "../../public/images/wave.svg";
 import SearchBar from "./components/SearchBar";
 import { Metadata } from "next";
-// import icon from "../../public/images/tempIcon.svg"
 
 export const metadata: Metadata = {
   title: "SparcHub",
