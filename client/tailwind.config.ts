@@ -18,6 +18,15 @@ const config: Config = {
       xs: { max: "480px" },
     },
     extend: {
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '-100% 0' },
+          '100%': { backgroundPosition: '100% 0' },
+        },
+      },
+      animation: {
+        shimmer: 'shimmer 2s infinite linear',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
