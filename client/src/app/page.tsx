@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className="relative h-56">
+      <div className="relative h-[5%]">
         <Image
           priority
           src={wave}
