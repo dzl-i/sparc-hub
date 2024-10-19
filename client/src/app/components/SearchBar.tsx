@@ -6,7 +6,7 @@ function SearchBar() {
     <>
       <div className="relative w-full">
         <input
-          className="bg-[hsl(0,0%,93%)] rounded border-2 border-black w-full h-10 pl-10 font-spartan leading-tight focus:outline-none focus:bg-[hsl(0,0%,98%)] focus:border-[darkGreen]"
+          className="bg-[hsl(0,0%,93%)] text-lg rounded border-2 border-black w-full h-10 pl-10 font-spartan leading-tight focus:outline-none focus:bg-[hsl(0,0%,98%)] focus:border-[darkGreen]"
           placeholder="Search..."
           type="text"
         />
