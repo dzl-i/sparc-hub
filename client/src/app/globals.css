@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(50, 21, 95);
+  --background: hsl(40, 23%, 95%);
   --dark-green: hsl(104, 100, 30);
   --light-green: hsl(86, 46, 72);
   --text-green: hsl(93, 74, 17);

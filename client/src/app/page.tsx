@@ -14,9 +14,9 @@ export default function Home() {
         />
       </div>
       <div className="flex flex-col items-center justify-center">
-        <div className="w-10/12">
+        <div className="w-5/6">
           <p className="text-xl md:text-sm">Team Justice Introduces</p>
-          <h1 className="font-lalezer text-8xl text-textGreen leading-none p-0 m-0 md:text-6xl">
+          <h1 className="font-lalezer text-8xl text-textGreen leading-none md:text-6xl">
             SparcHub
           </h1>
           <p className="text-2xl md:text-lg">
