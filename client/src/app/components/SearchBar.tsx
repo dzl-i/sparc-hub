@@ -4,7 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 function SearchBar() {
   return (
     <>
-      <div className="relative" style={{ width: "65vw" }}>
+      <div className="relative" style={{ width: "100%" }}>
         <input
           className="bg-[hsl(0,0%,93%)] rounded border-2 border-black w-full h-10 pl-10 font-spartan leading-tight focus:outline-none focus:bg-[hsl(0,0%,98%)] focus:border-[darkGreen]"
           placeholder="Search..."

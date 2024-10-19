@@ -21,8 +21,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        lightGreen: "var(--light-green)",
-        darkGreen: "var(--dark-green)",
+        lightGreen: "hsl(86, 46, 72)",
+        darkGreen: "hsl(104, 100, 30)",
+        textGreen: "hsl(93, 74, 17)",
       },
       fontFamily: {
         spartan: ['"League Spartan"', 'sans-serif'],

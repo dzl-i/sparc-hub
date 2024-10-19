@@ -7,6 +7,7 @@
   --foreground: hsl(50, 21, 100);
   --dark-green: hsl(104, 100, 30);
   --light-green: hsl(86, 46, 72);
+  --text-green: hsl(93, 74, 17);
 }
 
 @media (prefers-color-scheme: light) {
