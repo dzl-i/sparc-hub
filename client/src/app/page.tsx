@@ -1,6 +1,6 @@
 import Image from "next/image";
 import wave from "../../public/images/wave.svg";
-import SearchBar from "./components/SearchBar";
+import SearchBar from "../components/SearchBar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
