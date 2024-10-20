@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { SearchIcon } from "lucide-react";
 
 function SearchBar() {
   return (
@@ -10,8 +9,7 @@ function SearchBar() {
           placeholder="Search..."
           type="text"
         />
-        <FontAwesomeIcon
-          icon={faSearch}
+        <SearchIcon
           className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
         />
       </div>
