@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "SparcHub",
   description: "The offical UNSW home for societies reviews and insights.",
   icons: {
-    icon: "/images/tempIcon.svg",
+    icon: "/assets/tempIcon.svg",
   },
 };
 
