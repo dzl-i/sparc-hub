@@ -18,6 +18,10 @@ export default function Home() {
         src={"/assets/wave.svg"}
         alt="Green Wave"
         className="pointer-events-none select-none"
+        sizes="100vw"
+        width={0}
+        height={0}
+        style={{ width: '100%', height: 'auto' }}
       />
       <div className="flex flex-col items-center justify-center">
         <div className="w-5/6">
