@@ -1,5 +1,4 @@
 import Image from "next/image";
-import wave from "../../public/images/wave.svg";
 import SearchBar from "../components/SearchBar";
 import { Metadata } from "next";
 
@@ -16,7 +15,7 @@ export default function Home() {
     <>
       <Image
         priority
-        src={wave}
+        src={"/assets/wave.svg"}
         alt="Green Wave"
         className="pointer-events-none select-none"
       />
