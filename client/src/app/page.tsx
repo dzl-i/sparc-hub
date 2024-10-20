@@ -21,12 +21,12 @@ export default function Home() {
         sizes="100vw"
         width={0}
         height={0}
-        style={{ width: '100%', height: 'auto' }}
+        style={{ width: "100%", height: "auto" }}
       />
       <div className="flex flex-col items-center justify-center">
         <div className="w-5/6">
           <p className="text-xl md:text-sm">Team Justice Introduces</p>
-          <h1 className="font-lalezer text-8xl text-textGreen leading-none md:text-5xl">
+          <h1 className="lalezar text-8xl text-textGreen leading-none md:text-5xl">
             SparcHub
           </h1>
           <p className="text-2xl md:text-lg">
