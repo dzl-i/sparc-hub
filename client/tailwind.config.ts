@@ -18,11 +18,21 @@ const config: Config = {
       xs: { max: "480px" },
     },
     extend: {
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '-100% 0' },
+          '100%': { backgroundPosition: '100% 0' },
+        },
+      },
+      animation: {
+        shimmer: 'shimmer 2s infinite linear',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        lightGreen: "var(--light-green)",
-        darkGreen: "var(--dark-green)",
+        lightGreen: "hsl(86, 46, 72)",
+        darkGreen: "hsl(104, 100, 30)",
+        textGreen: "hsl(93, 74, 17)",
       },
       fontFamily: {
         spartan: ['"League Spartan"', 'sans-serif'],
