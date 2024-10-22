@@ -23,7 +23,7 @@ function Button({ children }: { children: ReactNode }) {
       <div>
         <button
           type="button"
-          className="relative overflow-hidden px-10 py-2 text-lg font-semibold font-spartan text-[hsl(50,21%,95%)] bg-[hsl(30,9%,17%)] hover:bg-[hsl(0,0%,0%)] duration-200 rounded-3xl outline-0 border-0"
+          className="relative overflow-hidden px-10 py-2 text-lg font-semibold font-spartan text-[hsl(50,21%,95%)] bg-[hsl(30,9%,17%)] hover:opacity-85 duration-200 rounded-3xl outline-0 border-0"
           onClick={createRipple}
         >
           {children}
