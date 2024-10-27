@@ -25,7 +25,7 @@ function Chip( { children, variant="default" }: ChipProps ) {
         {children}
       </div>
     </>
-  )
+  );
 }
 
 export default Chip;
