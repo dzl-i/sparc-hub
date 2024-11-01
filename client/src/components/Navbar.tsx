@@ -1,7 +1,19 @@
-import { Handshake, CircleUserRound, LogIn, TableProperties } from "lucide-react";
+"use client";
+
+import { Handshake, CircleUserRound, LogIn, LogOut } from "lucide-react";
 import Tooltip from "./Tooltip";
+import { useState } from "react";
 
 function Navbar() {
+  const [signedin, setSignedin] = useState(false);
+
+  const handleSignin = () => {
+    setSignedin(true);
+  }
+
+  const handleSignout = () => {
+    setSignedin(false);
+  }
   return (
     <div>
       <nav className="flex h-screen justify-between flex-col bg-white py-4 w-20">
@@ -25,15 +37,25 @@ function Navbar() {
             </Tooltip>
           </li>
           <li>
-            <Tooltip message={"Login"}>
-              <LogIn className="hover:scale-105 transition-transform cursor-pointer"/>
+            { signedin ? (
+            <Tooltip message={"Logout"}>
+              <LogOut
+                className="hover:scale-105 transition-transform cursor-pointer"
+                onClick={handleSignout}
+              />
+            </Tooltip>) :
+
+            (<Tooltip message={"Login"}>
+              <LogIn
+                className="hover:scale-105 transition-transform cursor-pointer"
+                onClick={handleSignin}
+              />
             </Tooltip>
+            )}
           </li>
         </ul>
       </nav>
     </div>
-
-
   );
 }
 
