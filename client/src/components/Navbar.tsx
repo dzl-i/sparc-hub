@@ -1,4 +1,5 @@
-import { Handshake, CircleUserRound, LogIn } from "lucide-react";
+import { Handshake, CircleUserRound, LogIn, TableProperties } from "lucide-react";
+import Tooltip from "./Tooltip";
 
 function Navbar() {
   return (
@@ -10,15 +11,29 @@ function Navbar() {
             <img className="h-10 hover:scale-105 transition-transform cursor-pointer" src="/assets/tempIcon.svg"></img>
           </li>
           <hr className="w-9/12 size-0.5 bg-gray-200"/>
-          <li><Handshake className="hover:scale-105 transition-transform cursor-pointer"/></li>
+          <li>
+            <Tooltip message={"Terms & Conditions"}>
+              <Handshake className="hover:scale-105 transition-transform cursor-pointer"/>
+            </Tooltip>
+          </li>
         </ul>
 
         <ul className="flex flex-col items-center gap-8">
-          <li><CircleUserRound className="hover:scale-105 transition-transform cursor-pointer"/></li>
-          <li><LogIn className="hover:scale-105 transition-transform cursor-pointer"/></li>
+          <li>
+            <Tooltip message={"View Profile"}>
+              <CircleUserRound className="hover:scale-105 transition-transform cursor-pointer"/>
+            </Tooltip>
+          </li>
+          <li>
+            <Tooltip message={"Login"}>
+              <LogIn className="hover:scale-105 transition-transform cursor-pointer"/>
+            </Tooltip>
+          </li>
         </ul>
       </nav>
     </div>
+
+
   );
 }
 
