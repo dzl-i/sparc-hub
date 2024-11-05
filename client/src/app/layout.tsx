@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { League_Spartan, Lalezar } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -26,7 +27,12 @@ export default function RootLayout({
       <body
         className={`${leagueSpartan.className} ${lalezar.className} antialiased`}
       >
-        {children}
+        <div className="flex flex-row">
+          <Navbar/>
+          <div>
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

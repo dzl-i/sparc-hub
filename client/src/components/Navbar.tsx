@@ -3,6 +3,7 @@
 import { Handshake, CircleUserRound, LogIn, LogOut } from "lucide-react";
 import Tooltip from "./Tooltip";
 import { useState } from "react";
+import Link from "next/link";
 
 function Navbar() {
   const [signedin, setSignedin] = useState(false);
@@ -19,38 +20,50 @@ function Navbar() {
       <nav className="flex h-screen sticky top-0 justify-between flex-col bg-white py-4 w-20">
         <ul className="flex flex-col items-center gap-5">
           <li>
-            {/* svg scales poorly, consider manually adjusting width and height */}
-            <img className="h-10 hover:scale-105 transition-transform cursor-pointer" src="/assets/tempIcon.svg"></img>
+            <Link href="/">
+              {/* svg scales poorly, consider manually adjusting width and height */}
+              <img className="h-10 hover:scale-105 transition-transform cursor-pointer" src="/assets/tempIcon.svg"></img>
+            </Link>
           </li>
           <hr className="w-9/12 size-0.5 bg-gray-200"/>
         </ul>
 
         <ul className="flex flex-col items-center gap-8">
           <li>
-            <Tooltip message={"Terms & Conditions"}>
-              <Handshake className="hover:scale-105 transition-transform cursor-pointer"/>
-            </Tooltip>
+            <Link href="/terms-and-conditions">
+              <Tooltip message={"Terms & Conditions"}>
+                <Handshake className="hover:scale-105 transition-transform cursor-pointer"/>
+              </Tooltip>
+            </Link>
           </li>
           <li>
-            <Tooltip message={"View Profile"}>
-              <CircleUserRound className="hover:scale-105 transition-transform cursor-pointer"/>
-            </Tooltip>
+            <Link href="/profile">
+              <Tooltip message={"View Profile"}>
+                <CircleUserRound className="hover:scale-105 transition-transform cursor-pointer"/>
+              </Tooltip>
+            </Link>
           </li>
           <li>
             { signedin ? (
-            <Tooltip message={"Logout"}>
-              <LogOut
-                className="hover:scale-105 transition-transform cursor-pointer"
-                onClick={handleSignout}
-              />
-            </Tooltip>) :
+            <Link href="/logout">
+              <Tooltip message={"Logout"}>
+                <LogOut
+                  className="hover:scale-105 transition-transform cursor-pointer"
+                  onClick={handleSignout}
+                />
+              </Tooltip>
+            </Link>
+            ) :
 
-            (<Tooltip message={"Login"}>
-              <LogIn
-                className="hover:scale-105 transition-transform cursor-pointer"
-                onClick={handleSignin}
-              />
-            </Tooltip>
+            (
+            <Link href="/login">
+              <Tooltip message={"Login"}>
+                <LogIn
+                  className="hover:scale-105 transition-transform cursor-pointer"
+                  onClick={handleSignin}
+                />
+              </Tooltip>
+            </Link>
             )}
           </li>
         </ul>
