@@ -1,5 +1,6 @@
 "use client";
 
+import classNames from "classnames";
 import { ReactNode, useState } from "react";
 
 function Tag( { children }: { children: ReactNode }) {
@@ -13,13 +14,19 @@ function Tag( { children }: { children: ReactNode }) {
     setSelected(false);
   }
 
+  const tagClass = classNames({
+    'px-4 py-1 text-sm font-spartan rounded-3xl border-[1.5px]': true,
+    'bg-[hsl(85,49%,40%)] text-[hsl(50,21%,95%)] border-[hsl(85,49%,40%)]': selected,
+    'bg-[hsl(50,21%,95%)] text-[hsl(30,9%,17%)] border-[hsl(30,9%,17%)]': !selected
+  });
+
   return (
     <>
       <div>
         { selected ? (
         <button
           type="button"
-          className="px-4 py-1 text-sm font-spartan bg-[hsl(85,49%,40%)] text-[hsl(50,21%,95%)] rounded-3xl border-[1.5px] border-[hsl(85,49%,40%)]"
+          className={tagClass}
           onClick={handleUnselect}
         >
           {children}
@@ -27,7 +34,7 @@ function Tag( { children }: { children: ReactNode }) {
 
         (<button
           type="button"
-          className="px-4 py-1 text-sm font-spartan text-[hsl(30,9%,17%)] bg-[hsl(50,21%,95%)] rounded-3xl border-[1.5px] border-[hsl(30,9%,17%)]"
+          className={tagClass}
           onClick={handleSelect}
         >
           {children}
