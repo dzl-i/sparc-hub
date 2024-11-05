@@ -16,7 +16,7 @@ function Navbar() {
   }
   return (
     <div>
-      <nav className="flex h-screen justify-between flex-col bg-white py-4 w-20">
+      <nav className="flex h-screen sticky top-0 justify-between flex-col bg-white py-4 w-20">
         <ul className="flex flex-col items-center gap-5">
           <li>
             {/* svg scales poorly, consider manually adjusting width and height */}
