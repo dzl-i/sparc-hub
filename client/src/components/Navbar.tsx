@@ -17,7 +17,7 @@ function Navbar() {
   }
   return (
     <div>
-      <nav className="flex h-screen sticky top-0 justify-between flex-col bg-white py-4 w-20">
+      <nav className="flex h-screen sticky top-0 justify-between flex-col bg-white py-4 w-20 shadow-lg">
         <ul className="flex flex-col items-center gap-5">
           <li>
             <Link href="/">
