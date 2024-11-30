@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-function Input({ children }: { children: ReactNode }) {
+function InputField({ children }: { children: ReactNode }) {
   return (
     <>
       <div className="relative w-full">
@@ -18,4 +18,4 @@ function Input({ children }: { children: ReactNode }) {
   );
 }
 
-export default Input;
+export default InputField;
