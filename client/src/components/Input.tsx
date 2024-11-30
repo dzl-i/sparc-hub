@@ -9,7 +9,7 @@ function Input({ children }: { children: ReactNode }) {
           type="text"
         />
         <div
-          className="bg-[hsl(50,21%,95%)] px-2 text-[10px] absolute left-1 bottom-8 font-spartan text-gray-500"
+          className="bg-[hsl(50,21%,95%)] px-2 text-[12px] absolute left-2 bottom-7 font-spartan text-gray-500"
         >
           {children}
         </div>
