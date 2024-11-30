@@ -28,9 +28,9 @@ export function ReviewCard({
   );
 
   return (
-    <div className="bg-white shadow-md p-4 rounded-lg md:basis-full basis-cardWidth flex flex-col justify-between h-56">
+    <div className="bg-white shadow-md p-4 rounded-lg md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-56">
       <div className="flex gap-4">
-        <div>
+        <div className="">
           <Image
             width={100}
             height={100}
@@ -70,7 +70,7 @@ export function ReviewCard({
             </div>
           </div>
           <hr className="bg-black h-0.5 mb-2" />
-          <p className="font-spartan text-lg break-words">{description}</p>
+          <p className="font-spartan text-md break-words">{description}</p>
         </div>
       </div>
       <div className="flex gap-4">
