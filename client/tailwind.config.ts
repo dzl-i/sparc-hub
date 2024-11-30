@@ -18,14 +18,18 @@ const config: Config = {
       xs: { max: "480px" },
     },
     extend: {
+      spacing: {
+        "cardWidth": "calc(33.333% - 1.25rem)",
+        "chipWidth": "calc(33.333% - 0.6rem)",
+      },
       keyframes: {
         shimmer: {
-          '0%': { backgroundPosition: '-100% 0' },
-          '100%': { backgroundPosition: '100% 0' },
+          "0%": { backgroundPosition: "-100% 0" },
+          "100%": { backgroundPosition: "100% 0" },
         },
       },
       animation: {
-        shimmer: 'shimmer 2s infinite linear',
+        shimmer: "shimmer 2s infinite linear",
       },
       colors: {
         background: "var(--background)",
@@ -35,8 +39,8 @@ const config: Config = {
         textGreen: "hsl(93, 74, 17)",
       },
       fontFamily: {
-        spartan: ['"League Spartan"', 'sans-serif'],
-        lalezar: ["Lalezar"],
+        spartan: ["var(--font-leagueSpartan)"],
+        lalezar: ["var(--font-lalezar)"],
       },
     },
   },
