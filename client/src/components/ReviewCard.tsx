@@ -28,15 +28,15 @@ export function ReviewCard({
   );
 
   return (
-    <div className="bg-white shadow-md p-4 rounded-lg md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-56">
+    <div className="bg-white shadow-md p-4 pt-5 rounded-lg md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-52">
       <div className="flex gap-4">
-        <div className="">
+        <div>
           <Image
             width={100}
             height={100}
             alt="society logo"
             src={logo}
-            className="rounded-full"
+            className="rounded-full shadow-lg"
           />
         </div>
         <div className="flex flex-col flex-grow basis-20">
@@ -58,7 +58,7 @@ export function ReviewCard({
                   return (
                     <Image
                       key={index}
-                      alt="green star"
+                      alt="empty star"
                       width={27}
                       height={27}
                       src={"/assets/emptyStar.svg"}
@@ -69,7 +69,7 @@ export function ReviewCard({
               <p className="text-sm text-slate-800">({reviews})</p>
             </div>
           </div>
-          <hr className="bg-black h-0.5 mb-2" />
+          <hr className="bg-black h-0.5 mb-3" />
           <p className="font-spartan text-md break-words">{description}</p>
         </div>
       </div>

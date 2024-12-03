@@ -43,23 +43,9 @@ export default function Home() {
               avgStar={2}
               reviews={12}
               title="DevSoc"
-              logo="https://kansai-resilience-forum.jp/wp-content/uploads/2019/02/IAFOR-Blank-Avatar-Image-1.jpg"
-              tags={["test", "test", "test"]}
-              description="Epic society about developing your favorite websiteEpic
-                    society about developtpic society about developing your favorite websiteEpic
-                    society about developtpic society about developing your favorite websiteEpic
-                    society about developt"
-            />
-            <ReviewCard
-              avgStar={2}
-              reviews={12}
-              title="DevSoc"
-              logo="https://kansai-resilience-forum.jp/wp-content/uploads/2019/02/IAFOR-Blank-Avatar-Image-1.jpg"
-              tags={["test", "test", "test"]}
-              description="Epic society about developing your favorite websiteEpic
-                    society about developtpic society about developing your favorite websiteEpic
-                    society about developtpic society about developing your favorite websiteEpic
-                    society about developt"
+              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
+              tags={["Development", "Based", "Cool"]}
+              description="Epic society about developing your favorite websites!"
             />
           </div>
         </div>

@@ -8,6 +8,18 @@ const nextConfig = {
         port: "",
         pathname: "/wp-content/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.linkupevents.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.linkupevents.com",
+        port: "",
+        pathname: "/society/**",
+      },
     ],
   },
 };
