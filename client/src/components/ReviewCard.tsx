@@ -18,7 +18,7 @@ export function ReviewCard({
   avgStar = 0,
   reviews = 0,
 }: ReviewCardProps) {
-  // Truncate the description if it exceeds 145 characters
+
   if (description.length > 130) {
     description = description.slice(0, 130) + "...";
   }
