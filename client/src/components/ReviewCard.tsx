@@ -42,7 +42,7 @@ export function ReviewCard({
         <div className="flex flex-col flex-grow basis-20">
           <div className="font-lalezar flex justify-between">
             <h1 className="text-4xl">{title}</h1>
-            <div className="flex ">
+            <div className="flex mb-2">
               {stars.map((val, index) => {
                 if (val === 1) {
                   return (
