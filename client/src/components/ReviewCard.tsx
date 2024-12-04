@@ -27,7 +27,7 @@ export function ReviewCard({
       <div className="flex gap-4">
         <div className="basis-3/12">
           <Image
-            width={400}
+            width={300}
             height={300}
             alt="society logo"
             src={logo}
@@ -38,29 +38,31 @@ export function ReviewCard({
           <div className="font-lalezar flex flex-col justify-between">
             <h1 className="text-xl line-clamp-2">{title}</h1>
             <div className="flex mb-2">
-              {stars.map((val, index) => {
-                if (val === 1) {
-                  return (
-                    <Image
-                      key={index}
-                      alt="green star"
-                      width={20}
-                      height={20}
-                      src={"/assets/star.svg"}
-                    />
-                  );
-                } else if (val === 0) {
-                  return (
-                    <Image
-                      key={index}
-                      alt="empty star"
-                      width={20}
-                      height={20}
-                      src={"/assets/emptyStar.svg"}
-                    />
-                  );
-                }
-              })}
+              <div className="flex gap-0.5">
+                {stars.map((val, index) => {
+                  if (val === 1) {
+                    return (
+                      <Image
+                        key={index}
+                        alt="green star"
+                        width={20}
+                        height={20}
+                        src={"/assets/star.svg"}
+                      />
+                    );
+                  } else if (val === 0) {
+                    return (
+                      <Image
+                        key={index}
+                        alt="empty star"
+                        width={20}
+                        height={20}
+                        src={"/assets/emptyStar.svg"}
+                      />
+                    );
+                  }
+                })}
+              </div>
               <p className="text-sm text-slate-800">({reviews})</p>
             </div>
           </div>
