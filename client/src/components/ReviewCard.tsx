@@ -18,30 +18,25 @@ export function ReviewCard({
   avgStar = 0,
   reviews = 0,
 }: ReviewCardProps) {
-
-  if (description.length > 130) {
-    description = description.slice(0, 130) + "...";
-  }
-
   const stars = Array.from({ length: 5 }, (_, index) =>
-    index < avgStar ? 1 : 0
+    index <= avgStar - 0.5 ? 1 : 0
   );
 
   return (
-    <div className="bg-white shadow-md p-4 pt-5 rounded-lg md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-52">
+    <div className="bg-white shadow-md p-6 rounded-xl md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-62">
       <div className="flex gap-4">
-        <div>
+        <div className="basis-3/12">
           <Image
-            width={100}
-            height={100}
+            width={400}
+            height={300}
             alt="society logo"
             src={logo}
             className="rounded-full shadow-lg"
           />
         </div>
-        <div className="flex flex-col flex-grow basis-20">
-          <div className="font-lalezar flex justify-between">
-            <h1 className="text-4xl">{title}</h1>
+        <div className="flex flex-col basis-50 mb-5 basis-9/12">
+          <div className="font-lalezar flex flex-col justify-between">
+            <h1 className="text-xl line-clamp-1">{title}</h1>
             <div className="flex mb-2">
               {stars.map((val, index) => {
                 if (val === 1) {
@@ -49,8 +44,8 @@ export function ReviewCard({
                     <Image
                       key={index}
                       alt="green star"
-                      width={27}
-                      height={27}
+                      width={20}
+                      height={20}
                       src={"/assets/star.svg"}
                     />
                   );
@@ -59,8 +54,8 @@ export function ReviewCard({
                     <Image
                       key={index}
                       alt="empty star"
-                      width={27}
-                      height={27}
+                      width={20}
+                      height={20}
                       src={"/assets/emptyStar.svg"}
                     />
                   );
@@ -70,7 +65,7 @@ export function ReviewCard({
             </div>
           </div>
           <hr className="bg-black h-0.5 mb-3" />
-          <p className="font-spartan text-md break-words">{description}</p>
+          <p className="font-spartan text-md line-clamp-3">{description}</p>
         </div>
       </div>
       <div className="flex gap-4">
