@@ -37,7 +37,7 @@ export function ReviewCard({
         <div className="flex flex-col basis-9/12">
           <div className="font-lalezar flex flex-col justify-between">
             <h1 className="text-xl line-clamp-2">{title}</h1>
-            <div className="flex mb-2">
+            <div className="flex">
               <div className="flex gap-0.5">
                 {stars.map((val, index) => {
                   if (val === 1) {
@@ -63,10 +63,10 @@ export function ReviewCard({
                   }
                 })}
               </div>
-              <p className="text-sm text-slate-800">({reviews})</p>
+              <p className="text-sm text-slate-800 px-1 pt-1">({reviews})</p>
             </div>
           </div>
-          <hr className="bg-black h-0.5 mb-3" />
+          <hr className="bg-black h-0.5 my-2" />
           <p className="font-spartan text-md line-clamp-3">{description}</p>
         </div>
       </div>
