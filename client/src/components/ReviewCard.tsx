@@ -23,9 +23,9 @@ export function ReviewCard({
   );
 
   return (
-    <div className="bg-white shadow-xl p-5 rounded-xl md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-64 hover:bg-gray-50 transition-colors duration-150 ease-in-out">
+    <div className="bg-white shadow-xl p-5 rounded-xl md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-64 sm:h-52 hover:bg-gray-50 transition-colors duration-150 ease-in-out">
       <div className="flex gap-4">
-        <div className="basis-3/12">
+        <div className="basis-3/12 landmd:basis-2/12 sm:basis-4/12">
           <Image
             width={300}
             height={300}
@@ -70,7 +70,7 @@ export function ReviewCard({
           <p className="font-spartan text-md line-clamp-3">{description}</p>
         </div>
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-2 sm:hidden justify-center">
         {tags.map((tag, index) => (
           <div key={index} className="flex basis-chipWidth">
             <Chip variant="landingPage">{tag}</Chip>

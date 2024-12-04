@@ -11,10 +11,10 @@ const config: Config = {
       // The following screen sizes are converted into css like so
       // @media (max-width: ...px) { ... }
       "2xl": { max: "1536px" },
-      "1xl": { max: "1400px" },
+      "1xl": { max: "1686px" },
       xl: { max: "1280px" },
       lg: { max: "1024px" },
-      "landmd": { max: "980px" },
+      "landmd": { max: "1150px" },
       md: { max: "768px" },
       sm: { max: "640px" },
       xs: { max: "480px" },

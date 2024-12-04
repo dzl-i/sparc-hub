@@ -52,7 +52,7 @@ export default function Home() {
               reviews={12}
               title="Australasian Union of Jewish Students"
               logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
-              tags={["Development", "Based", "Cool"]}
+              tags={["Developmentt", "Developmentt", "Developmentt"]}
               description="Epic society about des!"
             />
             <ReviewCard
