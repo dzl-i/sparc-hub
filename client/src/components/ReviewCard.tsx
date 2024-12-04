@@ -23,7 +23,7 @@ export function ReviewCard({
   );
 
   return (
-    <div className="bg-white shadow-md p-5 rounded-xl md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-64 border-solid border	border-slate-600">
+    <div className="bg-white shadow-xl p-5 rounded-xl md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-64 hover:bg-gray-50 transition-colors duration-150 ease-in-out">
       <div className="flex gap-4">
         <div className="basis-3/12">
           <Image
@@ -37,7 +37,7 @@ export function ReviewCard({
         <div className="flex flex-col basis-9/12">
           <div className="font-lalezar flex flex-col justify-between">
             <h1 className="text-xl line-clamp-2">{title}</h1>
-            <div className="flex">
+            <div className="flex gap-1">
               <div className="flex gap-0.5">
                 {stars.map((val, index) => {
                   if (val === 1) {
