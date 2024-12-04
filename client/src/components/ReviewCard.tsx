@@ -4,23 +4,21 @@ import Chip from "./Chip";
 interface ReviewCardProps {
   title: string;
   description: string;
-  logo: string;
-  tags: string[];
+  logo?: string;
+  tags?: string[];
   avgStar: number;
   reviews: number;
 }
 
 export function ReviewCard({
-  title = "placeholder",
-  description = "placeholder",
-  logo = "https://kansai-resilience-forum.jp/wp-content/uploads/2019/02/IAFOR-Blank-Avatar-Image-1.jpg",
+  title = "",
+  description = "",
+  logo = "https://cdn.linkupevents.com/arc_logo.png",
   tags = [],
   avgStar = 0,
   reviews = 0,
 }: ReviewCardProps) {
-  const stars = Array.from({ length: 5 }, (_, index) =>
-    index <= avgStar - 0.5 ? 1 : 0
-  );
+  const percentage = ((avgStar / 5) * 100).toFixed(1) + "%";
 
   return (
     <div className="bg-white shadow-xl p-5 rounded-xl md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-64 sm:h-52 hover:bg-gray-50 transition-colors duration-150 ease-in-out">
@@ -39,34 +37,20 @@ export function ReviewCard({
             <h1 className="text-xl line-clamp-2">{title}</h1>
             <div className="flex gap-1">
               <div className="flex gap-0.5">
-                {stars.map((val, index) => {
-                  if (val === 1) {
-                    return (
-                      <Image
-                        key={index}
-                        alt="green star"
-                        width={20}
-                        height={20}
-                        src={"/assets/star.svg"}
-                      />
-                    );
-                  } else if (val === 0) {
-                    return (
-                      <Image
-                        key={index}
-                        alt="empty star"
-                        width={20}
-                        height={20}
-                        src={"/assets/emptyStar.svg"}
-                      />
-                    );
-                  }
-                })}
+                <div className="relative inline-block text-slate-400">
+                  <p className="text-2xl">★★★★★</p>
+                  <p
+                    className="text-2xl bg-[#299800] bg-clip-text absolute inset-0 text-transparent"
+                    style={{ width: percentage }}
+                  >
+                    ★★★★★
+                  </p>
+                </div>
               </div>
               <p className="text-sm text-slate-800 px-1 pt-1">({reviews})</p>
             </div>
           </div>
-          <hr className="bg-black h-0.5 my-2" />
+          <hr className="bg-black h-0.5 mb-2" />
           <p className="font-spartan text-md line-clamp-3">{description}</p>
         </div>
       </div>
