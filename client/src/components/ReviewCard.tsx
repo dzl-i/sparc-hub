@@ -23,7 +23,7 @@ export function ReviewCard({
   );
 
   return (
-    <div className="bg-white shadow-md p-5 rounded-xl md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-64">
+    <div className="bg-white shadow-md p-5 rounded-xl md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-64 border-solid border	border-slate-600">
       <div className="flex gap-4">
         <div className="basis-3/12">
           <Image
