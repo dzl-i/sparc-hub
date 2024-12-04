@@ -38,14 +38,22 @@ export default function Home() {
           <div className="flex justify-center items-center mt-10 mb-10">
             <SearchBar />
           </div>
-          <div className="grid grid-cols-3 gap-7 1xl:grid-cols-2 landmd:grid-cols-1">
+          <div className="grid grid-cols-3 gap-7 1xl:grid-cols-2 landmd:grid-cols-1 mb-6">
+            <ReviewCard
+              avgStar={2.5}
+              reviews={12}
+              title="Australasian Union of Jewish Students studentsstudents students students students students"
+              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
+              tags={["Development", "Based", "Cool"]}
+              description="Epic society about des! Epic society about des! Epic society about des! Epic society about des! Epic society about des! Epic society about des!"
+            />
             <ReviewCard
               avgStar={2.5}
               reviews={12}
               title="Australasian Union of Jewish Students"
               logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
               tags={["Development", "Based", "Cool"]}
-              description="Epic society about developing your websites!Epic society about developing your favorite websites!Epic society about developing your favorite websites!Epic society about developing your favorite websites!"
+              description="Epic society about des!"
             />
             <ReviewCard
               avgStar={2}
@@ -53,7 +61,7 @@ export default function Home() {
               title="Albury Wodonga Medical "
               logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
               tags={["Development", "Based", "Cool"]}
-              description="Epic society about developing your favorite websites!Epic society about developing your favorite websites!Epic society about developing your favorite websites!Epic society about developing your favorite websites!"
+              description="The club strives to offer a welcoming setting to a diverse collection of students so they can ask the questions that everyone has and that are essential to comprehending life itself."
             />
             <ReviewCard
               avgStar={2}
