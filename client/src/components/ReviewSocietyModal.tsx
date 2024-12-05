@@ -81,3 +81,90 @@ function ReviewSocietyModal({
 }
 
 export default ReviewSocietyModal;
+
+// ChatGPT generated test page.tsx example of opening and closing modal:
+// "use client"
+
+// import { useState } from "react";
+// import ReviewSocietyModal from "@/components/ReviewSocietyModal";
+
+// export default function Test() {
+//   const [isOpen, setIsOpen] = useState(false); // Controls modal visibility
+//   const [isAnimating, setIsAnimating] = useState(false); // Controls animation state
+
+//   const handleOpenModal = () => {
+//     setIsOpen(true);
+//     setIsAnimating(true);
+//   };
+
+//   const handleCloseModal = () => {
+//     setIsAnimating(false); // Trigger reverse animation
+//     setTimeout(() => setIsOpen(false), 300); // Wait for animation to complete before hiding
+//   };
+
+//   return (
+//     <>
+//       <div className="sticky top-0 h-full flex items-center justify-center">
+//         <button
+//           className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
+//           onClick={handleOpenModal}
+//         >
+//           Open Modal
+//         </button>
+
+//         {isOpen && (
+//           <div
+//             className={`fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-300 ${
+//               isAnimating ? "bg-opacity-50 bg-black" : "bg-opacity-0"
+//             }`}
+//             onClick={handleCloseModal} // Close modal on background click
+//           >
+//             <div
+//               className={`max-h-screen rounded-lg shadow-md ${
+//                 isAnimating ? "animate-fade-in" : "animate-fade-out"
+//               }`}
+//               onClick={(e) => e.stopPropagation()} // Prevent closing on modal click
+//             >
+//               <ReviewSocietyModal name="DevSoc" numReviews={420} avgRating="Overwhelmingly Positive" logo="https://cdn.linkupevents.com/society/Software+Development+Society.png" onClose={handleCloseModal}/>
+//             </div>
+//           </div>
+//         )}
+//       </div>
+
+//       {/* Add styles for animations */}
+//       <style jsx>{`
+//         @keyframes fade-in {
+//           from {
+//             opacity: 0;
+//             transform: scale(0.95);
+//           }
+//           to {
+//             opacity: 1;
+//             transform: scale(1);
+//           }
+//         }
+
+//         @keyframes fade-out {
+//           from {
+//             opacity: 1;
+//             transform: scale(1);
+//           }
+//           to {
+//             opacity: 0;
+//             transform: scale(0.95);
+//           }
+//         }
+
+//         .animate-fade-in {
+//           animation: fade-in 0.3s ease-out;
+//         }
+
+//         .animate-fade-out {
+//           animation: fade-out 0.3s ease-out;
+//         }
+//       `}</style>
+//     </>
+//   );
+// }
+
+
