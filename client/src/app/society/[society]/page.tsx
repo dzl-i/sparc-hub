@@ -89,7 +89,7 @@ export default function SocietyPage() {
               <h1 className="text-4xl">Reviews</h1>
             </div>
             <button
-              className="flex gap-1 bg-lightGreen px-3 py-2 rounded relative overflow-hidden text-lg"
+              className="flex gap-1 bg-lightGreen px-4 py-2 rounded relative overflow-hidden text-xl"
               onClick={createRipple}
             >
               <SquarePen /> Add Review
