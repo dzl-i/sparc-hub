@@ -96,14 +96,14 @@ export default function SocietyPage() {
             </button>
           </div>
           <div className="grid grid-cols-1 gap-5">
-            <div className="w-full h-52 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-52 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-52 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-52 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-52 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-52 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-52 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-52 border-solid border-black border-2 p-5"></div>
+            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
+            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
+            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
+            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
+            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
+            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
+            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
+            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
           </div>
         </div>
       </div>
