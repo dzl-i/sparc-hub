@@ -83,7 +83,7 @@ function ReviewSocietyModal({
 export default ReviewSocietyModal;
 
 // ChatGPT generated test page.tsx example of opening and closing modal:
-// "use client"
+// "use client";
 
 // import { useState } from "react";
 // import ReviewSocietyModal from "@/components/ReviewSocietyModal";
@@ -95,11 +95,18 @@ export default ReviewSocietyModal;
 //   const handleOpenModal = () => {
 //     setIsOpen(true);
 //     setIsAnimating(true);
+
+//     // Prevent background scrolling
+//     document.body.style.overflow = "hidden";
 //   };
 
 //   const handleCloseModal = () => {
 //     setIsAnimating(false); // Trigger reverse animation
-//     setTimeout(() => setIsOpen(false), 300); // Wait for animation to complete before hiding
+//     setTimeout(() => {
+//       setIsOpen(false);
+//       // Restore background scrolling
+//       document.body.style.overflow = "auto";
+//     }, 300); // Wait for animation to complete before hiding
 //   };
 
 //   return (
@@ -114,18 +121,30 @@ export default ReviewSocietyModal;
 
 //         {isOpen && (
 //           <div
-//             className={`fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-300 ${
+//             className={`fixed inset-0 z-50 overflow-y-scroll transition-opacity duration-300 ${
 //               isAnimating ? "bg-opacity-50 bg-black" : "bg-opacity-0"
 //             }`}
 //             onClick={handleCloseModal} // Close modal on background click
 //           >
 //             <div
-//               className={`max-h-screen rounded-lg shadow-md ${
-//                 isAnimating ? "animate-fade-in" : "animate-fade-out"
-//               }`}
+//               className={`flex items-center justify-center min-h-full py-4`}
 //               onClick={(e) => e.stopPropagation()} // Prevent closing on modal click
 //             >
-//               <ReviewSocietyModal name="DevSoc" numReviews={420} avgRating="Overwhelmingly Positive" logo="https://cdn.linkupevents.com/society/Software+Development+Society.png" onClose={handleCloseModal}/>
+//               <div
+//                 className={`rounded-lg shadow-md ${
+//                   isAnimating ? "animate-fade-in" : "animate-fade-out"
+//                 }`}
+//               >
+//                 <div className="">
+//                   <ReviewSocietyModal
+//                     name="DevSoc"
+//                     numReviews={420}
+//                     avgRating="Overwhelmingly Positive"
+//                     logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
+//                     onClose={handleCloseModal}
+//                   />
+//                 </div>
+//               </div>
 //             </div>
 //           </div>
 //         )}
@@ -166,5 +185,3 @@ export default ReviewSocietyModal;
 //     </>
 //   );
 // }
-
-
