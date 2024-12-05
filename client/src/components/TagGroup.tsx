@@ -6,7 +6,7 @@ function TagGroup() {
       <div className="relative w-full">
         <div className="relative">
           <div
-            className="flex flex-wrap gap-2 bg-[hsl(50,21%,95%)] border-[0.5px] border-gray-400 w-full h-auto p-3 font-spartan leading-tight"
+            className="flex flex-wrap gap-2 bg-[hsl(50,21%,95%)] border-[0.5px] border-gray-400 w-full h-[140px] p-3 font-spartan leading-tight"
           >
             {/* Tags go here!!! */}
             <Tag>hi</Tag>

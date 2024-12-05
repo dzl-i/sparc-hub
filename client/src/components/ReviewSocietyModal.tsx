@@ -4,8 +4,23 @@ import InputField from "./InputField";
 import Textbox from "./Textbox";
 import TagGroup from "./TagGroup";
 import Button from "./Button";
+import Image from "next/image";
 
-function ReviewSocietyModal({ onClose } : { onClose: any }) {
+interface ReviewSocietyModalProps {
+  name: string;
+  logo?: string;
+  avgRating?: 'Overwhelmingly Positive' | 'Very Positive' | 'Positive' | 'Mixed' | 'Mostly Negative' | 'Negative';
+  numReviews: number;
+  onClose: () => void;
+}
+
+function ReviewSocietyModal({
+  name,
+  logo = "https://cdn.linkupevents.com/arc_logo.png",
+  avgRating,
+  numReviews,
+  onClose
+}: ReviewSocietyModalProps) {
   return (
     <>
       {/* container */}
@@ -23,17 +38,24 @@ function ReviewSocietyModal({ onClose } : { onClose: any }) {
             <hr></hr>
             {/* profile div */}
             <div className="flex pl-5 pt-3 gap-4 pb-2">
-              <img
-                src="https://media.licdn.com/dms/image/v2/D560BAQE_rkSk_pK13w/company-logo_200_200/company-logo_200_200/0/1701169794961?e=2147483647&v=beta&t=IdLU6hsYwn-g9NbTYHjpL2Wd8Oa33uvZLkq9uQdSr9I"
+              <Image
                 width={70}
                 height={70}
+                alt="society logo"
+                src={logo}
                 className="rounded-full"
               />
               <div className="flex flex-col leading-none pt-2">
-                <div className="text-[hsl(50,21%,95%)] text-[30px]">Devsoc</div>
-                <div className="p-1 text-[hsl(50,21%,95%)] text-[12px] font-spartan bg-[hsl(85,49%,40%)] rounded-md">
-                  Overwhelmingly Positive &#40;412&#41;
-                </div>
+                <div className="text-[hsl(50,21%,95%)] text-[30px]">{name}</div>
+                {numReviews > 0 ? (
+                  <div className="self-start p-1 text-[hsl(50,21%,95%)] text-[12px] font-spartan bg-[hsl(85,49%,40%)] rounded-md">
+                    {avgRating} &#40;{numReviews}&#41;
+                  </div>
+                ) : (
+                  <div className="self-start p-1 text-[hsl(50,21%,95%)] text-[12px] font-spartan bg-[hsl(85,49%,40%)] rounded-md">
+                    No reviews yet
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -47,7 +69,10 @@ function ReviewSocietyModal({ onClose } : { onClose: any }) {
               <input type="checkbox" id="anonymous"/>
               <label className="font-spartan text-sm font-bold">Display anonymously</label>
             </div>
-            <div className="self-end"><Button>Submit</Button></div>
+            <div className="self-end">
+              <Button onClick={onClose}>
+                Submit
+              </Button></div>
           </div>
         </div>
       </div>
