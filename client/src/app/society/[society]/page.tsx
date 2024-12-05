@@ -24,7 +24,7 @@ export default function SocietyPage() {
         height={0}
         style={{ width: "100%", height: "auto" }}
       />
-      <div className="grid grid-cols-2 w-full px-10 gap-8">
+      <div className="grid grid-cols-2 w-full px-20 gap-40">
         <div className="flex flex-col sticky top-0 pt-10 rounded-lg max-h-screen overflow-auto">
           <div className="flex flex-row gap-5">
             <div className="flex flex-col gap-3">
