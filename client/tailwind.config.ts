@@ -17,6 +17,7 @@ const config: Config = {
       sm: { max: "640px" },
       xs: { max: "480px" },
     },
+    
     extend: {
       keyframes: {
         shimmer: {
