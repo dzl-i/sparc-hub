@@ -24,9 +24,9 @@ function ReviewSocietyModal({
   return (
     <>
       {/* container */}
-      <div className="bg-[hsl(50,21%,95%)] h-[1000px] w-[850px] rounded-lg overflow-hidden">
+      <div className="bg-[hsl(50,21%,95%)] h-auto w-auto max-w-[800px] rounded-lg overflow-hidden">
         {/* outer flex */}
-        <div className="flex flex-col">
+        <div className="flex flex-col pb-6">
           {/* header */}
           <div className="flex flex-col bg-[hsl(30,9%,17%)] p-4">
             <div className="flex justify-between items-start">
@@ -61,7 +61,7 @@ function ReviewSocietyModal({
           </div>
           {/* content */}
           <div className="flex flex-col items-center justify-center px-16 gap-4 bg-[hsl(50,21%,95%)]">
-            <div className="pt-20 pb-10"><StarRating/></div>
+            <div className="pt-14 pb-10"><StarRating/></div>
             <InputField>Title</InputField>
             <Textbox>Review</Textbox>
             <TagGroup/>
