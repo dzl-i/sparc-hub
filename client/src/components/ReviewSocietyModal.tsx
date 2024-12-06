@@ -28,9 +28,9 @@ function ReviewSocietyModal({
         {/* outer flex */}
         <div className="flex flex-col pb-6">
           {/* header */}
-          <div className="flex flex-col bg-[hsl(30,9%,17%)] p-4">
+          <div className="flex flex-col bg-[hsl(30,9%,17%)] p-2">
             <div className="flex justify-between items-start">
-              <div className="text-[hsl(50,21%,95%)] text-[50px] pl-4">Submit Review</div>
+              <div className="text-[hsl(50,21%,95%)] text-[34px] pl-4">Submit Review</div>
               <button onClick={onClose}>
                 <X size="40" strokeWidth="0.5" color="hsl(50,21%,95%)"/>
               </button>
@@ -61,7 +61,7 @@ function ReviewSocietyModal({
           </div>
           {/* content */}
           <div className="flex flex-col items-center justify-center px-16 gap-4 bg-[hsl(50,21%,95%)]">
-            <div className="pt-14 pb-10"><StarRating/></div>
+            <div className="pt-10 pb-3"><StarRating/></div>
             <InputField>Title</InputField>
             <Textbox>Review</Textbox>
             <TagGroup/>
