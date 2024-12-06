@@ -11,21 +11,27 @@ const config: Config = {
       // The following screen sizes are converted into css like so
       // @media (max-width: ...px) { ... }
       "2xl": { max: "1536px" },
+      "1xl": { max: "1686px" },
       xl: { max: "1280px" },
       lg: { max: "1024px" },
+      "landmd": { max: "1150px" },
       md: { max: "768px" },
       sm: { max: "640px" },
       xs: { max: "480px" },
     },
     extend: {
+      spacing: {
+        "cardWidth": "calc(33.333% - 1.25rem)",
+        "chipWidth": "calc(33.333% - 0.6rem)",
+      },
       keyframes: {
         shimmer: {
-          '0%': { backgroundPosition: '-100% 0' },
-          '100%': { backgroundPosition: '100% 0' },
+          "0%": { backgroundPosition: "-100% 0" },
+          "100%": { backgroundPosition: "100% 0" },
         },
       },
       animation: {
-        shimmer: 'shimmer 2s infinite linear',
+        shimmer: "shimmer 2s infinite linear",
       },
       colors: {
         background: "var(--background)",
@@ -35,8 +41,8 @@ const config: Config = {
         textGreen: "hsl(93, 74, 17)",
       },
       fontFamily: {
-        spartan: ['"League Spartan"', 'sans-serif'],
-        lalezar: ["Lalezar"],
+        spartan: ["var(--font-leagueSpartan)"],
+        lalezar: ["var(--font-lalezar)"],
       },
     },
   },
