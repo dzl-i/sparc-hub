@@ -28,7 +28,7 @@ function Review({
   return (
     <>
       {/* Container */}
-      <div className="bg-white rounded-2xl border-2 px-6 pt-6 pb-4 shadow-md min-w-[320px]">
+      <div className="bg-white rounded-2xl p-6 shadow-lg min-w-[320px]">
         {/* Outer Flex */}
         <div className="flex flex-col gap-2">
           {/* Profile and Stars*/}
