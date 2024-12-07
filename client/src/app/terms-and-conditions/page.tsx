@@ -82,8 +82,21 @@ export default function Terms() {
                 Unilectives
               </a>
               . Created as part of training program hosted by the Software
-              Development Society at UNSW. Shoutout to Dylan and Nicole for
-              organising the program. Created by Team Justice comprised of{" "}
+              Development Society at UNSW. Shoutout to{" "}
+              <a
+                className="text-textGreen font-semibold"
+                href="https://github.com/TAS-scorchedshadow"
+              >
+                Dylan
+              </a>{" "}
+              and{" "}
+              <a
+                className="text-textGreen font-semibold"
+                href="https://github.com/crocyoiin"
+              >
+                Nicole
+              </a>{" "}
+              for organising the program. Created by Team Justice comprised of{" "}
               <a
                 className="text-textGreen font-semibold"
                 href="https://github.com/xleonx0x"
@@ -100,9 +113,9 @@ export default function Terms() {
               ,{" "}
               <a
                 className="text-textGreen font-semibold"
-                href="https://github.com/seebcode"
+                href="https://github.com/DickoEvaldo"
               >
-                Seb
+                Dicko
               </a>
               ,{" "}
               <a
@@ -110,13 +123,13 @@ export default function Terms() {
                 href="https://github.com/lalkobi"
               >
                 Liam
-              </a>{" "}
-              and{" "}
+              </a>
+              , and{" "}
               <a
                 className="text-textGreen font-semibold"
-                href="https://github.com/DickoEvaldo"
+                href="https://github.com/seebcode"
               >
-                Dicko
+                Seb
               </a>
               .
             </p>
