@@ -15,7 +15,7 @@ interface ReviewProps {
 
 function Review({
   username,
-  profilePic = "https://kansai-resilience-forum.jp/wp-content/uploads/2019/02/IAFOR-Blank-Avatar-Image-1.jpg",
+  profilePic = "https://images.nightcafe.studio//assets/profile.png",
   title,
   starRating,
   reviewContent,
@@ -34,7 +34,7 @@ function Review({
           {/* Profile and Stars*/}
           <div className="flex justify-between">
             {/* Profile */}
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-row gap-4">
               <Image
                 width={60}
                 height={75}
