@@ -28,7 +28,7 @@ function Review({
   return (
     <>
       {/* Container */}
-      <div className="bg-white rounded-lg border-2 px-6 pt-6 pb-4 shadow-md min-w-[320px]">
+      <div className="bg-white rounded-2xl border-2 px-6 pt-6 pb-4 shadow-md min-w-[320px]">
         {/* Outer Flex */}
         <div className="flex flex-col gap-2">
           {/* Profile and Stars*/}
@@ -37,15 +37,14 @@ function Review({
             <div className="flex flex-row gap-4">
               <Image
                 width={60}
-                height={75}
+                height={60}
                 alt="User profile picture"
                 src={profilePic}
                 className="rounded-full"
               />
               <div className="flex flex-col leading-none pt-1">
-                <div className="font-lalezar text-2xl">
-                  {anonymous ? "Anonymous" : username}
-                </div>
+                {/* Title */}
+                <div className="font-lalezar text-2xl">{title}</div>
                 <div className="font-lalezar text-sm">
                   Posted on {format(date, "dd MMMM yyyy")}
                 </div>
@@ -62,8 +61,9 @@ function Review({
               </p>
             </div>
           </div>
-          {/* Title */}
-          <div className="font-lalezar text-xl">{title}</div>
+          <div className="text-sm text-slate-500">
+            Reviewed by: {anonymous ? "Anonymous" : username}
+          </div>
           {/* Review Content*/}
           <div className="font-spartan leading-tight text-lg">
             {reviewContent}
