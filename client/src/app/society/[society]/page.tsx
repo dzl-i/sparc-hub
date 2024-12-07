@@ -1,5 +1,5 @@
 import { MdEmail } from "react-icons/md";
-import { FaFacebook } from "react-icons/fa";
+import { FaDiscord, FaFacebook, FaInstagram } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
 import Image from "next/image";
 import Chip from "@/components/Chip";
@@ -11,6 +11,11 @@ export default function SocietyPage() {
   const avgStar = 4.5;
   const percentage = ((avgStar / 5) * 100).toFixed(1) + "%";
   const reviews = 12;
+  const websiteUrl = "test";
+  const facebookUrl = "test";
+  const discordUrl = "test";
+  const emailUrl = "test";
+  const instagramUrl = "test";
 
   return (
     <>
@@ -24,27 +29,40 @@ export default function SocietyPage() {
         height={0}
         style={{ width: "100%", height: "auto" }}
       />
-      <div className="grid grid-cols-2 w-full px-20 gap-40">
+      <div className="grid grid-cols-2 w-full px-20 gap-40 font-spartan">
         <div className="flex flex-col sticky top-0 pt-10 rounded-lg max-h-screen overflow-auto">
           <div className="flex flex-row gap-5">
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 basis-2/12 items-center">
               <Image
                 priority
                 src={"https://cdn.linkupevents.com/arc_logo.png"}
                 alt="Society Logo"
                 className="rounded-full"
-                sizes="100vw"
-                width={100}
-                height={100}
+                width={140}
+                height={120}
               />
-              <div className="flex justify-center items-center gap-2">
-                <MdEmail size={"1.5em"} className="cursor-pointer" />
-                <FaFacebook size={"1.5em"} className="cursor-pointer" />
-                <AiOutlineGlobal size={"1.5em"} className="cursor-pointer" />
+              <div className="flex justify-center items-center gap-2 flex-wrap w-24">
+                {discordUrl && (
+                  <FaDiscord size={"1.5em"} className="cursor-pointer" />
+                )}
+                {instagramUrl && (
+                  <FaInstagram size={"1.5em"} className="cursor-pointer" />
+                )}
+                {emailUrl && (
+                  <MdEmail size={"1.5em"} className="cursor-pointer" />
+                )}
+                {facebookUrl && (
+                  <FaFacebook size={"1.5em"} className="cursor-pointer" />
+                )}
+                {websiteUrl && (
+                  <AiOutlineGlobal size={"1.5em"} className="cursor-pointer" />
+                )}
               </div>
             </div>
-            <div className="flex flex-col">
-              <h1 className="text-4xl">Software Development Society</h1>
+            <div className="flex flex-col basis-9/12">
+              <h1 className="text-4xl font-lalezar">
+                Software Development Society
+              </h1>
               <div className="flex flex-row gap-0.5">
                 <div className="relative inline-block text-slate-400">
                   <p className="text-2xl">★★★★★</p>
@@ -73,7 +91,7 @@ export default function SocietyPage() {
             </div>
           </div>
           <div>
-            <h2 className="text-lg">Top 3 Tags</h2>
+            <h2 className="text-lg font-lalezar">Top 3 Tags</h2>
             <div className="flex flex-row gap-8">
               {Top3tags.map((tag, index) => (
                 <Chip variant="top3" key={index}>
@@ -86,10 +104,10 @@ export default function SocietyPage() {
         <div className="pb-5 pt-10">
           <div className="flex justify-between pb-2">
             <div className="flex items-center">
-              <h1 className="text-4xl">Reviews</h1>
+              <h1 className="text-4xl font-lalezar">Reviews</h1>
             </div>
             <button
-              className="flex gap-1 bg-lightGreen px-4 py-2 rounded relative overflow-hidden text-xl"
+              className="flex gap-1 bg-lightGreen px-4 py-2 rounded-lg relative overflow-hidden text-xl font-lalezar"
               onClick={createRipple}
             >
               <SquarePen /> Add Review
