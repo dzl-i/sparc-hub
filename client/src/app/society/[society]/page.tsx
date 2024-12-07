@@ -124,9 +124,9 @@ export default function SocietyPage() {
               </p>
             </div>
           </div>
-          <div>
+          <div className="mt-4">
             <h2 className="text-lg font-lalezar">Top 3 Tags</h2>
-            <div className="flex flex-row gap-8">
+            <div className="flex flex-row gap-8 mt-2">
               {Top3tags.map((tag, index) => (
                 <Chip variant="top3" key={index}>
                   {tag}
