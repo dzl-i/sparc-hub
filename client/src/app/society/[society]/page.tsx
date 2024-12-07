@@ -115,7 +115,7 @@ export default function SocietyPage() {
                 We are the Software Development Society, a place for imaginative
                 and inventive students dedicated to crafting exceptional
                 products for the benefit of the community! Within our society,
-                you'll find over five teams of enthusiastic students diligently
+                you&apos;ll find over five teams of enthusiastic students diligently
                 working on a wide array of web apps, ranging from academic
                 degree planners to platforms that display available campus
                 facilities. Our primary goal is to develop solutions that
