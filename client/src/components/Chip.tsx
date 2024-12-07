@@ -6,17 +6,18 @@ export type ChipProps = {
 }
 
 function Chip( { children, variant="default" }: ChipProps ) {
-  let styles = "px-4 py-1 text-black text-center font-spartan w-full outline-0";
+  let styles = "px-4 py-1 text-black text-center font-spartan outline-0";
   switch(variant) {
     case "default":
-      styles += "text-sm bg-transparent rounded-3xl border border-black"
+      styles += "bg-transparent rounded-3xl border-[1.5px] border-black text-sm"
       break;
     case "landingPage":
-      styles += "text-sm font-semibold bg-white rounded-3xl border-2 border-[darkGreen]"
+      styles += "text-sm font-semibold bg-white rounded-3xl border-2 border-[darkGreen] w-full"
       break;
     case "top3":
-      styles += "text-lg font-semibold bg-white rounded-xl border border-black"
+      styles += "text-lg font-semibold bg-white rounded-xl border border-black w-full"
       break;
+
   }
 
   return (
