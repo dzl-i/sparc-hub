@@ -6,10 +6,12 @@ import Navbar from "@/components/Navbar";
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
   weight: ["100", "400", "700"],
+  variable: "--font-leagueSpartan",
 });
 const lalezar = Lalezar({
   subsets: ["latin"],
   weight: "400",
+  variable: "--font-lalezar",
 });
 
 export const metadata: Metadata = {
@@ -25,13 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${leagueSpartan.className} ${lalezar.className} antialiased`}
+        className={`${leagueSpartan.variable} ${lalezar.variable} antialiased`}
       >
         <div className="flex flex-row">
-          <Navbar/>
-          <div>
-            {children}
-          </div>
+          <Navbar />
+          <div>{children}</div>
         </div>
       </body>
     </html>
