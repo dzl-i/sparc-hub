@@ -11,11 +11,11 @@ export default function SocietyPage() {
   const avgStar = 4.5;
   const percentage = ((avgStar / 5) * 100).toFixed(1) + "%";
   const reviews = 12;
-  const websiteUrl = "test";
-  const facebookUrl = "test";
-  const discordUrl = "test";
-  const emailUrl = "test";
-  const instagramUrl = "test";
+  const websiteUrl = "https://unswavsoc.com";
+  const facebookUrl = "https://www.facebook.com/DataSoc";
+  const discordUrl = "https://discord.gg/CWnTGNZzKU";
+  const emailUrl = "unsw@180dc.org";
+  const instagramUrl = "https://instagram.com/aiesecinunsw";
 
   return (
     <>
@@ -43,19 +43,52 @@ export default function SocietyPage() {
               />
               <div className="flex justify-center items-center gap-2 flex-wrap w-24">
                 {discordUrl && (
-                  <FaDiscord size={"1.5em"} className="cursor-pointer" />
+                  <a
+                    href={discordUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaDiscord size={"1.5em"} className="cursor-pointer" />
+                  </a>
                 )}
                 {instagramUrl && (
-                  <FaInstagram size={"1.5em"} className="cursor-pointer" />
+                  <a
+                    href={instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaInstagram size={"1.5em"} className="cursor-pointer" />
+                  </a>
                 )}
                 {emailUrl && (
-                  <MdEmail size={"1.5em"} className="cursor-pointer" />
+                  <a
+                    href={`mailto:${emailUrl}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MdEmail size={"1.5em"} className="cursor-pointer" />
+                  </a>
                 )}
                 {facebookUrl && (
-                  <FaFacebook size={"1.5em"} className="cursor-pointer" />
+                  <a
+                    href={facebookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaFacebook size={"1.5em"} className="cursor-pointer" />
+                  </a>
                 )}
                 {websiteUrl && (
-                  <AiOutlineGlobal size={"1.5em"} className="cursor-pointer" />
+                  <a
+                    href={websiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <AiOutlineGlobal
+                      size={"1.5em"}
+                      className="cursor-pointer"
+                    />
+                  </a>
                 )}
               </div>
             </div>
