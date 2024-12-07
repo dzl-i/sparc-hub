@@ -56,7 +56,7 @@ export function ReviewCard({
             <p className="font-spartan text-md line-clamp-3">{description}</p>
           </div>
         </div>
-        <div className="flex gap-2 sm:hidden justify-center">
+        <div className="flex gap-3 sm:hidden justify-center">
           {tags.map((tag, index) => (
             <div key={index} className="flex basis-chipWidth">
               <Chip variant="landingPage">{tag}</Chip>

@@ -5,9 +5,10 @@ import Image from "next/image";
 import Chip from "@/components/Chip";
 import { createRipple } from "@/components/Button";
 import { SquarePen } from "lucide-react";
+import Review from "@/components/Review";
 
 export default function SocietyPage() {
-  const Top3tags = ["test", "test", "test"];
+  const Top3tags = ["Engaging", "Friendly", "Epic"];
   const avgStar = 4.5;
   const percentage = ((avgStar / 5) * 100).toFixed(1) + "%";
   const reviews = 12;
@@ -29,7 +30,7 @@ export default function SocietyPage() {
         height={0}
         style={{ width: "100%", height: "auto" }}
       />
-      <div className="grid grid-cols-2 w-full px-20 gap-40 font-spartan">
+      <div className="grid grid-cols-2 w-full px-20 gap-20 font-spartan">
         <div className="flex flex-col sticky top-0 pt-10 rounded-lg max-h-screen overflow-auto">
           <div className="flex flex-row gap-5">
             <div className="flex flex-col gap-3 basis-2/12 items-center">
@@ -135,7 +136,7 @@ export default function SocietyPage() {
           </div>
         </div>
         <div className="pb-5 pt-10">
-          <div className="flex justify-between pb-2">
+          <div className="flex justify-between pb-4">
             <div className="flex items-center">
               <h1 className="text-4xl font-lalezar">Reviews</h1>
             </div>
@@ -147,14 +148,130 @@ export default function SocietyPage() {
             </button>
           </div>
           <div className="grid grid-cols-1 gap-5">
-            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
-            <div className="w-full h-60 border-solid border-black border-2 p-5"></div>
+            <Review
+              anonymous={false}
+              username="z5583784"
+              title="Best society ever"
+              starRating={4}
+              date={new Date()}
+              tags={["Engaging", "Friendly", "Epic"]}
+              reviewContent=" We are the Software Development Society, a place for imaginative
+                and inventive students dedicated to crafting exceptional
+                products for the benefit of the community! Within our society,
+                you'll find over five teams of enthusiastic students diligently
+                working on a wide array of web apps, ranging from academic
+                degree planners to platforms that display available campus
+                facilities. 
+                
+
+
+                Our primary goal is to develop solutions that
+                enhance the lives of university students in their daily
+                routines.
+                
+                
+                "
+            />
+            <Review
+              anonymous={false}
+              username="z5583784"
+              title="Best society ever"
+              starRating={4}
+              date={new Date()}
+              reviewContent=" We are the Software Development Society, a place for imaginative
+                and inventive students dedicated to crafting exceptional
+                products for the benefit of the community! Within our society,
+                you'll find over five teams of enthusiastic students diligently
+                working on a wide array of web apps, ranging from academic
+                degree planners to platforms that display available campus
+                facilities. 
+                
+
+
+                Our primary goal is to develop solutions that
+                enhance the lives of university students in their daily
+                routines."
+            />
+            <Review
+              anonymous={false}
+              username="z5583784"
+              title="Best society ever"
+              starRating={4}
+              date={new Date()}
+              reviewContent=" We are the Software Development Society, a place for imaginative
+                and inventive students dedicated to crafting exceptional
+                products for the benefit of the community! Within our society,
+                you'll find over five teams of enthusiastic students diligently
+                working on a wide array of web apps, ranging from academic
+                degree planners to platforms that display available campus
+                facilities. 
+                
+
+
+                Our primary goal is to develop solutions that
+                enhance the lives of university students in their daily
+                routines."
+            />
+            <Review
+              anonymous={false}
+              username="z5583784"
+              title="Best society ever"
+              starRating={4}
+              date={new Date()}
+              reviewContent=" We are the Software Development Society, a place for imaginative
+                and inventive students dedicated to crafting exceptional
+                products for the benefit of the community! Within our society,
+                you'll find over five teams of enthusiastic students diligently
+                working on a wide array of web apps, ranging from academic
+                degree planners to platforms that display available campus
+                facilities. 
+                
+
+
+                Our primary goal is to develop solutions that
+                enhance the lives of university students in their daily
+                routines."
+            />
+            <Review
+              anonymous={false}
+              username="z5583784"
+              title="Best society ever"
+              starRating={4}
+              date={new Date()}
+              reviewContent=" We are the Software Development Society, a place for imaginative
+                and inventive students dedicated to crafting exceptional
+                products for the benefit of the community! Within our society,
+                you'll find over five teams of enthusiastic students diligently
+                working on a wide array of web apps, ranging from academic
+                degree planners to platforms that display available campus
+                facilities. 
+                
+
+
+                Our primary goal is to develop solutions that
+                enhance the lives of university students in their daily
+                routines."
+            />
+            <Review
+              anonymous={true}
+              username="z5583784"
+              title="Best society ever"
+              starRating={4}
+              date={new Date()}
+              reviewContent=" We are the Software Development Society, a place for imaginative
+                and inventive students dedicated to crafting exceptional
+                products for the benefit of the community! Within our society,
+                you'll find over five teams of enthusiastic students diligently
+                working on a wide array of web apps, ranging from academic
+                degree planners to platforms that display available campus
+                facilities. 
+                
+
+
+                Our primary goal is to develop solutions that
+                enhance the lives of university students in their daily
+                routines."
+            />
           </div>
         </div>
       </div>
