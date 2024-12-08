@@ -13,7 +13,7 @@ export default function Terms() {
         height={0}
         style={{ width: "100%", height: "auto" }}
       />
-      <div className="flex flex-col justify-center items-center mb-10">
+      <div className="flex flex-col justify-center items-center mb-10 font-spartan">
         <div className="flex gap-3 flex-col w-3/6 ">
           <h1 className="text-6xl font-lalezar text-textGreen text-center">
             Terms and Conditions
@@ -27,7 +27,7 @@ export default function Terms() {
               not affiliated, endorsed, or associated in any way with the
               University of New South Wales (UNSW). The views, opinions, and
               content shared on this platform are solely those of the users and
-              creators and do not reflect the opinions or policies of UNSW.
+              creators and do not reflect the opinions or policies of UNSW or Arc.
             </p>
           </section>
           <section>
