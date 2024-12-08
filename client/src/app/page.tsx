@@ -1,15 +1,6 @@
 import Image from "next/image";
 import SearchBar from "../components/SearchBar";
-import { Metadata } from "next";
 import { ReviewCard } from "@/components/ReviewCard";
-
-export const metadata: Metadata = {
-  title: "SparcHub",
-  description: "The offical UNSW home for societies reviews and insights.",
-  icons: {
-    icon: "/assets/tempIcon.svg",
-  },
-};
 
 export default function Home() {
   return (

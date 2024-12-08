@@ -19,6 +19,7 @@ const config: Config = {
       sm: { max: "640px" },
       xs: { max: "480px" },
     },
+    
     extend: {
       spacing: {
         "cardWidth": "calc(33.333% - 1.25rem)",
