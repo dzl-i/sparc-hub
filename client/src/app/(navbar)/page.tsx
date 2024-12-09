@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../../components/SearchBar";
 import { ReviewCard } from "@/components/ReviewCard";
 
 export default function Home() {
