@@ -1,14 +1,6 @@
 import Image from "next/image";
 import SearchBar from "../components/SearchBar";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "SparcHub",
-  description: "The offical UNSW home for societies reviews and insights.",
-  icons: {
-    icon: "/assets/tempIcon.svg",
-  },
-};
+import { ReviewCard } from "@/components/ReviewCard";
 
 export default function Home() {
   return (
@@ -23,50 +15,61 @@ export default function Home() {
         height={0}
         style={{ width: "100%", height: "auto" }}
       />
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center">
         <div className="w-5/6">
-          <p className="text-xl md:text-sm">Team Justice Introduces</p>
-          <h1 className="lalezar text-8xl text-textGreen leading-none md:text-5xl">
+          <p className="font-lalezar text-xl md:text-sm">
+            Team Justice Introduces
+          </p>
+          <h1 className="font-lalezar text-8xl text-textGreen leading-none md:text-5xl">
             SparcHub
           </h1>
-          <p className="text-2xl md:text-lg">
+          <p className="font-lalezar text-2xl md:text-lg">
             Your go-to destination for UNSW society reviews and insights.
           </p>
           <div className="flex justify-center items-center mt-10 mb-10">
             <SearchBar />
           </div>
-          <div className="flex flex-wrap gap-5 mb-5">
-            {/* Placeholder blocks :) */}
-            <div className="basis-1/4 md:basis-full grow h-56 bg-white shadow-md p-4 rounded">
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-            </div>
-            <div className="basis-1/4 md:basis-full grow h-56 bg-white shadow-md p-4 rounded">
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-            </div>
-            <div className="basis-1/4 md:basis-full grow h-56 bg-white shadow-md p-4 rounded">
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-            </div>
-            <div className="basis-1/4 md:basis-full grow h-56 bg-white shadow-md p-4 rounded">
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-            </div>
-            <div className="basis-1/4 md:basis-full grow h-56 bg-white shadow-md p-4 rounded">
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-            </div>
-            <div className="basis-1/4 md:basis-full grow h-56 bg-white shadow-md p-4 rounded">
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-              <div className="h-4 bg-gray-300 mb-2 animate-shimmer bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-[length:200%_100%]"></div>
-            </div>
+          <div className="grid grid-cols-3 gap-7 1xl:grid-cols-2 landmd:grid-cols-1 mb-6">
+            <ReviewCard
+              avgStar={2.5}
+              reviews={12}
+              title="Australasian Union of Jewish Students studentsstudents students students students students"
+              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
+              tags={["Development", "Based", "Cool"]}
+              description="Epic society about des! Epic society about des! Epic society about des! Epic society about des! Epic society about des! Epic society about des!"
+            />
+            <ReviewCard
+              avgStar={2.5}
+              reviews={12}
+              title="Australasian Union of Jewish Students"
+              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
+              tags={["Developmentt", "Developmentt", "Developmentt"]}
+              description="Epic society about des!"
+            />
+            <ReviewCard
+              avgStar={2.5}
+              reviews={12}
+              title="Australasian Union of Jewish Students"
+              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
+              tags={["Developmentt", "Developmentt", "Developmentt"]}
+              description="Epic society about des!"
+            />
+            <ReviewCard
+              avgStar={2}
+              reviews={12}
+              title="Albury Wodonga Medical "
+              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
+              tags={["Development", "Based", "Cool"]}
+              description="The club strives to offer a welcoming setting to a diverse collection of students so they can ask the questions that everyone has and that are essential to comprehending life itself."
+            />
+            <ReviewCard
+              avgStar={2}
+              reviews={12}
+              title="Australasian Union of Jewish s"
+              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
+              tags={["Development", "Based", "Cool"]}
+              description="Epdeveloping your favorite websit your favorite websites!Epic society about developing your favorite websites!"
+            />
           </div>
         </div>
       </div>
