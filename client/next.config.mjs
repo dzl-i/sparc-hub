@@ -10,6 +10,12 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "images.nightcafe.studio",
+        port: "",
+        pathname: "//assets/profile.png"
+      },
+      {
+        protocol: "https",
         hostname: "cdn.linkupevents.com",
         port: "",
         pathname: "/**",

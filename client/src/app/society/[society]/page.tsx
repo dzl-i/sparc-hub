@@ -115,7 +115,7 @@ export default function SocietyPage() {
                 We are the Software Development Society, a place for imaginative
                 and inventive students dedicated to crafting exceptional
                 products for the benefit of the community! Within our society,
-                you'll find over five teams of enthusiastic students diligently
+                you&apos;ll find over five teams of enthusiastic students diligently
                 working on a wide array of web apps, ranging from academic
                 degree planners to platforms that display available campus
                 facilities. Our primary goal is to develop solutions that
@@ -124,9 +124,9 @@ export default function SocietyPage() {
               </p>
             </div>
           </div>
-          <div>
+          <div className="mt-4">
             <h2 className="text-lg font-lalezar">Top 3 Tags</h2>
-            <div className="flex flex-row gap-8">
+            <div className="flex flex-row gap-8 mt-2">
               {Top3tags.map((tag, index) => (
                 <Chip variant="top3" key={index}>
                   {tag}
