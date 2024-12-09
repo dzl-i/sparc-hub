@@ -26,7 +26,7 @@ function ReviewSocietyModal({
           {/* header */}
           <div className="flex flex-col bg-[hsl(30,9%,17%)] p-2">
             <div className="flex justify-between items-center mb-1">
-              <div className="text-[hsl(50,21%,95%)] text-2xl pl-4">Submit Review</div>
+              <div className="font-lalezar text-[hsl(50,21%,95%)] text-2xl pl-4">Submit Review</div>
               <button onClick={onClose}>
                 <X size="30" strokeWidth="0.5" color="hsl(50,21%,95%)" />
               </button>
@@ -42,7 +42,7 @@ function ReviewSocietyModal({
                 className="rounded-full"
               />
               <div className="flex flex-col leading-none pt-2">
-                <div className="text-[hsl(50,21%,95%)] text-4xl">{name}</div>
+                <div className="font-lalezar text-[hsl(50,21%,95%)] text-4xl">{name}</div>
               </div>
             </div>
           </div>
