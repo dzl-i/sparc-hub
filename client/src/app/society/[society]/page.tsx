@@ -162,7 +162,10 @@ export default function SocietyPage() {
             </div>
             <button
               className="flex gap-1 bg-lightGreen px-4 py-2 rounded-lg relative overflow-hidden text-xl font-lalezar"
-              onClick={handleOpenModal}
+              onClick={(e) => {
+                createRipple(e);
+                handleOpenModal();
+              }}
             >
               <SquarePen /> Add Review
             </button>
