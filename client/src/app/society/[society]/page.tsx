@@ -159,7 +159,7 @@ export default function SocietyPage() {
             <div className="flex flex-row gap-2 items-center">
               <DropdownSelect id="sort-reviews" selectedId="Recent" data={sortReviewsData} width="260px" variant="societyPage"></DropdownSelect>
               <button
-                className="flex gap-1 bg-lightGreen px-4 py-2 rounded-lg relative overflow-hidden text-xl font-lalezar"
+                className="flex gap-1 bg-lightGreen px-4 py-2 rounded-lg relative overflow-hidden text-xl font-spartan"
                 onClick={createRipple}
               >
                 <SquarePen /> Add Review
