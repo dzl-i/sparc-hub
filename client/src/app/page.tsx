@@ -5,7 +5,7 @@ import Button from "@/components/Button";
 import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
 
 export default function Home() {
-  const dropdownData: DropdownItem[] = [
+  const sortSocietiesData: DropdownItem[] = [
     {
       id: 'A-Z',
       name: 'Alphabetical (A-Z)',
@@ -45,7 +45,12 @@ export default function Home() {
           </p>
           <div className="flex justify-center items-center mt-10 mb-10 gap-4">
             <SearchBar />
-            <DropdownSelect id="sort-societies" data={dropdownData} width="240px" title="Sort by"/>
+            <DropdownSelect
+              id="sort-societies"
+              data={sortSocietiesData}
+              width="240px"
+              title="Sort by"
+            />
           </div>
           <div className="grid grid-cols-3 gap-7 1xl:grid-cols-2 landmd:grid-cols-1 mb-6">
             <ReviewCard
