@@ -1,8 +1,12 @@
 import Image from "next/image";
 import SearchBar from "../components/SearchBar";
 import { ReviewCard } from "@/components/ReviewCard";
+import data from "../../societyData.json";
+import { useState } from "react";
 
 export default function Home() {
+  const [inputText, setInputText] = useState("");
+
   return (
     <>
       <Image
@@ -30,46 +34,17 @@ export default function Home() {
             <SearchBar />
           </div>
           <div className="grid grid-cols-3 gap-7 1xl:grid-cols-2 landmd:grid-cols-1 mb-6">
-            <ReviewCard
-              avgStar={2.5}
-              reviews={12}
-              title="Australasian Union of Jewish Students studentsstudents students students students students"
-              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
-              tags={["Development", "Based", "Cool"]}
-              description="Epic society about des! Epic society about des! Epic society about des! Epic society about des! Epic society about des! Epic society about des!"
-            />
-            <ReviewCard
-              avgStar={2.5}
-              reviews={12}
-              title="Australasian Union of Jewish Students"
-              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
-              tags={["Developmentt", "Developmentt", "Developmentt"]}
-              description="Epic society about des!"
-            />
-            <ReviewCard
-              avgStar={2.5}
-              reviews={12}
-              title="Australasian Union of Jewish Students"
-              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
-              tags={["Developmentt", "Developmentt", "Developmentt"]}
-              description="Epic society about des!"
-            />
-            <ReviewCard
-              avgStar={2}
-              reviews={12}
-              title="Albury Wodonga Medical "
-              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
-              tags={["Development", "Based", "Cool"]}
-              description="The club strives to offer a welcoming setting to a diverse collection of students so they can ask the questions that everyone has and that are essential to comprehending life itself."
-            />
-            <ReviewCard
-              avgStar={2}
-              reviews={12}
-              title="Australasian Union of Jewish s"
-              logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
-              tags={["Development", "Based", "Cool"]}
-              description="Epdeveloping your favorite websit your favorite websites!Epic society about developing your favorite websites!"
-            />
+            {data.map((society) => (
+              <ReviewCard
+                key={1}
+                avgStar={Math.random() * 5}
+                reviews={12}
+                title={society.fullTitle}
+                logo={society.logo}
+                tags={[]}
+                description={society.description}
+              />
+            ))}
           </div>
         </div>
       </div>
