@@ -1,7 +1,6 @@
 import Image from "next/image";
 import SearchBar from "../components/SearchBar";
 import { ReviewCard } from "@/components/ReviewCard";
-import Button from "@/components/Button";
 import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
 
 export default function Home() {
