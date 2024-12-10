@@ -22,6 +22,7 @@ function InputField({
           placeholder={placeholder}
           value={reviewTitle}
           onChange={(e) => setReviewTitle(e.target.value)}
+          maxLength={100}
         />
         <div className="bg-[hsl(50,21%,95%)] px-2 text-[12px] absolute left-2 bottom-7 font-spartan text-gray-500">
           {children}

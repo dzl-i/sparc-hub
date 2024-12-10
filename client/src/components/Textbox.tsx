@@ -21,6 +21,7 @@ function Textbox({
           placeholder={placeholder}
           value={reviewContent}
           onChange={(e) => setReviewContent(e.target.value)}
+          maxLength={600}
         />
         <div className="bg-[hsl(50,21%,95%)] px-2 text-[12px] absolute left-2 top-[-7px] font-spartan text-gray-500">
           {children}
