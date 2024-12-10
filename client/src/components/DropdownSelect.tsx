@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
 import { ChevronDown } from "lucide-react";
 
-interface DropdownItem {
+export interface DropdownItem {
   id: string;
   name: string;
 }
@@ -91,7 +91,7 @@ function DropdownSelect({
         type='button'
         onClick={() => setIsOpen(!isOpen)}
         className={classNames(
-          'flex justify-between items-center gap-5 rounded-lg w-full py-2 px-4 bg-[hsl(85,49%,40%)] text-white font-spartan text-sm',
+          'flex justify-between items-center gap-5 rounded w-full py-2 px-4 bg-[hsl(85,49%,40%)] text-white font-spartan text-sm border-2 border-[hsl(85,49%,40%)]',
         )}
       >
         <span>{selectedItem?.name || title}</span>
@@ -104,7 +104,7 @@ function DropdownSelect({
         <div
           aria-label='Dropdown menu'
           className={dropdownClass}
-          style={{ width: width || 'auto' }}
+          style={{ width: '100%' }}
         >
           <ul
             role='menu'
