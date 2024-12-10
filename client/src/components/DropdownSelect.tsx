@@ -19,10 +19,9 @@ interface DropdownProps {
   variant?: "default" | "societyPage";
 }
 
-
 function DropdownSelect({
   id,
-  title = 'Select',
+  title = "Select",
   data,
   selectedId,
   onSelect,
@@ -36,14 +35,16 @@ function DropdownSelect({
 
   const handleChange = (item: DropdownItem) => {
     setSelectedItem(item);
-    onSelect && onSelect(item.id);
+    onSelect?.(item.id);
     setIsOpen(false);
   };
 
   useEffect(() => {
     if (selectedId && data) {
       const newSelectedItem = data.find((item) => item.id === selectedId);
-      newSelectedItem && setSelectedItem(newSelectedItem);
+      if (newSelectedItem) {
+        setSelectedItem(newSelectedItem);
+      }
     } else {
       setSelectedItem(undefined);
     }
@@ -62,10 +63,10 @@ function DropdownSelect({
         }
       };
 
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
 
       return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
+        document.removeEventListener("mousedown", handleClickOutside);
       };
     }, [ref, handler]);
   };
@@ -76,73 +77,72 @@ function DropdownSelect({
     handler: () => setIsOpen(false),
   });
 
-  const dropdownClass = classNames(
-    'absolute bg-gray-100 w-max max-h-52 overflow-y-auto py-3 rounded shadow-md z-10',
-  );
-
-  const buttonClass = classNames(
-    'flex justify-between items-center gap-5 w-full px-4',
-    {
-      'rounded py-2 text-white font-spartan text-sm bg-[hsl(85,49%,40%)] border-2 border-[hsl(85,49%,40%)]':
-        variant === 'default',
-      'rounded-lg py-1 text-black font-lalezar text-xl bg-transparent border-4 border-lightGreen':
-        variant === 'societyPage',
-    }
-  )
-
-
   return (
     <>
-      <div ref={dropdownRef} className='relative' style={{ width: width || 'auto' }}>
-      <button
-        id={id}
-        aria-label='Toggle dropdown'
-        aria-haspopup='true'
-        aria-expanded={isOpen}
-        type='button'
-        onClick={() => setIsOpen(!isOpen)}
-        className={buttonClass}
+      <div
+        ref={dropdownRef}
+        className="relative"
+        style={{ width: width || "auto" }}
       >
-        <span>{selectedItem?.name || title}</span>
-        <ChevronDown
-          size={variant === "societyPage" ? 25 : 20}
-          className={classNames({
-            "pb-[2px]": variant === "societyPage",
-          })}
-        />
-      </button>
-      {/* Open */}
-      {isOpen && (
-        <div
-          aria-label='Dropdown menu'
-          className={dropdownClass}
-          style={{ width: '100%' }}
+        <button
+          id={id}
+          aria-label="Toggle dropdown"
+          aria-haspopup="true"
+          aria-expanded={isOpen}
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className={classNames(
+            "flex justify-between items-center gap-5 w-full px-4",
+            {
+              "rounded py-2 text-white font-spartan text-md bg-[hsl(85,49%,40%)]":
+                variant === "default",
+              "rounded-lg py-1 text-black font-spartan text-xl bg-transparent border-4 border-lightGreen":
+                variant === "societyPage",
+            }
+          )}
         >
-          <ul
-            role='menu'
-            aria-labelledby={id}
-            aria-orientation='vertical'
-            className='leading-10'
+          <span>{selectedItem?.name || title}</span>
+          <ChevronDown
+            size={variant === "societyPage" ? 25 : 20}
+            className={classNames({
+              "pb-[2px]": variant === "societyPage",
+            })}
+          />
+        </button>
+        {/* Open */}
+        {isOpen && (
+          <div
+            aria-label="Dropdown menu"
+            className={
+              "absolute bg-gray-100 w-max max-h-52 overflow-y-auto rounded shadow-md z-10"
+            }
+            style={{ width: "100%" }}
           >
-            {data?.map((item) => (
-              <li
-                key={item.id}
-                onClick={() => handleChange(item)}
-                className={classNames(
-                  'flex items-center cursor-pointer hover:bg-gray-200 px-3 font-spartan',
-                  { 'bg-gray-300': selectedItem?.id === item.id }
-                )}
-              >
-                <span>{item.name}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </div>
+            <ul
+              role="menu"
+              aria-labelledby={id}
+              aria-orientation="vertical"
+              className="leading-10"
+            >
+              {data?.map((item) => (
+                <li
+                  key={item.id}
+                  onClick={() => handleChange(item)}
+                  className={classNames(
+                    "flex items-center cursor-pointer px-3 font-spartan",
+                    { "bg-gray-300": selectedItem?.id === item.id },
+                    { "hover:bg-gray-200": selectedItem?.id !== item.id }
+                  )}
+                >
+                  <span className="">{item.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </>
   );
 }
 
 export default DropdownSelect;
-
