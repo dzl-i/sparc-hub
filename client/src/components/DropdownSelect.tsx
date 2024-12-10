@@ -16,6 +16,7 @@ interface DropdownProps {
   selectedId?: string;
   onSelect?: (id: string) => void;
   width?: string;
+  variant?: "default" | "societyPage";
 }
 
 
@@ -25,7 +26,8 @@ function DropdownSelect({
   data,
   selectedId,
   onSelect,
-  width
+  width,
+  variant = "default",
 }: DropdownProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedItem, setSelectedItem] = useState<DropdownItem | undefined>(
@@ -78,6 +80,15 @@ function DropdownSelect({
     'absolute bg-gray-100 w-max max-h-52 overflow-y-auto py-3 rounded shadow-md z-10',
   );
 
+  const buttonClass = classNames(
+    'flex justify-between items-center gap-5 w-full px-4',
+    {
+      'rounded py-2 text-white font-spartan text-sm bg-[hsl(85,49%,40%)] border-2 border-[hsl(85,49%,40%)]':
+        variant === 'default',
+      'rounded-lg py-1 text-black font-lalezar text-xl bg-transparent border-4 border-lightGreen':
+        variant === 'societyPage',
+    }
+  )
 
 
   return (
@@ -90,13 +101,14 @@ function DropdownSelect({
         aria-expanded={isOpen}
         type='button'
         onClick={() => setIsOpen(!isOpen)}
-        className={classNames(
-          'flex justify-between items-center gap-5 rounded w-full py-2 px-4 bg-[hsl(85,49%,40%)] text-white font-spartan text-sm border-2 border-[hsl(85,49%,40%)]',
-        )}
+        className={buttonClass}
       >
         <span>{selectedItem?.name || title}</span>
         <ChevronDown
-          size={20}
+          size={variant === "societyPage" ? 25 : 20}
+          className={classNames({
+            "pb-[2px]": variant === "societyPage",
+          })}
         />
       </button>
       {/* Open */}
@@ -133,3 +145,4 @@ function DropdownSelect({
 }
 
 export default DropdownSelect;
+
