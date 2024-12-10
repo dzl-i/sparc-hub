@@ -1,11 +1,13 @@
 "use client";
-
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { Star } from "lucide-react";
 
-function StarRating() {
-  const [rating, setRating] = useState<number | null>(null);
+interface StarRatingProps {
+  rating: number;
+  setRating: Dispatch<SetStateAction<number>>;
+}
 
+function StarRating({ rating, setRating }: StarRatingProps) {
   const ratings = [
     { label: "Unacceptable", score: 1 },
     { label: "Poor", score: 2 },
@@ -19,10 +21,19 @@ function StarRating() {
       {ratings.map((rate, index) => (
         <div key={rate.score} className="flex items-center">
           <label>
-            <input className="hidden peer" type="radio" name="rating" value={rate.score} onClick={() => setRating(rate.score)} />
+            <input
+              className="hidden peer"
+              type="radio"
+              name="rating"
+              value={rate.score}
+              onClick={() => setRating(rate.score)}
+            />
             <div className=" flex flex-col gap-3 hover:scale-110 transition-transform">
-
-              <div className={`cursor-pointer z-0 rounded-3xl p-3 ${rating === rate.score ? "bg-[hsl(85,49%,40%)]" : "bg-[#eaeaea]"}`}>
+              <div
+                className={`cursor-pointer z-0 rounded-3xl p-3 ${
+                  rating >= rate.score ? "bg-[hsl(85,49%,40%)]" : "bg-[#eaeaea]"
+                }`}
+              >
                 <Star
                   color="white"
                   size="50"
@@ -32,7 +43,13 @@ function StarRating() {
                   className="z-10"
                 />
               </div>
-              <div className={`flex justify-center font-spartan text-[12px] ${rating === rate.score ? "text-[hsl(85,49%,40%)]" : "text-[hsl(0,0%,53%)]"}`}>
+              <div
+                className={`flex justify-center font-spartan text-[12px] ${
+                  rating === rate.score
+                    ? "text-[hsl(85,49%,40%)]"
+                    : "text-[hsl(0,0%,53%)]"
+                }`}
+              >
                 {rate.label}
               </div>
             </div>

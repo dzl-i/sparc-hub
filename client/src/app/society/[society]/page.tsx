@@ -27,7 +27,6 @@ export default function SocietyPage() {
     }, 300); // Wait for animation to complete
   };
 
-
   const Top3tags = ["Engaging", "Friendly", "Epic"];
   const avgStar = 4.5;
   const percentage = ((avgStar / 5) * 100).toFixed(1) + "%";
@@ -50,8 +49,8 @@ export default function SocietyPage() {
         height={0}
         style={{ width: "100%", height: "auto" }}
       />
-      <div className="grid grid-cols-2 w-full px-20 gap-20 font-spartan">
-        <div className="flex flex-col sticky top-0 pt-10 rounded-lg max-h-screen overflow-auto">
+      <div className="grid grid-cols-2 w-full px-20 gap-20 font-spartan overflow-hidden">
+        <div className="flex flex-col sticky top-0 pt-10 rounded-lg max-h-screen">
           <div className="flex flex-row gap-5">
             <div className="flex flex-col gap-3 basis-2/12 items-center">
               <Image
@@ -135,10 +134,10 @@ export default function SocietyPage() {
                 We are the Software Development Society, a place for imaginative
                 and inventive students dedicated to crafting exceptional
                 products for the benefit of the community! Within our society,
-                you&apos;ll find over five teams of enthusiastic students diligently
-                working on a wide array of web apps, ranging from academic
-                degree planners to platforms that display available campus
-                facilities. Our primary goal is to develop solutions that
+                you&apos;ll find over five teams of enthusiastic students
+                diligently working on a wide array of web apps, ranging from
+                academic degree planners to platforms that display available
+                campus facilities. Our primary goal is to develop solutions that
                 enhance the lives of university students in their daily
                 routines.
               </p>
@@ -302,7 +301,7 @@ export default function SocietyPage() {
       {/* Modal */}
       {isOpen && (
         <div
-          className={`fixed inset-0 z-50 overflow-y-scroll transition-opacity duration-300 ${
+          className={`fixed inset-0 z-50 transition-opacity duration-300 ${
             isAnimating ? "bg-opacity-50 bg-black" : "bg-opacity-0"
           }`}
           onClick={handleCloseModal}
@@ -317,7 +316,7 @@ export default function SocietyPage() {
               }`}
             >
               <ReviewSocietyModal
-                name="DevSoc"
+                name="Software Development Society"
                 logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
                 onClose={handleCloseModal}
               />
