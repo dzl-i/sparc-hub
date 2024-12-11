@@ -14,8 +14,12 @@ export default function Home() {
       name: 'Alphabetical (Z-A)',
     },
     {
-      id: 'Rating',
-      name: 'Overall Rating',
+      id: 'Rating(H-L)',
+      name: 'Rating (High to Low)',
+    },
+    {
+      id: 'Rating(L-H)',
+      name: 'Rating (Low to High)',
     },
   ];
 
@@ -47,7 +51,7 @@ export default function Home() {
             <DropdownSelect
               id="sort-societies"
               data={sortSocietiesData}
-              width="240px"
+              width="260px"
               title="Sort by"
             />
           </div>
