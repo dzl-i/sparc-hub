@@ -64,7 +64,7 @@ function Review({
               </p>
             </div>
           </div>
-          <div className="text-sm text-slate-500">
+          <div className="text-sm text-slate-500 font-spartan">
             Reviewed by: {anonymous ? "Anonymous" : username}
           </div>
           {/* Review Content*/}
