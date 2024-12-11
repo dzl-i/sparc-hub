@@ -86,7 +86,7 @@ export default function Profile() {
         </div>
         <h1 className="font-lalezar text-textGreen text-4xl">Your Reviews</h1>
         {reviews && (
-          <div className="grid grid-cols-1 gap-8 my-6">
+          <div className="grid grid-cols-1 gap-5 my-6">
             {fakeReviewDataArray.map((data, index) => (
               <Review
                 key={index}

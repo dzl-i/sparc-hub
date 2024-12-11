@@ -68,7 +68,7 @@ function Review({
             Reviewed by: {anonymous ? "Anonymous" : username}
           </div>
           {/* Review Content*/}
-          <div className="font-spartan leading-tight text-lg">
+          <div className="font-spartan leading-tight text-lg my-2">
             {reviewContent}
           </div>
           {/* Tags */}
