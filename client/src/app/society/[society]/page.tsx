@@ -49,7 +49,7 @@ export default function SocietyPage() {
         height={0}
         style={{ width: "100%", height: "auto" }}
       />
-      <div className="grid grid-cols-2 w-full px-20 gap-20 font-spartan overflow-hidden">
+      <div className="grid grid-cols-2 w-full px-20 gap-20 font-spartan">
         <div className="flex flex-col sticky top-0 pt-10 rounded-lg max-h-screen">
           <div className="flex flex-row gap-5">
             <div className="flex flex-col gap-3 basis-2/12 items-center">
@@ -301,7 +301,7 @@ export default function SocietyPage() {
       {/* Modal */}
       {isOpen && (
         <div
-          className={`fixed inset-0 z-50 transition-opacity duration-300 ${
+          className={`overflow-auto fixed inset-0 z-50 transition-opacity duration-300 ${
             isAnimating ? "bg-opacity-50 bg-black" : "bg-opacity-0"
           }`}
           onClick={handleCloseModal}

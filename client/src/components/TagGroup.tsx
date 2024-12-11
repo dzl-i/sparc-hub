@@ -7,7 +7,6 @@ interface TagGroupProps {
 }
 
 const tagValues = [
-  "Welcoming",
   "Inclusive",
   "Fun",
   "Diverse",
@@ -15,7 +14,7 @@ const tagValues = [
   "Professional",
   "Academic",
   "Supportive",
-  "Careers",
+  "League of Legends",
   "Networking",
   "Creative",
   "Helpful",
@@ -30,13 +29,11 @@ const tagValues = [
   "Spicy",
   "Meme-worthy",
   "Karaoke",
+  "Educational",
   "Chaotic",
   "Free food",
-  "Dancers",
   "Wholesome",
   "Crafty",
-  "Sassy",
-  "Midnight ideas",
   "Costumes",
   "Gamers",
   "💀💀💀",
