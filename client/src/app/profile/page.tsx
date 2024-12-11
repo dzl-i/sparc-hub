@@ -51,7 +51,7 @@ export default function Profile() {
         height={0}
         style={{ width: "100%", height: "auto" }}
       />
-      <div className="flex flex-col gap-3 px-10">
+      <div className="flex flex-col gap-3 px-20">
         <div className="flex items-center gap-4">
           <div>
             <Image
