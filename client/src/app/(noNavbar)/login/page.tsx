@@ -49,7 +49,7 @@ export default function LoginPage() {
   return (
     <>
       <div className="flex h-screen w-screen justify-center items-center">
-        <div className="flex flex-col justify-center w-[400px] h-[400px] bg-[#b7e6a5b0] px-8 rounded-lg">
+        <div className="flex flex-col justify-center w-[400px] h-[400px] bg-[#b7e6a5b0] px-8 rounded-lg shadow-lg border border-slate-500">
           <h1 className="text-center font-lalezar text-textGreen text-4xl mb-2">
             Welcome to SparcHub
           </h1>
