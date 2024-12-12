@@ -39,8 +39,7 @@ export default function LoginPage() {
     setErrorMsg(error);
     if (error) return;
 
-    // Not going to handle password
-    // For demo will just allow people to
+    // send request to backend
     console.log(zid);
     console.log(zpass);
 

@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { createRipple } from "@/components/Button";
 import { useEffect, useState } from "react";
+import { zidChecker, passwordRegex } from "@/constants";
 
 export default function RegisterPage() {
   const [zid, setZid] = useState("");
@@ -9,7 +10,6 @@ export default function RegisterPage() {
   const [confirmZpass, setConfirmZpass] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 
-  const zidChecker = /^z\d{7}$/;
   const router = useRouter();
 
   const handleGoBack = () => {
@@ -39,19 +39,19 @@ export default function RegisterPage() {
       error = "passwords do not match";
     } else if (!zid.match(zidChecker)) {
       error = "Zid incorrect format!";
-    } else if (zpass.length < 10) {
-      error = "zpass cannot be below 10 character";
+    } else if (!zpass.match(passwordRegex)) {
+      error =
+        "password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one digit, and one special character";
     }
 
     setErrorMsg(error);
     if (error) return;
 
-    // Not going to handle password
-    // For demo will just allow people to
+    // send register request
     console.log(zid);
     console.log(zpass);
 
-    handleGoBack();
+    router.push("/login");
   };
 
   return (
