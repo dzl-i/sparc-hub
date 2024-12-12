@@ -6,6 +6,7 @@ import Chip from "@/components/Chip";
 import { createRipple } from "@/components/Button";
 import { SquarePen } from "lucide-react";
 import Review from "@/components/Review";
+import Rating from "@/components/Rating";
 
 export default function SocietyPage() {
   const societyData = {
@@ -134,15 +135,7 @@ export default function SocietyPage() {
                 Software Development Society
               </h1>
               <div className="flex flex-row gap-0.5">
-                <div className="relative inline-block text-slate-400">
-                  <p className="text-2xl">★★★★★</p>
-                  <p
-                    className="text-2xl bg-[#299800] bg-clip-text absolute inset-0 text-transparent"
-                    style={{ width: percentage }}
-                  >
-                    ★★★★★
-                  </p>
-                </div>
+                <Rating percentage={percentage} />
                 <p className="text-sm text-slate-800 px-1 pt-1">
                   {societyData.reviews} Reviews
                 </p>
