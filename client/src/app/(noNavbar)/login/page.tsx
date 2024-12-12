@@ -49,12 +49,12 @@ export default function LoginPage() {
   return (
     <>
       <div className="flex h-screen w-screen justify-center items-center">
-        <div className="w-1/5 bg-[#b7e6a5b0] px-8 pt-6 pb-4 rounded-lg">
+        <div className="flex flex-col justify-center w-[400px] h-[400px] bg-[#b7e6a5b0] px-8 rounded-lg">
           <h1 className="text-center font-lalezar text-textGreen text-4xl mb-2">
             Welcome to SparcHub
           </h1>
           <form className="font-spartan">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-5">
               <div>
                 <label
                   className="block text-lg font-spartan font-bold mb-2"
@@ -90,7 +90,7 @@ export default function LoginPage() {
               {errorMsg && <p className="text-md text-red-800">{errorMsg}</p>}
               <button
                 type="button"
-                className="rounded-lg text-lg bg-lightGreen border border-black h-10 font-semibold relative overflow-hidden"
+                className="rounded-lg text-lg bg-lightGreen border border-black h-10 font-semibold relative overflow-hidden hover:bg-lightGreen hover:brightness-95	"
                 onClick={(e) => {
                   createRipple(e);
                   submit(zid, zpass);
@@ -101,17 +101,17 @@ export default function LoginPage() {
               <div className="flex flex-col gap-1">
                 <button
                   type="button"
-                  className="text-md font-semibold"
+                  className="text-md font-semibold underline"
                   onClick={() => router.push("/register")}
                 >
-                  No account? Register here
+                  No account? Register now!
                 </button>
                 <button
                   type="button"
-                  className="text-md font-semibold"
+                  className="text-md font-semibold underline"
                   onClick={handleGoBack}
                 >
-                  Go back
+                  Back
                 </button>
               </div>
             </div>
