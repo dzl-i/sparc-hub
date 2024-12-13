@@ -1,3 +1,5 @@
+"use client";
+
 import { MdEmail } from "react-icons/md";
 import { FaDiscord, FaFacebook, FaInstagram } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
@@ -8,6 +10,7 @@ import { SquarePen } from "lucide-react";
 import Review from "@/components/Review";
 import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
 import Rating from "@/components/Rating";
+import { useState } from "react";
 
 export default function SocietyPage() {
   const societyData = {
@@ -54,8 +57,6 @@ export default function SocietyPage() {
     },
   ];
 
-  const percentage = ((societyData.avgStar / 5) * 100).toFixed(1) + "%";
-
   const sortReviewsData: DropdownItem[] = [
     {
       id: 'Recent',
@@ -70,6 +71,34 @@ export default function SocietyPage() {
       name: 'Rating (Low to High)',
     },
   ];
+
+  const [sortOption, setSortOption] = useState("Recent");
+
+  const sortedReviews = [...fakeReviewDataArray].sort((a, b) => {
+    if (sortOption === "Recent") {
+      return b.date.getTime() - a.date.getTime();
+    }
+    
+    if (sortOption === "Rating(H-L)") {
+      if (b.starRating === a.starRating) {
+        // If rating the same, sort by most recent
+        return b.date.getTime() - a.date.getTime();
+      }
+      return b.starRating - a.starRating;
+    }
+    
+    if (sortOption === "Rating(L-H)") {
+      if (a.starRating === b.starRating) {
+        // If rating the same, sort by most recent
+        return b.date.getTime() - a.date.getTime();
+      }
+      return a.starRating - b.starRating;
+    }
+    
+    return 0;
+  });
+
+  const percentage = ((societyData.avgStar / 5) * 100).toFixed(1) + "%";
 
   return (
     <>
@@ -186,7 +215,14 @@ export default function SocietyPage() {
               <h1 className="text-4xl font-lalezar">Reviews</h1>
             </div>
             <div className="flex flex-row gap-2 items-center">
-              <DropdownSelect id="sort-reviews" selectedId="Recent" data={sortReviewsData} width="260px" variant="societyPage"></DropdownSelect>
+              <DropdownSelect 
+                id="sort-reviews" 
+                selectedId={sortOption}
+                data={sortReviewsData} 
+                width="260px" 
+                variant="societyPage"
+                onSelect={(id) => setSortOption(id)}
+              />
               <button
                 className="flex gap-1 bg-lightGreen px-4 py-2 rounded-lg relative overflow-hidden text-xl font-spartan"
                 onClick={createRipple}
@@ -196,7 +232,7 @@ export default function SocietyPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-5">
-            {fakeReviewDataArray.map((review, index) => (
+            {sortedReviews.map((review, index) => (
               <Review
                 key={index}
                 anonymous={review.anonymous}

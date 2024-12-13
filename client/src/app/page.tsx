@@ -17,6 +17,7 @@ export default function Home() {
   const [inputText, setInputText] = useState("");
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
   const [visibleSocieties, setVisibleSocieties] = useState(initialSocieties);
+  const [sortOption, setSortOption] = useState("");
 
   const sortSocietiesData: DropdownItem[] = [
     {
@@ -53,6 +54,39 @@ export default function Home() {
       ),
     [inputText]
   );
+
+  const sortedData = [...filteredData].sort((a, b) => {
+    if (sortOption === "A-Z") return a.fullTitle.localeCompare(b.fullTitle);
+    if (sortOption === "Z-A") return b.fullTitle.localeCompare(a.fullTitle);
+    
+    if (sortOption === "Rating(H-L)") {
+      // Ensure societies with no reviews are placed last
+      if (b.numReviews === 0) return -1;
+      if (a.numReviews === 0) return 1;
+
+      // If ratings are equal, then sort by number of reviews
+      if (b.ratingAvg !== a.ratingAvg) {
+        return b.ratingAvg - a.ratingAvg;
+      }
+
+      return b.numReviews - a.numReviews;
+    } 
+
+    if (sortOption === "Rating(L-H)") {
+      // Ensure societies with no reviews are placed last
+      if (a.numReviews === 0) return 1;
+      if (b.numReviews === 0) return -1;
+
+      // If ratings are equal, then sort by number of reviews
+      if (a.ratingAvg !== b.ratingAvg) {
+        return a.ratingAvg - b.ratingAvg;
+      }
+
+      return b.numReviews - a.numReviews;
+    }
+
+    return 0;
+  });
 
   useEffect(() => {
     setVisibleSocieties(initialSocieties);
@@ -118,10 +152,12 @@ export default function Home() {
               data={sortSocietiesData}
               width="260px"
               title="Sort by"
+              selectedId={sortOption}
+              onSelect={(id) => setSortOption(id)}
             />
           </div>
           <div className="grid grid-cols-3 gap-7 1xl:grid-cols-2 landmd:grid-cols-1 mb-6">
-            {filteredData.slice(0, visibleSocieties).map((society, index) => (
+            {sortedData.slice(0, visibleSocieties).map((society, index) => (
               <ReviewCard
                 key={index}
                 avgStar={society.ratingAvg}
