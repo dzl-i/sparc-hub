@@ -87,6 +87,10 @@ export default function Home() {
     setVisibleSocieties(initialSocieties);
   }, [inputText, sortOption]);
 
+  const debouncedLoadMore = debounce(() => {
+    setVisibleSocieties((prev) => prev + addedSocietiesPerLoad);
+  }, loadingDebounce);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries: IntersectionObserverEntry[]) => {
@@ -94,9 +98,7 @@ export default function Home() {
           entries[0].isIntersecting &&
           filteredData.length >= visibleSocieties
         ) {
-          setTimeout(() => {
-            setVisibleSocieties((prev) => prev + addedSocietiesPerLoad);
-          }, loadingDebounce);
+          debouncedLoadMore();
         }
       },
       {

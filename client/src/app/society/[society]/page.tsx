@@ -14,6 +14,7 @@ import Rating from "@/components/Rating";
 import { useEffect, useRef, useState } from "react";
 import Data from "../../../../reviewData.json";
 import { DropdownItem } from "../../../../interface";
+import { debounce } from "lodash";
 
 export default function SocietyPage() {
   const initialReviews = 3;
@@ -69,13 +70,15 @@ export default function SocietyPage() {
     date: new Date(review.date),
   }));
 
+  const debouncedLoadMore = debounce(() => {
+    setVisibleReviews((prev) => prev + addedReviewsPerLoad);
+  }, loadingDebounce);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries: IntersectionObserverEntry[]) => {
         if (entries[0].isIntersecting && Data.length >= visibleReviews) {
-          setTimeout(() => {
-            setVisibleReviews((prev) => prev + addedReviewsPerLoad);
-          }, loadingDebounce);
+          debouncedLoadMore();
         }
       },
       {
