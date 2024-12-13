@@ -10,9 +10,33 @@ import { SquarePen } from "lucide-react";
 import Review from "@/components/Review";
 import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
 import Rating from "@/components/Rating";
-import { useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Data from "../../../../reviewData.json";
 
 export default function SocietyPage() {
+  const sortReviewsData: DropdownItem[] = [
+    {
+      id: "Recent",
+      name: "Most Recent",
+    },
+    {
+      id: "Rating(H-L)",
+      name: "Rating (High to Low)",
+    },
+    {
+      id: "Rating(L-H)",
+      name: "Rating (Low to High)",
+    },
+  ];
+
+  const initialReviews = 3;
+  const addedReviewsPerLoad = 3;
+  const loadingDebounce = 100;
+
+  const loadMoreRef = useRef<HTMLDivElement | null>(null);
+  const [visibleReviews, setVisibleReviews] = useState(initialReviews);
+  const [sortOption, setSortOption] = useState("Recent");
+
   const societyData = {
     avgStar: 4.5,
     topTags: ["Engaging", "Friendly", "Epic"],
@@ -24,79 +48,65 @@ export default function SocietyPage() {
     instagramUrl: "https://instagram.com/aiesecinunsw",
   };
 
-  const fakeReviewDataArray = [
-    {
-      anonymous: true,
-      username: "anonymous_user1",
-      title: "Great Experience!",
-      starRating: 5,
-      date: new Date("2023-10-01"),
-      tags: ["Helpful", "Friendly", "Organized"],
-      reviewContent:
-        "We are the Software Development Society, a place for imaginative and inventive students dedicated to crafting exceptional products for the benefit of the community! Within our society, you'll find over five teams of enthusiastic students diligently working on a wide array of web apps, ranging from academic degree planners to platforms that display available campus facilities. Our primary goal is to develop solutions that enhance the lives of university students in their daily routines.",
-    },
-    {
-      anonymous: false,
-      username: "user2",
-      title: "Amazing Society!",
-      starRating: 4,
-      date: new Date("2023-09-15"),
-      tags: ["Engaging", "Friendly", "Epic"],
-      reviewContent:
-        "This society is amazing! The events are well-organized and the members are very friendly. I highly recommend joining!",
-    },
-    {
-      anonymous: true,
-      username: "anonymous_user3",
-      title: "Good but can improve",
-      starRating: 3,
-      date: new Date("2023-08-20"),
-      tags: ["Helpful", "Community"],
-      reviewContent:
-        "The society is good overall, but there are some areas that can be improved. The events are helpful, but sometimes they feel a bit disorganized.",
-    },
-  ];
+  const data = useMemo(
+    () =>
+      Data.map((review) => ({
+        ...review,
+        date: new Date(review.date),
+      })),
+    []
+  );
 
-  const sortReviewsData: DropdownItem[] = [
-    {
-      id: 'Recent',
-      name: 'Most Recent',
-    },
-    {
-      id: 'Rating(H-L)',
-      name: 'Rating (High to Low)',
-    },
-    {
-      id: 'Rating(L-H)',
-      name: 'Rating (Low to High)',
-    },
-  ];
-
-  const [sortOption, setSortOption] = useState("Recent");
-
-  const sortedReviews = [...fakeReviewDataArray].sort((a, b) => {
-    if (sortOption === "Recent") {
-      return b.date.getTime() - a.date.getTime();
-    }
-    
-    if (sortOption === "Rating(H-L)") {
-      if (b.starRating === a.starRating) {
-        // If rating the same, sort by most recent
-        return b.date.getTime() - a.date.getTime();
+  const handleIntersection = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      if (entries[0].isIntersecting && Data.length >= visibleReviews) {
+        setTimeout(() => {
+          setVisibleReviews((prev) => prev + addedReviewsPerLoad);
+        }, loadingDebounce);
       }
-      return b.starRating - a.starRating;
+    },
+    [loadingDebounce, visibleReviews]
+  );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 1.0,
+    });
+
+    if (loadMoreRef.current) {
+      observer.observe(loadMoreRef.current);
     }
-    
-    if (sortOption === "Rating(L-H)") {
-      if (a.starRating === b.starRating) {
-        // If rating the same, sort by most recent
-        return b.date.getTime() - a.date.getTime();
+    const ref = loadMoreRef.current;
+    return () => {
+      if (ref) {
+        observer.unobserve(ref);
       }
-      return a.starRating - b.starRating;
-    }
-    
-    return 0;
-  });
+    };
+  }, [handleIntersection]);
+
+  const sortedReviews = useMemo(
+    () =>
+      [...data].sort((a, b) => {
+        if (sortOption === "Recent") {
+          return b.date.getTime() - a.date.getTime();
+        } else if (sortOption === "Rating(H-L)") {
+          if (b.starRating === a.starRating) {
+            // If rating the same, sort by most recent
+            return b.date.getTime() - a.date.getTime();
+          }
+          return b.starRating - a.starRating;
+        } else if (sortOption === "Rating(L-H)") {
+          if (a.starRating === b.starRating) {
+            // If rating the same, sort by most recent
+            return b.date.getTime() - a.date.getTime();
+          }
+          return a.starRating - b.starRating;
+        }
+
+        return 0;
+      }),
+    [sortOption]
+  );
 
   const percentage = ((societyData.avgStar / 5) * 100).toFixed(1) + "%";
 
@@ -215,11 +225,11 @@ export default function SocietyPage() {
               <h1 className="text-4xl font-lalezar">Reviews</h1>
             </div>
             <div className="flex flex-row gap-2 items-center">
-              <DropdownSelect 
-                id="sort-reviews" 
+              <DropdownSelect
+                id="sort-reviews"
                 selectedId={sortOption}
-                data={sortReviewsData} 
-                width="260px" 
+                data={sortReviewsData}
+                width="260px"
                 variant="societyPage"
                 onSelect={(id) => setSortOption(id)}
               />
@@ -232,7 +242,7 @@ export default function SocietyPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-5">
-            {sortedReviews.map((review, index) => (
+            {sortedReviews.slice(0, visibleReviews).map((review, index) => (
               <Review
                 key={index}
                 anonymous={review.anonymous}
@@ -245,6 +255,7 @@ export default function SocietyPage() {
               />
             ))}
           </div>
+          <div ref={loadMoreRef} className="h-5"></div>
         </div>
       </div>
     </>
