@@ -46,7 +46,7 @@ export default function RegisterPage() {
   return (
     <>
       <div className="flex h-screen w-screen justify-center items-center">
-        <div className="w-[400px] h-[450px] bg-[#b7e6a5b0] p-10 rounded-lg shadow-2xl">
+        <div className="flex flex-col w-[400px] bg-[#b7e6a5b0] p-9 rounded-lg shadow-2xl">
           <h1 className="text-center font-lalezar text-textGreen text-4xl mb-2">
             Register
           </h1>
