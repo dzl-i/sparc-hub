@@ -15,6 +15,7 @@ export default function Home() {
   const [inputText, setInputText] = useState("");
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
   const [visibleSocieties, setVisibleSocieties] = useState(initialSocieties);
+  const [sortOption, setSortOption] = useState("");
 
   const sortSocietiesData: DropdownItem[] = [
     {
@@ -36,11 +37,33 @@ export default function Home() {
   ];
 
   // Filter societies based on search input
-  const filteredData = data.filter(
+  const searchedData = data.filter(
     (society) =>
       society.fullTitle.toLowerCase().includes(inputText.toLowerCase()) ||
       society.abbreviatedTitle.toLowerCase().includes(inputText.toLowerCase())
   );
+
+  const sortedData = [...searchedData].sort((a, b) => {
+    if (sortOption === "A-Z") return a.fullTitle.localeCompare(b.fullTitle);
+    if (sortOption === "Z-A") return b.fullTitle.localeCompare(a.fullTitle);
+    
+    if (sortOption === "Rating(H-L)") {
+      // Ensure societies with no reviews are placed last
+      if (b.numReviews === 0) return -1;
+      if (a.numReviews === 0) return 1;
+      return b.ratingAvg - a.ratingAvg;
+    } 
+
+
+    if (sortOption === "Rating(L-H)") {
+      // Ensure societies with no reviews are placed last
+      if (a.numReviews === 0) return 1;
+      if (b.numReviews === 0) return -1;
+      return a.ratingAvg - b.ratingAvg;
+    }
+
+    return 0;
+  });
 
   useEffect(() => {
     setVisibleSocieties(initialSocieties);
@@ -93,14 +116,16 @@ export default function Home() {
               data={sortSocietiesData}
               width="260px"
               title="Sort by"
+              selectedId={sortOption}
+              onSelect={(id) => setSortOption(id)}
             />
           </div>
           <div className="grid grid-cols-3 gap-7 1xl:grid-cols-2 landmd:grid-cols-1 mb-6">
-            {filteredData.slice(0, visibleSocieties).map((society) => (
+            {sortedData.slice(0, visibleSocieties).map((society) => (
               <ReviewCard
                 key={1}
-                avgStar={5}
-                reviews={12}
+                avgStar={society.ratingAvg}
+                reviews={society.numReviews}
                 title={society.fullTitle}
                 logo={society.logo}
                 tags={[]}

@@ -15,7 +15,9 @@
             "Social",
             "friends",
             "out of your comfort zone"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 3.68
     },
     {
         "fullTitle": "180 Degrees Consulting",
@@ -32,7 +34,9 @@
             "consulting",
             "non-for-profit",
             "professional development"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 4.22
     },
     {
         "fullTitle": "Accounting Society",
@@ -56,7 +60,9 @@
             "Networking",
             "UNSW",
             "Work"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 4.34
     },
     {
         "fullTitle": "Active Thinkers Society",
@@ -95,7 +101,9 @@
             "understanding",
             "universe",
             "unwinding curiosity"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 0.75
     },
     {
         "fullTitle": "Actuarial Society",
@@ -114,7 +122,9 @@
             "asoc",
             "math1151",
             "math1251"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 4.88
     },
     {
         "fullTitle": "Adventist Students On Campus",
@@ -154,7 +164,9 @@
             "spiritual",
             "study",
             "volunteer"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 4.4
     },
     {
         "fullTitle": "Adventure Society",
@@ -178,7 +190,9 @@
             "skiing",
             "social",
             "sport"
-        ]
+        ],
+        "numReviews": 5,
+        "ratingAvg": 0.25
     },
     {
         "fullTitle": "Advertising & Public Relations Society",
@@ -197,7 +211,9 @@
             "Marketing",
             "Media",
             "Public Relations"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 0.28
     },
     {
         "fullTitle": "Aerospace Society",
@@ -217,7 +233,9 @@
             "American Institute of Aeronautics and Astronautics",
             "Engineering",
             "Space"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 4.03
     },
     {
         "fullTitle": "African Students Union",
@@ -233,7 +251,9 @@
             "African students",
             "Black Students",
             "International Students"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 3.56
     },
     {
         "fullTitle": "AgriCycle",
@@ -249,7 +269,9 @@
             "AgriCycle",
             "Environmental",
             "Humanitarian"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 4.03
     },
     {
         "fullTitle": "AIESEC",
@@ -267,7 +289,9 @@
             "Growth.",
             "Leadership",
             "Self-development"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 3.17
     },
     {
         "fullTitle": "Albury Wodonga Medical Students Society",
@@ -285,7 +309,9 @@
             "rural campus",
             "social",
             "students"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 4.48
     },
     {
         "fullTitle": "Allied Health Society",
@@ -308,7 +334,9 @@
             "physical",
             "physiology",
             "sports"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 0.44
     },
     {
         "fullTitle": "Alt Protein Project",
@@ -326,7 +354,9 @@
             "research",
             "vegan",
             "vegetarian"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 0.27
     },
     {
         "fullTitle": "Alternative Investment Society",
@@ -354,7 +384,9 @@
             "VC",
             "Venture Capital",
             "Workshop"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 1.21
     },
     {
         "fullTitle": "Animal Encounters Society",
@@ -372,7 +404,9 @@
             "shelters",
             "welfare",
             "zoo"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 0.07
     },
     {
         "fullTitle": "AnimeUNSW",
@@ -395,7 +429,9 @@
             "gaming",
             "music",
             "vtubers"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 1.7
     },
     {
         "fullTitle": "Anjali Tamil Society",
@@ -407,7 +443,9 @@
         "websiteUrl": "https://www.anjalitamilsociety.org/",
         "discordUrl": "",
         "instagramUrl": "",
-        "tags": []
+        "tags": [],
+        "numReviews": 2,
+        "ratingAvg": 3.12
     },
     {
         "fullTitle": "Aquatic Life Appreciation Society",
@@ -423,7 +461,9 @@
             "aquatic",
             "fish",
             "sustainability"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 0.23
     },
     {
         "fullTitle": "Arab Society",
@@ -461,7 +501,9 @@
             "UAE",
             "United Arab Emirates",
             "Yemen"
-        ]
+        ],
+        "numReviews": 10,
+        "ratingAvg": 2.66
     },
     {
         "fullTitle": "Architecture Society",
@@ -480,7 +522,9 @@
             "Design",
             "Interior Architecture",
             "Landscape Architecture"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 0.32
     },
     {
         "fullTitle": "Artificial Intelligence Society",
@@ -498,7 +542,9 @@
             "Engineering",
             "Intelligence",
             "Technology"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 4.2
     },
     {
         "fullTitle": "Arts, Design & Architecture Society",
@@ -517,7 +563,9 @@
             "Languages",
             "Media",
             "Social Sciences"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 3.53
     },
     {
         "fullTitle": "ASEANSOC",
@@ -550,7 +598,9 @@
             "UAC",
             "UNSW ASEAN Conference",
             "Vietnam"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 4.06
     },
     {
         "fullTitle": "Assyrian Students' Association",
@@ -568,7 +618,9 @@
             "Chaldean",
             "Mesopotamia",
             "Syriac"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 2.78
     },
     {
         "fullTitle": "Australasian Union of Jewish Students",
@@ -588,7 +640,9 @@
             "of",
             "students",
             "unsw"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 4.31
     },
     {
         "fullTitle": "Australia Awards Scholars Society",
@@ -605,7 +659,9 @@
             "Awards",
             "Cultural",
             "Scholarship. DFAT"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 1.51
     },
     {
         "fullTitle": "Australia China Youth Association",
@@ -626,7 +682,9 @@
             "Multicultural",
             "Networking",
             "Social"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 0.86
     },
     {
         "fullTitle": "Australia-Japan Career Development Society",
@@ -649,7 +707,9 @@
             "Job",
             "Nippon",
             "Syuukatsu"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 3.87
     },
     {
         "fullTitle": "Australian Wall Street at UNSW",
@@ -678,7 +738,9 @@
             "Technical skills",
             "UNSW commerce community",
             "Workshops"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 2.14
     },
     {
         "fullTitle": "Australian Youth Climate Coalition (AYCC) UNSW",
@@ -694,7 +756,9 @@
             "Youth Climate Coalition",
             "climate awareness",
             "climate justice"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 2.85
     },
     {
         "fullTitle": "Avengers Assemble",
@@ -718,7 +782,9 @@
             "superhero",
             "thanos",
             "thor"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 1.66
     },
     {
         "fullTitle": "Aviation Society",
@@ -735,7 +801,9 @@
             "Aviation Flying",
             "Aviation Management",
             "Pilot"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Backyard Sports Society",
@@ -757,7 +825,9 @@
             "Recreation",
             "Social",
             "Sport"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 1.8
     },
     {
         "fullTitle": "Baking Society",
@@ -805,7 +875,9 @@
             "trips",
             "uni",
             "yolo"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 1.87
     },
     {
         "fullTitle": "Barbell Club",
@@ -825,7 +897,9 @@
             "strength",
             "strength training",
             "weightlifting"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 1.73
     },
     {
         "fullTitle": "Basser College",
@@ -837,7 +911,9 @@
         "websiteUrl": "http://www.accommodation.unsw.edu.au/colleges/the-kensington-colleges",
         "discordUrl": "",
         "instagramUrl": "",
-        "tags": []
+        "tags": [],
+        "numReviews": 4,
+        "ratingAvg": 1.18
     },
     {
         "fullTitle": "Beyond The Bounds",
@@ -856,7 +932,9 @@
             "psychology",
             "wellness",
             "youth"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 2.71
     },
     {
         "fullTitle": "Bicycle Society",
@@ -873,7 +951,9 @@
             "bike",
             "fitness",
             "riding"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 2.06
     },
     {
         "fullTitle": "Bioinformatics Society",
@@ -900,7 +980,9 @@
             "computing",
             "engineering",
             "science"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 1.14
     },
     {
         "fullTitle": "Biomedical Engineering Students' Society",
@@ -919,7 +1001,9 @@
             "medical",
             "social",
             "student"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 4.34
     },
     {
         "fullTitle": "BIOSOC",
@@ -940,7 +1024,9 @@
             "ecology",
             "marine biology",
             "zoology"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 2.1
     },
     {
         "fullTitle": "Biotechnology and Biomolecular Science Society",
@@ -968,7 +1054,9 @@
             "networking",
             "research",
             "social"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 0.57
     },
     {
         "fullTitle": "BITSA UNSW",
@@ -985,7 +1073,9 @@
             "Empowerment",
             "Information Systems",
             "Technology"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 4.53
     },
     {
         "fullTitle": "Bluesat",
@@ -1021,7 +1111,9 @@
             "Social",
             "Software",
             "Space"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 1.41
     },
     {
         "fullTitle": "Bonding Society",
@@ -1037,7 +1129,9 @@
             "friends",
             "networking",
             "social"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 3.47
     },
     {
         "fullTitle": "Bookworm Society",
@@ -1065,7 +1159,9 @@
             "sci-fi",
             "story",
             "young adult"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 3.55
     },
     {
         "fullTitle": "Bowls Society",
@@ -1084,7 +1180,9 @@
             "social",
             "sport",
             "tenpin"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 2.52
     },
     {
         "fullTitle": "Boys and Girls Love Society",
@@ -1099,7 +1197,9 @@
         "tags": [
             "Hobby",
             "Social"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 4.55
     },
     {
         "fullTitle": "Built Environment Student Association",
@@ -1130,7 +1230,9 @@
             "interior architecture",
             "landscape",
             "landscape architecture"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 3.47
     },
     {
         "fullTitle": "Business Analytics Society",
@@ -1150,7 +1252,9 @@
             "Business Analytics",
             "Business School",
             "UNSW"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 1.8
     },
     {
         "fullTitle": "Business Society",
@@ -1175,7 +1279,9 @@
             "inspire",
             "unswbsoc",
             "unswbsoc18"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 2.15
     },
     {
         "fullTitle": "BusinessONE UNSW",
@@ -1193,7 +1299,9 @@
             "Consulting",
             "Management",
             "Start up"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 2.15
     },
     {
         "fullTitle": "Calisthenics Society",
@@ -1217,7 +1325,9 @@
             "health",
             "sport",
             "training"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 2.15
     },
     {
         "fullTitle": "Cambodian Society",
@@ -1234,7 +1344,9 @@
             "Culture",
             "Food",
             "Volunteer"
-        ]
+        ],
+        "numReviews": 3,
+        "ratingAvg": 4.74
     },
     {
         "fullTitle": "Campus Runners",
@@ -1268,7 +1380,9 @@
             "Talking",
             "Trail Running",
             "Trails"
-        ]
+        ],
+        "numReviews": 5,
+        "ratingAvg": 2.18
     },
     {
         "fullTitle": "Cantonese Christian Fellowship",
@@ -1285,7 +1399,9 @@
             "Chinese",
             "Christian",
             "Fellowship"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 1.97
     },
     {
         "fullTitle": "Car Society",
@@ -1315,7 +1431,9 @@
             "unswcarsoc",
             "unswcs",
             "vehicle"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 0.76
     },
     {
         "fullTitle": "Cat Appreciation Society",
@@ -1331,7 +1449,9 @@
             "animals",
             "cat",
             "cats"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 0.2
     },
     {
         "fullTitle": "Catholic Society",
@@ -1349,7 +1469,9 @@
             "Christian",
             "Jesus",
             "Mass"
-        ]
+        ],
+        "numReviews": 10,
+        "ratingAvg": 0.68
     },
     {
         "fullTitle": "Cheer and Dance Society",
@@ -1377,7 +1499,9 @@
             "sport",
             "tricks",
             "tumbling"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 4.12
     },
     {
         "fullTitle": "Chemical Engineering Research Society",
@@ -1395,7 +1519,9 @@
             "Postgraduate",
             "Research",
             "Research Society"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 2.13
     },
     {
         "fullTitle": "Chemical Engineering Undergraduate Society",
@@ -1420,7 +1546,9 @@
             "ICUS",
             "Industrial Chemistry",
             "Undergraduate"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 1.16
     },
     {
         "fullTitle": "Chess Club",
@@ -1438,7 +1566,9 @@
             "fun",
             "games",
             "unsw"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 4.37
     },
     {
         "fullTitle": "Chinese Creative Arts Club",
@@ -1450,7 +1580,9 @@
         "websiteUrl": "",
         "discordUrl": "",
         "instagramUrl": "",
-        "tags": []
+        "tags": [],
+        "numReviews": 17,
+        "ratingAvg": 3.08
     },
     {
         "fullTitle": "Chinese Cuisine Society",
@@ -1467,7 +1599,9 @@
             "cooking",
             "eating",
             "food"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 1.56
     },
     {
         "fullTitle": "Chinese Debating Club",
@@ -1488,7 +1622,9 @@
             "debating competition",
             "mahjong",
             "new membership debating competition"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 1.41
     },
     {
         "fullTitle": "Chinese Musician Society",
@@ -1507,7 +1643,9 @@
             "performance",
             "social",
             "traditional chinese musical instruments"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 3.18
     },
     {
         "fullTitle": "Chinese Student Association",
@@ -1523,7 +1661,9 @@
             "CSA",
             "China",
             "Chinese"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 0.56
     },
     {
         "fullTitle": "Chinmaya Yuva Kendra (CHYK)",
@@ -1557,7 +1697,9 @@
             "success",
             "truth",
             "upliftment"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 1.45
     },
     {
         "fullTitle": "Christian Union",
@@ -1576,7 +1718,9 @@
             "Jesus",
             "Religion",
             "Religious"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 0.5
     },
     {
         "fullTitle": "CIRCLE Engineering",
@@ -1595,7 +1739,9 @@
             "Humanitarian",
             "International",
             "Renewable"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 2.95
     },
     {
         "fullTitle": "Civil & Environmental Engineering Research Student Association",
@@ -1612,7 +1758,9 @@
             "Environmental engineering",
             "Postgrads",
             "Research students"
-        ]
+        ],
+        "numReviews": 10,
+        "ratingAvg": 0.37
     },
     {
         "fullTitle": "Civil and Environmental Engineering Society",
@@ -1633,7 +1781,9 @@
             "industry",
             "professional",
             "social"
-        ]
+        ],
+        "numReviews": 5,
+        "ratingAvg": 2.65
     },
     {
         "fullTitle": "Civil and Environmental Postgraduate Coursework Association",
@@ -1650,7 +1800,9 @@
             "Coursework",
             "Environmental",
             "Postgraduate"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 1.44
     },
     {
         "fullTitle": "Clash of Clans Society",
@@ -1667,7 +1819,9 @@
             "Clash",
             "MOBA",
             "mobile"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 0.52
     },
     {
         "fullTitle": "Clown Society",
@@ -1686,7 +1840,9 @@
             "ha ha",
             "improv",
             "jokes"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 0.2
     },
     {
         "fullTitle": "Co-op Society",
@@ -1705,7 +1861,9 @@
             "Coop",
             "coop",
             "coopsociety"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 3.94
     },
     {
         "fullTitle": "Coffs Harbour Undergraduate Medical Society",
@@ -1721,7 +1879,9 @@
             "Coffs Harbour",
             "Medical",
             "Undergraduate"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 2.3
     },
     {
         "fullTitle": "Colombo House Residents Club",
@@ -1747,7 +1907,9 @@
             "International",
             "Residential",
             "Tricol"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 3.47
     },
     {
         "fullTitle": "Commerce (International) Society",
@@ -1770,7 +1932,9 @@
             "Social",
             "Travel",
             "Workshops"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 4.76
     },
     {
         "fullTitle": "Compassion UNSW",
@@ -1796,7 +1960,9 @@
             "Social",
             "Sponsorship",
             "Volunteering"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 2.01
     },
     {
         "fullTitle": "CompClub",
@@ -1812,7 +1978,9 @@
             "computer science",
             "programming",
             "technology"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 2.51
     },
     {
         "fullTitle": "Competitive Programming and Mathematics Society",
@@ -1840,7 +2008,9 @@
             "programming",
             "society",
             "solving"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 0.56
     },
     {
         "fullTitle": "Computer Science and Engineering Revue Society",
@@ -1865,7 +2035,9 @@
             "revue",
             "show",
             "singing"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 3.75
     },
     {
         "fullTitle": "Coptic Society",
@@ -1881,7 +2053,9 @@
             "Christian",
             "Coptic",
             "Focus"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 0.04
     },
     {
         "fullTitle": "Craft Society",
@@ -1900,7 +2074,9 @@
             "lip balm making",
             "needle felting",
             "painting"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 2.93
     },
     {
         "fullTitle": "CREATE NSW Inc.",
@@ -1931,7 +2107,9 @@
             "surveying",
             "warman",
             "workshop"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 1.85
     },
     {
         "fullTitle": "Creston College Student Society",
@@ -1948,7 +2126,9 @@
             "Creston College",
             "Residence",
             "Residential"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 3.82
     },
     {
         "fullTitle": "Criminology Society",
@@ -1968,7 +2148,9 @@
             "Networking",
             "Professional Development",
             "Social"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 0.13
     },
     {
         "fullTitle": "CSE Society",
@@ -1990,7 +2172,9 @@
             "programming",
             "tech",
             "technology"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 0.79
     },
     {
         "fullTitle": "CueSports Society",
@@ -2020,7 +2204,9 @@
             "social",
             "sport",
             "sports"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 2.69
     },
     {
         "fullTitle": "Cultures of Europe Society",
@@ -2049,7 +2235,9 @@
             "Spain",
             "Sweden",
             "Switzerland"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 0.48
     },
     {
         "fullTitle": "D2MG Hip Hop Society",
@@ -2067,7 +2255,9 @@
             "Graffiti",
             "Hip Hop",
             "MC"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Daily Delight Disrupt",
@@ -2084,7 +2274,9 @@
             "climate crisis",
             "ecological health",
             "environmental awareness"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 0.59
     },
     {
         "fullTitle": "Dart Sports Society",
@@ -2096,7 +2288,9 @@
         "websiteUrl": "",
         "discordUrl": "https://discord.gg/CWnTGNZzKU",
         "instagramUrl": "",
-        "tags": []
+        "tags": [],
+        "numReviews": 11,
+        "ratingAvg": 4.1
     },
     {
         "fullTitle": "Data Science Society",
@@ -2112,7 +2306,9 @@
             "AI",
             "Artificial Intelligence; Machine Learning; ML; Business; Math; Analytics; Data Analytics",
             "Data; Science; Data Science"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 4.38
     },
     {
         "fullTitle": "Debating Society",
@@ -2127,7 +2323,9 @@
         "tags": [
             "Debating",
             "Public Speaking"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 4.02
     },
     {
         "fullTitle": "Design Society",
@@ -2139,7 +2337,9 @@
         "websiteUrl": "https://www.unswdesignsociety.com/",
         "discordUrl": "",
         "instagramUrl": "",
-        "tags": []
+        "tags": [],
+        "numReviews": 2,
+        "ratingAvg": 4.7
     },
     {
         "fullTitle": "Dessert and Street Food Society",
@@ -2159,7 +2359,9 @@
             "Food",
             "Icecream",
             "Street Food"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 4.78
     },
     {
         "fullTitle": "Digital Society UNSW",
@@ -2178,7 +2380,9 @@
             "Networking",
             "Social",
             "UX/UI Design"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 4.88
     },
     {
         "fullTitle": "Disney Society",
@@ -2205,7 +2409,9 @@
             "screenings",
             "star wars",
             "trivia"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 4.87
     },
     {
         "fullTitle": "Dodgeball UNSW",
@@ -2222,7 +2428,9 @@
             "dodgeball",
             "fun",
             "sports"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 3.07
     },
     {
         "fullTitle": "Dog Appreciation Society",
@@ -2244,7 +2452,9 @@
             "social",
             "volunteering",
             "walks"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 3.27
     },
     {
         "fullTitle": "Drawing Society",
@@ -2262,7 +2472,9 @@
             "Hobby",
             "Painting",
             "Sketching"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 3.73
     },
     {
         "fullTitle": "Drought Resistance in Uganda",
@@ -2282,7 +2494,9 @@
             "Project",
             "Sustainable",
             "Uganda"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 4.85
     },
     {
         "fullTitle": "Economics Society",
@@ -2308,7 +2522,9 @@
             "Society",
             "UNSW",
             "Volunteering"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 3.77
     },
     {
         "fullTitle": "Education Society",
@@ -2348,7 +2564,9 @@
             "Workshops",
             "unsw edsoc",
             "unswedsoc"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 1.55
     },
     {
         "fullTitle": "Effective Altruism UNSW",
@@ -2367,7 +2585,9 @@
             "ethics",
             "philanthropy",
             "reason"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 1.33
     },
     {
         "fullTitle": "Elderly Technology Assistance Club",
@@ -2383,7 +2603,9 @@
             "elderly assistance",
             "elderly technology",
             "tech support"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 3.35
     },
     {
         "fullTitle": "Electrical Engineering & Telecommunications Society",
@@ -2407,7 +2629,9 @@
             "hash brown",
             "industry",
             "social"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 3.54
     },
     {
         "fullTitle": "Enactus UNSW",
@@ -2426,7 +2650,9 @@
             "Multifaculty",
             "Social Impact",
             "Start-Up"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 2.55
     },
     {
         "fullTitle": "Engineers Without Borders",
@@ -2443,7 +2669,9 @@
             "engineering",
             "global",
             "sustainability"
-        ]
+        ],
+        "numReviews": 5,
+        "ratingAvg": 0.56
     },
     {
         "fullTitle": "Enrich Mandarin Bible Study",
@@ -2460,7 +2688,9 @@
             "Christian",
             "God",
             "Mandarin"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 1.38
     },
     {
         "fullTitle": "Entrepreneurs' Society",
@@ -2486,7 +2716,9 @@
             "UNSW Entrepreneurs Society",
             "UNSW Entrepreneurs' Society",
             "success"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 3.2
     },
     {
         "fullTitle": "Environmental Management Club",
@@ -2504,7 +2736,9 @@
             "graduate",
             "management",
             "postgraduate"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 4.57
     },
     {
         "fullTitle": "ESports Club",
@@ -2541,7 +2775,9 @@
             "tft",
             "tournaments",
             "valorant"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 2.78
     },
     {
         "fullTitle": "Exchange Society",
@@ -2557,7 +2793,9 @@
             "exchange",
             "students",
             "travel"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 4.4
     },
     {
         "fullTitle": "Exotic Beer Society",
@@ -2583,7 +2821,9 @@
             "more beer",
             "pub crawl",
             "tastings"
-        ]
+        ],
+        "numReviews": 10,
+        "ratingAvg": 2.96
     },
     {
         "fullTitle": "Faculty of Engineering Student Society",
@@ -2602,7 +2842,9 @@
             "Networking",
             "Programs",
             "Society"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 0.24
     },
     {
         "fullTitle": "Fashion and Beauty Society",
@@ -2621,7 +2863,9 @@
             "kbeauty",
             "makeup",
             "skincare"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 1.56
     },
     {
         "fullTitle": "Feminists for Free Speech & Freer Drinks Society",
@@ -2640,7 +2884,9 @@
             "gender inclusive",
             "social debates",
             "social events"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Fig Tree Hall College",
@@ -2673,7 +2919,9 @@
             "Study Abroad",
             "Undergraduate Students",
             "Units"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 3.75
     },
     {
         "fullTitle": "Fighting Games Society UNSW",
@@ -2691,7 +2939,9 @@
             "guilty gear",
             "street fighter",
             "tekken"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 1.19
     },
     {
         "fullTitle": "Filipino Students' Society",
@@ -2709,7 +2959,9 @@
             "Filo",
             "Filosoc",
             "International"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 3.9
     },
     {
         "fullTitle": "Film Production Society",
@@ -2728,7 +2980,9 @@
             "movies",
             "production",
             "short film"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 4.34
     },
     {
         "fullTitle": "Film Society",
@@ -2748,7 +3002,9 @@
             "Picture",
             "Screenings",
             "Theatre"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 4.52
     },
     {
         "fullTitle": "Finance and Banking Society",
@@ -2764,7 +3020,9 @@
             "Banking",
             "Business",
             "Finance"
-        ]
+        ],
+        "numReviews": 3,
+        "ratingAvg": 1.32
     },
     {
         "fullTitle": "Financial Management Association of Australia",
@@ -2776,7 +3034,9 @@
         "websiteUrl": "http://www.fmaa.com.au",
         "discordUrl": "",
         "instagramUrl": "",
-        "tags": []
+        "tags": [],
+        "numReviews": 13,
+        "ratingAvg": 0.54
     },
     {
         "fullTitle": "Financial Planning Student Group",
@@ -2792,7 +3052,9 @@
             "Business School",
             "Business Society",
             "Financial Planning"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 2.44
     },
     {
         "fullTitle": "Financial Technology Society",
@@ -2815,7 +3077,9 @@
             "Tech",
             "Technology",
             "UNSW"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 2.85
     },
     {
         "fullTitle": "Fine Arts Society",
@@ -2832,7 +3096,9 @@
             "creative",
             "fine arts",
             "paddington campus"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 2.4
     },
     {
         "fullTitle": "Fine Dining Society",
@@ -2849,7 +3115,9 @@
             "fine",
             "food",
             "social"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 1.47
     },
     {
         "fullTitle": "First Nations Engineering and Science Society",
@@ -2861,7 +3129,9 @@
         "websiteUrl": "",
         "discordUrl": "",
         "instagramUrl": "",
-        "tags": []
+        "tags": [],
+        "numReviews": 13,
+        "ratingAvg": 3.2
     },
     {
         "fullTitle": "Five Nights at Freddy's Society",
@@ -2891,7 +3161,9 @@
             "Pizza",
             "Pizzeria",
             "Security"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 1.46
     },
     {
         "fullTitle": "Food For All Association",
@@ -2911,7 +3183,9 @@
             "free food",
             "giving",
             "not-for-profit"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 0.96
     },
     {
         "fullTitle": "Food Lovers Society",
@@ -2925,7 +3199,9 @@
         "instagramUrl": "",
         "tags": [
             "Food"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 0.96
     },
     {
         "fullTitle": "Food Science Association",
@@ -2947,7 +3223,9 @@
             "nutrition",
             "science",
             "technology"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 2.8
     },
     {
         "fullTitle": "Foursquare Society",
@@ -2970,7 +3248,9 @@
             "hobby",
             "school",
             "sport"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 0.22
     },
     {
         "fullTitle": "Furry Society",
@@ -2982,7 +3262,9 @@
         "websiteUrl": "",
         "discordUrl": "",
         "instagramUrl": "",
-        "tags": []
+        "tags": [],
+        "numReviews": 15,
+        "ratingAvg": 0.36
     },
     {
         "fullTitle": "Game Development Society",
@@ -3019,7 +3301,9 @@
             "sound",
             "workshop",
             "yummy"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 3.5
     },
     {
         "fullTitle": "General Practice Students' Network UNSW",
@@ -3036,7 +3320,9 @@
             "gp",
             "medical",
             "medicine"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 2.63
     },
     {
         "fullTitle": "GEOSoc",
@@ -3054,7 +3340,9 @@
             "Geoscience",
             "Palaeontology",
             "Science"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 2.59
     },
     {
         "fullTitle": "GeoStrategic Policy Society",
@@ -3072,7 +3360,9 @@
             "geostrategic",
             "international affairs",
             "policy"
-        ]
+        ],
+        "numReviews": 3,
+        "ratingAvg": 0.46
     },
     {
         "fullTitle": "Giving Sight",
@@ -3095,7 +3385,9 @@
             "vision science",
             "volunteer",
             "volunteering"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 4.14
     },
     {
         "fullTitle": "Gliding Society UNSW",
@@ -3117,7 +3409,9 @@
             "planes",
             "soaring",
             "social"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 4.04
     },
     {
         "fullTitle": "Goldstein College",
@@ -3135,7 +3429,9 @@
             "Goldstein",
             "Residential",
             "The Best College"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 1.21
     },
     {
         "fullTitle": "Greens on Campus UNSW",
@@ -3152,7 +3448,9 @@
             "Justice",
             "Political",
             "Sustainability"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 4.94
     },
     {
         "fullTitle": "Hellenic Society",
@@ -3177,7 +3475,9 @@
             "Music",
             "Party",
             "Social Activities"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 1.69
     },
     {
         "fullTitle": "Hillsong Campus Club",
@@ -3196,7 +3496,9 @@
             "church",
             "community",
             "friends"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 3.0
     },
     {
         "fullTitle": "Hindu Society",
@@ -3214,7 +3516,9 @@
             "Indian",
             "Religious",
             "Spiritual"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 1.7
     },
     {
         "fullTitle": "History Society",
@@ -3229,7 +3533,9 @@
         "tags": [
             "History",
             "historical"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 0.87
     },
     {
         "fullTitle": "Hong Kong and Macau Medical Society",
@@ -3246,7 +3552,9 @@
             "hong kong",
             "macau",
             "medical"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 3.26
     },
     {
         "fullTitle": "Hong Kong Student Association",
@@ -3265,7 +3573,9 @@
             "Hong Kong Student Association",
             "Leisure",
             "Social"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 4.93
     },
     {
         "fullTitle": "Hoyoverse Society",
@@ -3287,7 +3597,9 @@
             "Mobile",
             "Social",
             "Technology"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 0.55
     },
     {
         "fullTitle": "Human Factors Club",
@@ -3308,7 +3620,9 @@
             "system design",
             "transportation",
             "work safety and health"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 4.03
     },
     {
         "fullTitle": "Hustle Hub",
@@ -3326,7 +3640,9 @@
             "inclusive",
             "socialising",
             "supportive"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "I Heart UNSW",
@@ -3369,7 +3685,9 @@
             "start",
             "summer break",
             "white"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 1.36
     },
     {
         "fullTitle": "Ice Skating Society",
@@ -3383,7 +3701,9 @@
         "instagramUrl": "",
         "tags": [
             "ice skating"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 2.18
     },
     {
         "fullTitle": "Indian Society",
@@ -3405,7 +3725,9 @@
             "indian society",
             "music",
             "religion"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 0.53
     },
     {
         "fullTitle": "Indonesian Students Association",
@@ -3425,7 +3747,9 @@
             "PPIA",
             "PPIA UNSW",
             "UNSW"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 4.03
     },
     {
         "fullTitle": "Indoor Cricket Society",
@@ -3441,7 +3765,9 @@
             "cricket",
             "indoor cricket",
             "indoor sports"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Innovative Trends Creation Society",
@@ -3475,7 +3801,9 @@
             "Projects",
             "Start-ups",
             "Technology"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 2.99
     },
     {
         "fullTitle": "International Entry Education",
@@ -3505,7 +3833,9 @@
             "Study",
             "Thailand",
             "Tutoring"
-        ]
+        ],
+        "numReviews": 3,
+        "ratingAvg": 4.79
     },
     {
         "fullTitle": "International House Residents' Society",
@@ -3522,7 +3852,9 @@
             "College",
             "International House",
             "International Understanding"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 2.57
     },
     {
         "fullTitle": "International Law Students Society",
@@ -3550,7 +3882,9 @@
             "Social",
             "Study",
             "Taiwan"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 2.37
     },
     {
         "fullTitle": "Investing for Charity",
@@ -3578,7 +3912,9 @@
             "Social",
             "Subcommittee",
             "Workshops"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 3.1
     },
     {
         "fullTitle": "Iranian Student Association",
@@ -3605,7 +3941,9 @@
             "Yalda",
             "economics",
             "politics"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 2.35
     },
     {
         "fullTitle": "Jazz Appreciation Society",
@@ -3622,7 +3960,9 @@
             "jazz",
             "music",
             "scat"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Journalism & Communication Society",
@@ -3637,7 +3977,9 @@
         "tags": [
             "communications",
             "journalism"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Karaoke Society",
@@ -3655,7 +3997,9 @@
             "music",
             "singing",
             "social"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 0.93
     },
     {
         "fullTitle": "Knitting and Crochet Society",
@@ -3676,7 +4020,9 @@
             "knitting",
             "scarf",
             "yarn"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 4.76
     },
     {
         "fullTitle": "Korean Students Association",
@@ -3694,7 +4040,9 @@
             "korea",
             "korean",
             "student association"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 2.3
     },
     {
         "fullTitle": "KOSTA",
@@ -3712,7 +4060,9 @@
             "Church",
             "Isaiah 60:1",
             "Korean"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 4.64
     },
     {
         "fullTitle": "Kpop Society",
@@ -3735,7 +4085,9 @@
             "Society",
             "UNSW",
             "Workshops"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 3.61
     },
     {
         "fullTitle": "Labor Club",
@@ -3757,7 +4109,9 @@
             "politics",
             "progressive",
             "union"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 0.95
     },
     {
         "fullTitle": "LARP Society",
@@ -3786,7 +4140,9 @@
             "Role Play",
             "Script",
             "Tabletop"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 1.79
     },
     {
         "fullTitle": "Latin Dance Society",
@@ -3806,7 +4162,9 @@
             "Latin",
             "Salsa",
             "West Coast Swing"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 0.25
     },
     {
         "fullTitle": "Law Revue Society",
@@ -3829,7 +4187,9 @@
             "sketch show",
             "skits",
             "socials"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 2.77
     },
     {
         "fullTitle": "Law Society",
@@ -3845,7 +4205,9 @@
             "Law",
             "Law Society",
             "LawSoc"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 3.87
     },
     {
         "fullTitle": "Lebanese Society",
@@ -3865,7 +4227,9 @@
             "Lebnan",
             "Middle East",
             "Phoenician"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 2.7
     },
     {
         "fullTitle": "Legends of the Three Kingdoms",
@@ -3885,7 +4249,9 @@
             "lotk",
             "san guo sha",
             "social"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 3.75
     },
     {
         "fullTitle": "Liberal Club",
@@ -3907,7 +4273,9 @@
             "politics",
             "social",
             "young liberal"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 0.38
     },
     {
         "fullTitle": "Linux Society",
@@ -3926,7 +4294,9 @@
             "operating",
             "software",
             "system"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 0.95
     },
     {
         "fullTitle": "Little Sister, Big Sister",
@@ -3947,7 +4317,9 @@
             "respect",
             "supporting",
             "transparency"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 1.69
     },
     {
         "fullTitle": "lo-fi society",
@@ -3959,7 +4331,9 @@
         "websiteUrl": "",
         "discordUrl": "https://discord.gg/NAhCu4T",
         "instagramUrl": "",
-        "tags": []
+        "tags": [],
+        "numReviews": 18,
+        "ratingAvg": 2.79
     },
     {
         "fullTitle": "Malayalee Society",
@@ -3973,7 +4347,9 @@
         "instagramUrl": "",
         "tags": [
             "Malayalee"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 4.8
     },
     {
         "fullTitle": "Malaysian Students Organisation",
@@ -3988,7 +4364,9 @@
         "tags": [
             "Malaysia",
             "Malaysian"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 4.22
     },
     {
         "fullTitle": "Management Society",
@@ -4009,7 +4387,9 @@
             "Social",
             "Society",
             "UNSW"
-        ]
+        ],
+        "numReviews": 10,
+        "ratingAvg": 1.86
     },
     {
         "fullTitle": "Marketing Analytics Society",
@@ -4028,7 +4408,9 @@
             "marketing analytics",
             "postgraduate",
             "undergraduate"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 0.26
     },
     {
         "fullTitle": "Marketing Society",
@@ -4065,7 +4447,9 @@
             "students",
             "team",
             "university"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 4.95
     },
     {
         "fullTitle": "Materials Science and Engineering Postgraduate Society",
@@ -4083,7 +4467,9 @@
             "science",
             "social",
             "unsw"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 1.89
     },
     {
         "fullTitle": "Materials Science and Engineering Society",
@@ -4099,7 +4485,9 @@
             "Engineering",
             "Materials Science",
             "Science"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 1.45
     },
     {
         "fullTitle": "Mathematics Society",
@@ -4113,7 +4501,9 @@
         "instagramUrl": "",
         "tags": [
             "Mathematics"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 3.19
     },
     {
         "fullTitle": "Mature Age Students\u2019 Society",
@@ -4128,7 +4518,9 @@
         "tags": [
             "Mature aged",
             "postgraduate student"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 2.79
     },
     {
         "fullTitle": "Mechanical Keyboards Society",
@@ -4150,7 +4542,9 @@
             "tech",
             "technology",
             "typing"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 4.56
     },
     {
         "fullTitle": "Mechatronics Society",
@@ -4170,7 +4564,9 @@
             "MicroMouse",
             "Robots",
             "Sumobots"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Med Revue Society",
@@ -4195,7 +4591,9 @@
             "show",
             "singing",
             "theatre"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 1.08
     },
     {
         "fullTitle": "Medical Outreachers Australia",
@@ -4221,7 +4619,9 @@
             "outreach",
             "rural",
             "volunteering"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 1.01
     },
     {
         "fullTitle": "Medical Science Society",
@@ -4238,7 +4638,9 @@
             "Biotechnology",
             "Medical science",
             "Science"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 4.89
     },
     {
         "fullTitle": "Medical Society",
@@ -4256,7 +4658,9 @@
             "Medic",
             "Medical",
             "Medicine"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 0.88
     },
     {
         "fullTitle": "Medical Students' Aid Project",
@@ -4273,7 +4677,9 @@
             "charity",
             "global health",
             "health"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 0.86
     },
     {
         "fullTitle": "Mending Broken Hearts",
@@ -4287,7 +4693,9 @@
         "instagramUrl": "",
         "tags": [
             "Mending Broken Hearts"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 3.79
     },
     {
         "fullTitle": "Minecraft Society",
@@ -4303,7 +4711,9 @@
             "Build",
             "Minecraft",
             "Server"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 3.28
     },
     {
         "fullTitle": "Minerals and Energy Resources Engineering Society",
@@ -4335,7 +4745,9 @@
             "petroleum",
             "resources",
             "social"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 2.65
     },
     {
         "fullTitle": "Ministry of Dance Society",
@@ -4364,7 +4776,9 @@
             "Urban",
             "Waacking",
             "Whacking"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 3.19
     },
     {
         "fullTitle": "Motorcycle Society",
@@ -4384,7 +4798,9 @@
             "ride day",
             "track",
             "track day"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 3.91
     },
     {
         "fullTitle": "Motorsport Society",
@@ -4406,7 +4822,9 @@
             "Moto GP",
             "Motorsport",
             "V8"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 3.28
     },
     {
         "fullTitle": "Music Society of UNSW",
@@ -4434,7 +4852,9 @@
             "singing",
             "songs",
             "sound"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 0.87
     },
     {
         "fullTitle": "Musical Theatre Society",
@@ -4453,7 +4873,9 @@
             "performance",
             "song",
             "theatre"
-        ]
+        ],
+        "numReviews": 5,
+        "ratingAvg": 0.74
     },
     {
         "fullTitle": "Muslim Students Association",
@@ -4472,7 +4894,9 @@
             "prayer",
             "religion",
             "spiritual"
-        ]
+        ],
+        "numReviews": 10,
+        "ratingAvg": 4.7
     },
     {
         "fullTitle": "Myanmar Students' Society",
@@ -4489,7 +4913,9 @@
             "Culture",
             "Southeast Asia",
             "Student Organisation"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 3.72
     },
     {
         "fullTitle": "Neuroscience Society",
@@ -4512,7 +4938,9 @@
             "research",
             "science",
             "science major"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 4.13
     },
     {
         "fullTitle": "New College Student Association",
@@ -4526,7 +4954,9 @@
         "instagramUrl": "",
         "tags": [
             "New College"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 3.81
     },
     {
         "fullTitle": "New South Wales Ski & Board Club",
@@ -4546,7 +4976,9 @@
             "Social",
             "Sport",
             "Travel"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 4.12
     },
     {
         "fullTitle": "New South Wales Uni Theatrical Society",
@@ -4572,7 +5004,9 @@
             "review",
             "stage",
             "theatrical"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 2.73
     },
     {
         "fullTitle": "Non-Alcoholic Beer Society",
@@ -4588,7 +5022,9 @@
             "alcohol-free",
             "non-alcoholic",
             "sober"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 2.16
     },
     {
         "fullTitle": "Ocean Swim Society",
@@ -4606,7 +5042,9 @@
             "ocean",
             "swim",
             "swimming"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 1.03
     },
     {
         "fullTitle": "One Piece Society",
@@ -4644,7 +5082,9 @@
             "Straw Hat",
             "Treasure",
             "Trending"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 1.27
     },
     {
         "fullTitle": "Organisation of Planning Students",
@@ -4671,7 +5111,9 @@
             "Town",
             "Town Planning",
             "Urban"
-        ]
+        ],
+        "numReviews": 3,
+        "ratingAvg": 1.86
     },
     {
         "fullTitle": "Overseas Christian Fellowship",
@@ -4692,7 +5134,9 @@
             "Overseas",
             "Religious",
             "Social"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 3.22
     },
     {
         "fullTitle": "Pasta Society",
@@ -4711,7 +5155,9 @@
             "pasta enthusiasts",
             "penne",
             "spaghetti"
-        ]
+        ],
+        "numReviews": 5,
+        "ratingAvg": 3.92
     },
     {
         "fullTitle": "PCSoc: Computers and Tech",
@@ -4747,7 +5193,9 @@
             "VR",
             "Video Games",
             "Virtual Reality"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 2.42
     },
     {
         "fullTitle": "Personal Finance Club",
@@ -4761,7 +5209,9 @@
         "instagramUrl": "",
         "tags": [
             "Finance\nPersonal Finance\nMoney"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 1.29
     },
     {
         "fullTitle": "Pet Society",
@@ -4779,7 +5229,9 @@
             "friends",
             "life partners",
             "pets"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 0.04
     },
     {
         "fullTitle": "Pharmacy Students\u2019 Society",
@@ -4804,7 +5256,9 @@
             "Pharma",
             "Pharmacist",
             "Pharmacy"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Philip Baxter College",
@@ -4821,7 +5275,9 @@
             "College",
             "TKC",
             "The Kensington Colleges"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 3.25
     },
     {
         "fullTitle": "Philosophy Society",
@@ -4842,7 +5298,9 @@
             "Politics",
             "Social",
             "Society"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 4.51
     },
     {
         "fullTitle": "Physics Society",
@@ -4862,7 +5320,9 @@
             "Physics",
             "Science",
             "Social"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 3.37
     },
     {
         "fullTitle": "Physiotherapy & Exercise Physiology Society",
@@ -4878,7 +5338,9 @@
             "academic",
             "exercise",
             "physiology"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 3.28
     },
     {
         "fullTitle": "Piano Society UNSW",
@@ -4902,7 +5364,9 @@
             "recitals",
             "rock",
             "social"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 3.33
     },
     {
         "fullTitle": "Pickle Ball Society",
@@ -4918,7 +5382,9 @@
             "Pickle ball",
             "Pickleball",
             "Social sport"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 1.8
     },
     {
         "fullTitle": "Plastic Model Kit Society",
@@ -4945,7 +5411,9 @@
             "plastic",
             "robots",
             "tanks"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 4.46
     },
     {
         "fullTitle": "Pokemon Society",
@@ -4963,7 +5431,9 @@
             "Pokemon",
             "TCG",
             "UNSW"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 3.42
     },
     {
         "fullTitle": "Poker Society UNSW",
@@ -4985,7 +5455,9 @@
             "poker",
             "skill",
             "social"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 2.33
     },
     {
         "fullTitle": "Politics, Philosophy and Economics Society",
@@ -5002,7 +5474,9 @@
             "PPE",
             "Philosophy",
             "Politics"
-        ]
+        ],
+        "numReviews": 5,
+        "ratingAvg": 2.25
     },
     {
         "fullTitle": "Port Medical Society",
@@ -5019,7 +5493,9 @@
             "PMS",
             "Port Macquarie",
             "Rural clinical school"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 1.56
     },
     {
         "fullTitle": "Postgraduate Business Society",
@@ -5035,7 +5511,9 @@
             "business",
             "postgrad",
             "postgraduate"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 2.76
     },
     {
         "fullTitle": "Practical Science Association",
@@ -5057,7 +5535,9 @@
             "Skills",
             "Social",
             "Upskill"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 4.54
     },
     {
         "fullTitle": "Project Hope UNSW",
@@ -5075,7 +5555,9 @@
             "China",
             "Project Hope",
             "UNSW"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 1.36
     },
     {
         "fullTitle": "Psychology Society",
@@ -5104,7 +5586,9 @@
             "UNSW",
             "UNSW PsychSoc",
             "UNSW Psychology Society"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 3.55
     },
     {
         "fullTitle": "Punjabi Society UNSW",
@@ -5123,7 +5607,9 @@
             "Pakistan",
             "Politics",
             "Punjab"
-        ]
+        ],
+        "numReviews": 3,
+        "ratingAvg": 4.75
     },
     {
         "fullTitle": "Puzzle Society",
@@ -5148,7 +5634,9 @@
             "rebus",
             "riddle",
             "riddles"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 3.11
     },
     {
         "fullTitle": "Quantitative Finance and Trading Society",
@@ -5168,7 +5656,9 @@
             "quant",
             "quantitative",
             "trading"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 4.63
     },
     {
         "fullTitle": "Quantum Engineering Society",
@@ -5183,7 +5673,9 @@
         "tags": [
             "Electrical Engineering",
             "Quantum Engineering"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 3.65
     },
     {
         "fullTitle": "Queer Students in STEM",
@@ -5205,7 +5697,9 @@
             "Science",
             "Technology",
             "Trans"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 3.38
     },
     {
         "fullTitle": "Railway Society",
@@ -5224,7 +5718,9 @@
             "railway",
             "stations",
             "steam"
-        ]
+        ],
+        "numReviews": 5,
+        "ratingAvg": 2.33
     },
     {
         "fullTitle": "Real Estate Investment Student Association",
@@ -5245,7 +5741,9 @@
             "development",
             "lending",
             "private equity"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 4.04
     },
     {
         "fullTitle": "Real Estate Society",
@@ -5277,7 +5775,9 @@
             "real estate",
             "realsoc",
             "residential"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 2.0
     },
     {
         "fullTitle": "Real Skills UNSW",
@@ -5295,7 +5795,9 @@
             "industry",
             "networking",
             "softskills"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 0.14
     },
     {
         "fullTitle": "Redback Racing Team",
@@ -5313,7 +5815,9 @@
             "project",
             "racing",
             "student project"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 4.56
     },
     {
         "fullTitle": "Reel 'Em In Fishing Society",
@@ -5335,7 +5839,9 @@
             "Social",
             "Sport",
             "Water"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 0.19
     },
     {
         "fullTitle": "Reformed Evangelical Fellowship",
@@ -5371,7 +5877,9 @@
             "Religion",
             "TULIP",
             "Theology"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Rehabilitation Engineering Society",
@@ -5392,7 +5900,9 @@
             "rehabilitation",
             "social impact",
             "volunteering"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Renewable Energy Society",
@@ -5420,7 +5930,9 @@
             "solar",
             "sustainable",
             "wind"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 1.26
     },
     {
         "fullTitle": "Research Seminar Association",
@@ -5439,7 +5951,9 @@
             "Science",
             "Seminar",
             "Sharing"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 4.57
     },
     {
         "fullTitle": "Retro Games Society",
@@ -5461,7 +5975,9 @@
             "social",
             "tetris",
             "video"
-        ]
+        ],
+        "numReviews": 5,
+        "ratingAvg": 4.48
     },
     {
         "fullTitle": "Rhythm Games Society",
@@ -5488,7 +6004,9 @@
             "rhythm",
             "sekai",
             "timezone"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 2.83
     },
     {
         "fullTitle": "Riot Games Society",
@@ -5508,7 +6026,9 @@
             "riot games",
             "unsw lolsoc",
             "unswlolsoc"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Risk Management Society",
@@ -5524,7 +6044,9 @@
             "BUSINESS",
             "RISK",
             "RISK MANAGEMENT"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 4.62
     },
     {
         "fullTitle": "Roblox Society",
@@ -5544,7 +6066,9 @@
             "Hobby",
             "Minecraft",
             "Roblox"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 0.66
     },
     {
         "fullTitle": "Robogals",
@@ -5582,7 +6106,9 @@
             "Volunteer",
             "Volunteering",
             "Workshop"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 4.8
     },
     {
         "fullTitle": "Rock Music Society",
@@ -5600,7 +6126,9 @@
             "Listening",
             "Music",
             "Rock"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 0.91
     },
     {
         "fullTitle": "Rocketry Society UNSW",
@@ -5617,7 +6145,9 @@
             "rocket",
             "rocketry",
             "space"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 3.36
     },
     {
         "fullTitle": "Rollerblading Society",
@@ -5632,7 +6162,9 @@
         "tags": [
             "rollerblading",
             "social rollerblading"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 0.37
     },
     {
         "fullTitle": "Rubik Society",
@@ -5652,7 +6184,9 @@
             "Puzzles",
             "Rubik",
             "Rubik's"
-        ]
+        ],
+        "numReviews": 15,
+        "ratingAvg": 3.87
     },
     {
         "fullTitle": "Rural Allied Health and Medical Society",
@@ -5685,7 +6219,9 @@
             "Rural Allied Health and Medical Society",
             "Rural Health",
             "Social Work"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 0.71
     },
     {
         "fullTitle": "Sanrio Lovers Society",
@@ -5697,7 +6233,9 @@
         "websiteUrl": "",
         "discordUrl": "",
         "instagramUrl": "",
-        "tags": []
+        "tags": [],
+        "numReviews": 20,
+        "ratingAvg": 0.87
     },
     {
         "fullTitle": "Sapphic Society UNSW",
@@ -5716,7 +6254,9 @@
             "Lesbian",
             "queer",
             "sapphic"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 2.71
     },
     {
         "fullTitle": "Saudi Students Union",
@@ -5733,7 +6273,9 @@
             "saudi arabia",
             "social",
             "students"
-        ]
+        ],
+        "numReviews": 3,
+        "ratingAvg": 0.65
     },
     {
         "fullTitle": "Save The Children UNSW Student Action Group",
@@ -5750,7 +6292,9 @@
             "social impact",
             "volunteer",
             "volunteering"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 2.26
     },
     {
         "fullTitle": "School of Mechanical and Manufacturing Engineering Student Society",
@@ -5769,7 +6313,9 @@
             "Mechanical",
             "Mechatronic",
             "Naval"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 0.63
     },
     {
         "fullTitle": "Science Society",
@@ -5796,7 +6342,9 @@
             "science",
             "social",
             "society"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 3.87
     },
     {
         "fullTitle": "Securities and Commodities Analysis Society",
@@ -5812,7 +6360,9 @@
             "analysis",
             "commodities",
             "securities"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 0.07
     },
     {
         "fullTitle": "Security Society",
@@ -5845,7 +6395,9 @@
             "picking",
             "science",
             "security"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 2.93
     },
     {
         "fullTitle": "Shalom College Residents Society",
@@ -5857,7 +6409,9 @@
         "websiteUrl": "http://www.shalomcollege.unsw.edu.au",
         "discordUrl": "",
         "instagramUrl": "",
-        "tags": []
+        "tags": [],
+        "numReviews": 15,
+        "ratingAvg": 3.07
     },
     {
         "fullTitle": "Silat Society",
@@ -5879,7 +6433,9 @@
             "seni silat",
             "silat tari",
             "sport silat"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Silent Steps",
@@ -5896,7 +6452,9 @@
             "outdoor",
             "scenic",
             "walks"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 1.21
     },
     {
         "fullTitle": "Singapore Students' Association",
@@ -5911,7 +6469,9 @@
         "tags": [
             "SSA",
             "Singapore"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Skate Society",
@@ -5935,7 +6495,9 @@
             "skateboarding",
             "skaters",
             "speed"
-        ]
+        ],
+        "numReviews": 3,
+        "ratingAvg": 4.15
     },
     {
         "fullTitle": "Skylabs UNSW",
@@ -5959,7 +6521,9 @@
             "Planes",
             "Quadcopter",
             "UAV"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 2.07
     },
     {
         "fullTitle": "Slavic Society",
@@ -5979,7 +6543,9 @@
             "Fun",
             "Slav",
             "Slavic"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 1.18
     },
     {
         "fullTitle": "Smash Brothers",
@@ -6005,7 +6571,9 @@
             "Smash",
             "Zelda",
             "eSport"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 4.41
     },
     {
         "fullTitle": "Social Golf Society UNSW",
@@ -6028,7 +6596,9 @@
             "Social",
             "Social Golf",
             "Sport"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 2.58
     },
     {
         "fullTitle": "Social Science Society",
@@ -6051,7 +6621,9 @@
             "Science",
             "Social",
             "Sociology"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 4.12
     },
     {
         "fullTitle": "Social Soccer Society",
@@ -6074,7 +6646,9 @@
             "soccer",
             "social",
             "sport"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 1.13
     },
     {
         "fullTitle": "Social Work Student Association",
@@ -6090,7 +6664,9 @@
             "Social work",
             "opportunities",
             "support"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 3.82
     },
     {
         "fullTitle": "Socialist Alternative",
@@ -6113,7 +6689,9 @@
             "politics",
             "social justice",
             "socialism"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 0.18
     },
     {
         "fullTitle": "Society of Orchestra and Pipers",
@@ -6152,7 +6730,9 @@
             "viola",
             "wind symphony",
             "xylophone"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 3.62
     },
     {
         "fullTitle": "Society of Telecommunications and Electrical Engineers for Postgraduates",
@@ -6169,7 +6749,9 @@
             "Electrical",
             "Postgraduates",
             "Telecommunications"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 4.29
     },
     {
         "fullTitle": "Society of Vietnamese International Students at UNSW",
@@ -6193,7 +6775,9 @@
             "study",
             "viet",
             "viet nam"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 2.18
     },
     {
         "fullTitle": "SOFIA UNSW Orthodox Christian Fellowship",
@@ -6211,7 +6795,9 @@
             "Orthodox",
             "Orthodox Christian",
             "Orthodoxy"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 1.49
     },
     {
         "fullTitle": "Software Development Society",
@@ -6242,7 +6828,9 @@
             "Tailwind",
             "Typescript",
             "Web"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 3.78
     },
     {
         "fullTitle": "Soup Society",
@@ -6265,7 +6853,9 @@
             "Soupy",
             "Super",
             "Yum"
-        ]
+        ],
+        "numReviews": 10,
+        "ratingAvg": 4.9
     },
     {
         "fullTitle": "South Asian Movies and Series Stans",
@@ -6283,7 +6873,9 @@
             "south asian",
             "tollywood",
             "tv shows"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 2.97
     },
     {
         "fullTitle": "Spanish & Latin American Society UNSW",
@@ -6299,7 +6891,9 @@
             "Culture",
             "Latin America",
             "Spanish"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 1.9
     },
     {
         "fullTitle": "Sri Lankan Students Society",
@@ -6315,7 +6909,9 @@
             "cricket",
             "food",
             "music"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 4.06
     },
     {
         "fullTitle": "St John Ambulance Student Society",
@@ -6331,7 +6927,9 @@
             "First aid",
             "medical",
             "volunteer"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 3.32
     },
     {
         "fullTitle": "StartUp Link",
@@ -6349,7 +6947,9 @@
             "Venture Capital",
             "networking",
             "technology"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "String Ensemble",
@@ -6373,7 +6973,9 @@
             "strings",
             "viola",
             "violin"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 3.04
     },
     {
         "fullTitle": "Student Energy UNSW",
@@ -6388,7 +6990,9 @@
         "tags": [
             "energy education",
             "energy transition"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 4.52
     },
     {
         "fullTitle": "Student Outreach to the World",
@@ -6404,7 +7008,9 @@
             "Christian",
             "Christianity",
             "Ministry"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 4.3
     },
     {
         "fullTitle": "Student Policy Society of Australia",
@@ -6421,7 +7027,9 @@
             "network",
             "policy",
             "student"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 1.3
     },
     {
         "fullTitle": "Students for Palestine UNSW",
@@ -6442,7 +7050,9 @@
             "education.",
             "human rights",
             "politics"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 0.9
     },
     {
         "fullTitle": "Students of Chemistry Society",
@@ -6464,7 +7074,9 @@
             "Students",
             "Undergrad",
             "Undergraduate"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 1.49
     },
     {
         "fullTitle": "Sydney High Tech Venture Club",
@@ -6479,7 +7091,9 @@
         "tags": [
             "technology",
             "venture"
-        ]
+        ],
+        "numReviews": 10,
+        "ratingAvg": 1.1
     },
     {
         "fullTitle": "Sydney Rovers Football (Soccer) Club",
@@ -6499,7 +7113,9 @@
             "fun",
             "rovers",
             "soccer"
-        ]
+        ],
+        "numReviews": 3,
+        "ratingAvg": 4.55
     },
     {
         "fullTitle": "Tabletop Games Society",
@@ -6528,7 +7144,9 @@
             "dnd",
             "game",
             "games"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 3.83
     },
     {
         "fullTitle": "Taiwanese Students Association",
@@ -6546,7 +7164,9 @@
             "Student association",
             "Taiwan",
             "Taiwanese"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 2.12
     },
     {
         "fullTitle": "Tea & Coffee Society",
@@ -6569,7 +7189,9 @@
             "high tea",
             "hobby",
             "social"
-        ]
+        ],
+        "numReviews": 10,
+        "ratingAvg": 2.81
     },
     {
         "fullTitle": "Teach Learn Grow UNSW",
@@ -6586,7 +7208,9 @@
             "Equality",
             "Rural",
             "Volunteer"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 0.88
     },
     {
         "fullTitle": "TEDxUNSW",
@@ -6612,7 +7236,9 @@
             "presentation",
             "speech",
             "technology"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "TeoChew Students Association",
@@ -6637,7 +7263,9 @@
             "Social",
             "Teochew",
             "Uni club"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 1.74
     },
     {
         "fullTitle": "Thai Students Society",
@@ -6652,7 +7280,9 @@
         "tags": [
             "TSS",
             "Thai"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 1.5
     },
     {
         "fullTitle": "The New Zealand Society",
@@ -6668,7 +7298,9 @@
             "Kiwi",
             "NZ",
             "New Zealand"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 4.77
     },
     {
         "fullTitle": "The Women in Electrical Engineering and Telecommunications",
@@ -6694,7 +7326,9 @@
             "quantum engineering",
             "telecommunications",
             "telecommunications engineering"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 3.37
     },
     {
         "fullTitle": "Time and Shine Society",
@@ -6709,7 +7343,9 @@
         "tags": [
             "jewellery enthusiasts",
             "watch enthusiasts"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 1.87
     },
     {
         "fullTitle": "Toastmasters",
@@ -6727,7 +7363,9 @@
             "speech",
             "talks",
             "toasts"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 1.39
     },
     {
         "fullTitle": "Touhou Project Society",
@@ -6745,7 +7383,9 @@
             "touhou",
             "touhou project",
             "video games"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 4.64
     },
     {
         "fullTitle": "Tricking Society",
@@ -6768,7 +7408,9 @@
             "martial arts",
             "parkour",
             "tricking"
-        ]
+        ],
+        "numReviews": 16,
+        "ratingAvg": 2.54
     },
     {
         "fullTitle": "UN(SWifties)",
@@ -6785,7 +7427,9 @@
             "music",
             "swiftie soc",
             "swifties"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 1.31
     },
     {
         "fullTitle": "United Nations Society",
@@ -6801,7 +7445,9 @@
             "United Nations",
             "international affairs",
             "international relations"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 2.72
     },
     {
         "fullTitle": "University Network for Cryptocurrency and Blockchain UNSW",
@@ -6821,7 +7467,9 @@
             "Investing",
             "Investment",
             "Social"
-        ]
+        ],
+        "numReviews": 11,
+        "ratingAvg": 0.5
     },
     {
         "fullTitle": "University Network for Investing & Trading",
@@ -6839,7 +7487,9 @@
             "finance",
             "investing",
             "trading"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 3.99
     },
     {
         "fullTitle": "University of New South Wales - Google Developer Student Club",
@@ -6863,7 +7513,9 @@
             "Professional",
             "Sustainability",
             "Technology"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 3.91
     },
     {
         "fullTitle": "UNSW Afghan Society",
@@ -6881,7 +7533,9 @@
             "cultural",
             "culture",
             "international"
-        ]
+        ],
+        "numReviews": 5,
+        "ratingAvg": 2.53
     },
     {
         "fullTitle": "UNSW Armwrestling Club",
@@ -6901,7 +7555,9 @@
             "Physical",
             "Sport",
             "Strength"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "UNSW Bhakti Yoga Club",
@@ -6915,7 +7571,9 @@
         "instagramUrl": "",
         "tags": [
             "spirituality\nvaishnavism\nkrishna consciousness\nbhakti\nmantra meditation\nscripture reading\ndeity worship\npuja and bhoga offerings\ndevotion"
-        ]
+        ],
+        "numReviews": 18,
+        "ratingAvg": 0.74
     },
     {
         "fullTitle": "UNSW BoulderSoc",
@@ -6932,7 +7590,9 @@
             "Climbing",
             "Indoor climbing",
             "boulder"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 4.01
     },
     {
         "fullTitle": "UNSW Brazilian Jiu-Jitsu and Wrestling Society",
@@ -6947,7 +7607,9 @@
         "tags": [
             "Jiu-Jitsu",
             "Wrestling"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 2.24
     },
     {
         "fullTitle": "UNSW Bridge Society",
@@ -6988,7 +7650,9 @@
             "team",
             "trick",
             "trumps"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 3.68
     },
     {
         "fullTitle": "UNSW Canberra Club",
@@ -7004,7 +7668,9 @@
             "ADFA",
             "Canberra",
             "UNSW Canberra"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 1.63
     },
     {
         "fullTitle": "UNSW Christian Students",
@@ -7018,7 +7684,9 @@
         "instagramUrl": "",
         "tags": [
             "Christian"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "UNSW Christian Students Uniting",
@@ -7037,7 +7705,9 @@
             "Inclusive",
             "Social Justice",
             "Uniting Church"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 4.32
     },
     {
         "fullTitle": "UNSW Cocktail Society",
@@ -7054,7 +7724,9 @@
             "Bartending",
             "Cocktail",
             "Hospitality"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 4.2
     },
     {
         "fullTitle": "UNSW Consulting Club",
@@ -7071,7 +7743,9 @@
             "Consulting",
             "Presentation",
             "Problem Solving"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 1.08
     },
     {
         "fullTitle": "UNSW First Nations Business Society",
@@ -7089,7 +7763,9 @@
             "Community.",
             "First Nations",
             "Indigenous"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 3.48
     },
     {
         "fullTitle": "UNSW Hall",
@@ -7108,7 +7784,9 @@
             "community",
             "residential",
             "residents"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 2.12
     },
     {
         "fullTitle": "UNSW Labor Left",
@@ -7133,7 +7811,9 @@
             "Progressive",
             "Socialism",
             "Socialist"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 2.63
     },
     {
         "fullTitle": "UNSW Mahjong and Chinese Boardgame Society",
@@ -7150,7 +7830,9 @@
             "Chinese Chess",
             "Goh",
             "Mahjong"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 0.15
     },
     {
         "fullTitle": "UNSW Nepalese Society",
@@ -7167,7 +7849,9 @@
             "Nepal",
             "Nepalese",
             "Nepali"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 0.66
     },
     {
         "fullTitle": "UNSW Nuclear Society",
@@ -7186,7 +7870,9 @@
             "medicine",
             "science",
             "technology"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 3.02
     },
     {
         "fullTitle": "UNSW Photography Society",
@@ -7210,7 +7896,9 @@
             "unswphoto",
             "video",
             "workshop"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 4.18
     },
     {
         "fullTitle": "UNSW Republic Club",
@@ -7227,7 +7915,9 @@
             "Community",
             "Politics",
             "Republic"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 3.6
     },
     {
         "fullTitle": "UNSW Singing Society",
@@ -7242,7 +7932,9 @@
         "tags": [
             "singing",
             "songs"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 0.76
     },
     {
         "fullTitle": "Vietnamese Students Association",
@@ -7259,7 +7951,9 @@
             "students",
             "vietnamese",
             "vsa"
-        ]
+        ],
+        "numReviews": 2,
+        "ratingAvg": 4.75
     },
     {
         "fullTitle": "Vinnies Society",
@@ -7281,7 +7975,9 @@
             "homeless",
             "humanitarian",
             "volunteer"
-        ]
+        ],
+        "numReviews": 13,
+        "ratingAvg": 4.29
     },
     {
         "fullTitle": "Vocallective",
@@ -7298,7 +7994,9 @@
             "music",
             "singing",
             "vocal"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 3.19
     },
     {
         "fullTitle": "VR Society UNSW",
@@ -7322,7 +8020,9 @@
             "technology",
             "virtual",
             "virtual reality"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 0.87
     },
     {
         "fullTitle": "Wagga Wagga Rural Undergraduate Medical Society",
@@ -7341,7 +8041,9 @@
             "rural medicine",
             "wagga",
             "wagga wagga"
-        ]
+        ],
+        "numReviews": 1,
+        "ratingAvg": 3.94
     },
     {
         "fullTitle": "Wandering Society",
@@ -7368,7 +8070,9 @@
             "views",
             "walking",
             "walks"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Warhammer Club",
@@ -7387,7 +8091,9 @@
             "painting",
             "reading",
             "warhammer"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 4.19
     },
     {
         "fullTitle": "Warrane College",
@@ -7404,7 +8110,9 @@
             "Residence",
             "Residential",
             "Warrane"
-        ]
+        ],
+        "numReviews": 9,
+        "ratingAvg": 4.29
     },
     {
         "fullTitle": "We The Free - Animal Rights UNSW",
@@ -7439,7 +8147,9 @@
             "pigs",
             "sheep",
             "vegan"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Web3 Club",
@@ -7457,7 +8167,9 @@
             "cryptocurrency",
             "decentralised technology",
             "technology"
-        ]
+        ],
+        "numReviews": 0,
+        "ratingAvg": 0
     },
     {
         "fullTitle": "Western Sydney Society",
@@ -7475,7 +8187,9 @@
             "network",
             "sydney",
             "western"
-        ]
+        ],
+        "numReviews": 20,
+        "ratingAvg": 2.51
     },
     {
         "fullTitle": "White House Society",
@@ -7500,7 +8214,9 @@
             "Vice-President",
             "WHS",
             "White House"
-        ]
+        ],
+        "numReviews": 8,
+        "ratingAvg": 3.56
     },
     {
         "fullTitle": "Wine Society",
@@ -7526,7 +8242,9 @@
             "vino",
             "white",
             "wine"
-        ]
+        ],
+        "numReviews": 14,
+        "ratingAvg": 1.03
     },
     {
         "fullTitle": "Women in Consulting",
@@ -7546,7 +8264,9 @@
             "women",
             "women in",
             "women in consulting"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 3.07
     },
     {
         "fullTitle": "Women in Engineering",
@@ -7567,7 +8287,9 @@
             "Professional",
             "Social",
             "Women"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 2.92
     },
     {
         "fullTitle": "Women In Management",
@@ -7584,7 +8306,9 @@
             "management",
             "networking",
             "women"
-        ]
+        ],
+        "numReviews": 6,
+        "ratingAvg": 0.34
     },
     {
         "fullTitle": "Women in Politics Society",
@@ -7606,7 +8330,9 @@
             "politics",
             "united nations",
             "women"
-        ]
+        ],
+        "numReviews": 4,
+        "ratingAvg": 2.07
     },
     {
         "fullTitle": "Women In Science Society",
@@ -7629,7 +8355,9 @@
             "stemm",
             "women",
             "women in stem"
-        ]
+        ],
+        "numReviews": 12,
+        "ratingAvg": 0.24
     },
     {
         "fullTitle": "Women in Technology",
@@ -7656,7 +8384,9 @@
             "social",
             "software engineering",
             "workshops"
-        ]
+        ],
+        "numReviews": 7,
+        "ratingAvg": 3.15
     },
     {
         "fullTitle": "Yoga Club",
@@ -7675,7 +8405,9 @@
             "Sport",
             "Wellbeing",
             "Yoga"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 1.63
     },
     {
         "fullTitle": "Young Entrepreneurs Program",
@@ -7698,7 +8430,9 @@
             "Service",
             "Start Up",
             "Volunteering"
-        ]
+        ],
+        "numReviews": 19,
+        "ratingAvg": 4.48
     },
     {
         "fullTitle": "Youth Music Mission",
@@ -7719,6 +8453,8 @@
             "music",
             "social",
             "volunteering"
-        ]
+        ],
+        "numReviews": 17,
+        "ratingAvg": 3.16
     }
 ]
