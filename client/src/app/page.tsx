@@ -10,8 +10,8 @@ import debounce from "lodash/debounce";
 
 export default function Home() {
   const initialSocieties = 12;
-  const addedSocietiesPerLoad = 6;
-  const loadingDebounce = 200;
+  const addedSocietiesPerLoad = 12;
+  const loadingDebounce = 300;
   const filterDebounce = 300;
 
   const [inputText, setInputText] = useState("");
@@ -55,38 +55,42 @@ export default function Home() {
     [inputText]
   );
 
-  const sortedData = [...filteredData].sort((a, b) => {
-    if (sortOption === "A-Z") return a.fullTitle.localeCompare(b.fullTitle);
-    if (sortOption === "Z-A") return b.fullTitle.localeCompare(a.fullTitle);
-    
-    if (sortOption === "Rating(H-L)") {
-      // Ensure societies with no reviews are placed last
-      if (b.numReviews === 0) return -1;
-      if (a.numReviews === 0) return 1;
+  const sortedData = useMemo(
+    () =>
+      [...filteredData].sort((a, b) => {
+        if (sortOption === "A-Z") return a.fullTitle.localeCompare(b.fullTitle);
+        if (sortOption === "Z-A") return b.fullTitle.localeCompare(a.fullTitle);
 
-      // If ratings are equal, then sort by number of reviews
-      if (b.ratingAvg !== a.ratingAvg) {
-        return b.ratingAvg - a.ratingAvg;
-      }
+        if (sortOption === "Rating(H-L)") {
+          // Ensure societies with no reviews are placed last
+          if (b.numReviews === 0) return -1;
+          if (a.numReviews === 0) return 1;
 
-      return b.numReviews - a.numReviews;
-    } 
+          // If ratings are equal, then sort by number of reviews
+          if (b.ratingAvg !== a.ratingAvg) {
+            return b.ratingAvg - a.ratingAvg;
+          }
 
-    if (sortOption === "Rating(L-H)") {
-      // Ensure societies with no reviews are placed last
-      if (a.numReviews === 0) return 1;
-      if (b.numReviews === 0) return -1;
+          return b.numReviews - a.numReviews;
+        }
 
-      // If ratings are equal, then sort by number of reviews
-      if (a.ratingAvg !== b.ratingAvg) {
-        return a.ratingAvg - b.ratingAvg;
-      }
+        if (sortOption === "Rating(L-H)") {
+          // Ensure societies with no reviews are placed last
+          if (a.numReviews === 0) return 1;
+          if (b.numReviews === 0) return -1;
 
-      return b.numReviews - a.numReviews;
-    }
+          // If ratings are equal, then sort by number of reviews
+          if (a.ratingAvg !== b.ratingAvg) {
+            return a.ratingAvg - b.ratingAvg;
+          }
 
-    return 0;
-  });
+          return b.numReviews - a.numReviews;
+        }
+
+        return 0;
+      }),
+    [sortOption, filteredData]
+  );
 
   useEffect(() => {
     setVisibleSocieties(initialSocieties);
@@ -170,7 +174,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div ref={loadMoreRef} className="h-10"></div>
+        <div ref={loadMoreRef} className="h-10    " />
       </div>
     </>
   );
