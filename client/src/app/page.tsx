@@ -51,15 +51,26 @@ export default function Home() {
       // Ensure societies with no reviews are placed last
       if (b.numReviews === 0) return -1;
       if (a.numReviews === 0) return 1;
-      return b.ratingAvg - a.ratingAvg;
-    } 
 
+      // If ratings are equal, then sort by number of reviews
+      if (b.ratingAvg !== a.ratingAvg) {
+        return b.ratingAvg - a.ratingAvg;
+      }
+
+      return b.numReviews - a.numReviews;
+    } 
 
     if (sortOption === "Rating(L-H)") {
       // Ensure societies with no reviews are placed last
       if (a.numReviews === 0) return 1;
       if (b.numReviews === 0) return -1;
-      return a.ratingAvg - b.ratingAvg;
+
+      // If ratings are equal, then sort by number of reviews
+      if (a.ratingAvg !== b.ratingAvg) {
+        return a.ratingAvg - b.ratingAvg;
+      }
+
+      return b.numReviews - a.numReviews;
     }
 
     return 0;
