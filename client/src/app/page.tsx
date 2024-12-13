@@ -43,9 +43,7 @@ export default function Home() {
   );
 
   useEffect(() => {
-    if (inputText === "") {
-      setVisibleSocieties(initialSocieties);
-    }
+    setVisibleSocieties(initialSocieties);
   }, [inputText]);
 
   useEffect(() => {
