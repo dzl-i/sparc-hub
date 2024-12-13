@@ -1,11 +1,39 @@
+"use client";
+
 import Image from "next/image";
 import SearchBar from "../components/SearchBar";
 import { ReviewCard } from "@/components/ReviewCard";
 import data from "../../societyData.json";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
 
 export default function Home() {
   const [inputText, setInputText] = useState("");
+
+  const sortSocietiesData: DropdownItem[] = [
+    {
+      id: 'A-Z',
+      name: 'Alphabetical (A-Z)',
+    },
+    {
+      id: 'Z-A',
+      name: 'Alphabetical (Z-A)',
+    },
+    {
+      id: 'Rating(H-L)',
+      name: 'Rating (High to Low)',
+    },
+    {
+      id: 'Rating(L-H)',
+      name: 'Rating (Low to High)',
+    },
+  ];
+
+  // Filter societies based on search input
+  const filteredData = (data).filter((society) =>
+    society.fullTitle.toLowerCase().includes(inputText.toLowerCase()) ||
+    society.abbreviatedTitle.toLowerCase().includes(inputText.toLowerCase())
+  );
 
   return (
     <>
@@ -30,14 +58,20 @@ export default function Home() {
           <p className="font-lalezar text-2xl md:text-lg">
             Your go-to destination for UNSW society reviews and insights.
           </p>
-          <div className="flex justify-center items-center mt-10 mb-10">
-            <SearchBar />
+          <div className="flex justify-center items-center mt-10 mb-10 gap-4">
+            <SearchBar inputText={inputText} setInputText={setInputText}/>
+            <DropdownSelect
+              id="sort-societies"
+              data={sortSocietiesData}
+              width="260px"
+              title="Sort by"
+            />
           </div>
           <div className="grid grid-cols-3 gap-7 1xl:grid-cols-2 landmd:grid-cols-1 mb-6">
-            {data.map((society) => (
+            {filteredData.map((society) => (
               <ReviewCard
                 key={1}
-                avgStar={Math.random() * 5}
+                avgStar={5}
                 reviews={12}
                 title={society.fullTitle}
                 logo={society.logo}
