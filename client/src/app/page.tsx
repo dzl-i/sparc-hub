@@ -174,7 +174,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div ref={loadMoreRef} className="h-10    " />
+        <div ref={loadMoreRef} className="h-10" />
       </div>
     </>
   );
