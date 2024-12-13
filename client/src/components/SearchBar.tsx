@@ -1,21 +1,17 @@
 import { useState, useEffect } from "react";
 import { SearchIcon } from "lucide-react";
+import { DebouncedFunc } from "lodash";
 
 type SearchBarProps = {
   inputText: string;
-  setInputText: React.Dispatch<React.SetStateAction<string>>;
+  setInputText: DebouncedFunc<(text: string) => void>;
 };
 
 function SearchBar({ inputText, setInputText }: SearchBarProps) {
   const [localInput, setLocalInput] = useState(inputText);
-  const filterDataDebounce = 100;
 
-  // Debouncing
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setInputText(localInput);
-    }, filterDataDebounce);
-    return () => clearTimeout(timer);
+    setInputText(localInput);
   }, [localInput, setInputText]);
 
   return (

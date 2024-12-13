@@ -4,13 +4,15 @@ import Image from "next/image";
 import SearchBar from "../components/SearchBar";
 import { ReviewCard } from "@/components/ReviewCard";
 import data from "../../societyData.json";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
+import debounce from "lodash/debounce";
 
 export default function Home() {
   const initialSocieties = 12;
   const addedSocietiesPerLoad = 6;
   const loadingDebounce = 200;
+  const filterDebounce = 300;
 
   const [inputText, setInputText] = useState("");
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
@@ -35,33 +37,53 @@ export default function Home() {
     },
   ];
 
-  // Filter societies based on search input
-  const filteredData = data.filter(
-    (society) =>
-      society.fullTitle.toLowerCase().includes(inputText.toLowerCase()) ||
-      society.abbreviatedTitle.toLowerCase().includes(inputText.toLowerCase())
+  const debouncedSetInputText = useMemo(
+    () => debounce((text: string) => setInputText(text), filterDebounce),
+    []
+  );
+
+  const filteredData = useMemo(
+    () =>
+      data.filter(
+        (society) =>
+          society.fullTitle.toLowerCase().includes(inputText.toLowerCase()) ||
+          society.abbreviatedTitle
+            .toLowerCase()
+            .includes(inputText.toLowerCase())
+      ),
+    [inputText]
   );
 
   useEffect(() => {
     setVisibleSocieties(initialSocieties);
   }, [inputText]);
 
+  const handleIntersection = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      if (entries[0].isIntersecting && data.length >= visibleSocieties) {
+        setTimeout(() => {
+          setVisibleSocieties((prev) => prev + addedSocietiesPerLoad);
+        }, loadingDebounce);
+      }
+    },
+    [addedSocietiesPerLoad, loadingDebounce, visibleSocieties]
+  );
+
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setTimeout(() => {
-            setVisibleSocieties((prev) => prev + addedSocietiesPerLoad);
-          }, loadingDebounce);
-        }
-      },
-      { threshold: 1.0 }
-    );
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 1.0,
+    });
 
     if (loadMoreRef.current) {
       observer.observe(loadMoreRef.current);
     }
-  }, []);
+    const ref = loadMoreRef.current;
+    return () => {
+      if (ref) {
+        observer.unobserve(ref);
+      }
+    };
+  }, [handleIntersection]);
 
   return (
     <>
@@ -87,7 +109,10 @@ export default function Home() {
             Your go-to destination for UNSW society reviews and insights.
           </p>
           <div className="flex justify-center items-center mt-10 mb-10 gap-4">
-            <SearchBar inputText={inputText} setInputText={setInputText} />
+            <SearchBar
+              inputText={inputText}
+              setInputText={debouncedSetInputText}
+            />
             <DropdownSelect
               id="sort-societies"
               data={sortSocietiesData}
@@ -96,11 +121,11 @@ export default function Home() {
             />
           </div>
           <div className="grid grid-cols-3 gap-7 1xl:grid-cols-2 landmd:grid-cols-1 mb-6">
-            {filteredData.slice(0, visibleSocieties).map((society) => (
+            {filteredData.slice(0, visibleSocieties).map((society, index) => (
               <ReviewCard
-                key={1}
-                avgStar={5}
-                reviews={12}
+                key={index}
+                avgStar={society.ratingAvg}
+                reviews={society.numReviews}
                 title={society.fullTitle}
                 logo={society.logo}
                 tags={[]}
