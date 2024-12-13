@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Chip from "./Chip";
 import { format } from "date-fns";
+import { Pencil, Trash2 } from "lucide-react";
+import Rating from "./Rating";
 
 interface ReviewProps {
   username: string;
@@ -11,6 +13,7 @@ interface ReviewProps {
   date: Date;
   anonymous: boolean;
   tags?: string[];
+  variant?: string;
 }
 
 function Review({
@@ -22,6 +25,7 @@ function Review({
   date,
   anonymous,
   tags,
+  variant = "default",
 }: ReviewProps) {
   const percentage = (starRating / 5) * 100 + "%";
 
@@ -51,30 +55,32 @@ function Review({
               </div>
             </div>
             {/* Stars */}
-            <div className="relative inline-block text-slate-400">
-              <p className="text-[30px]">★★★★★</p>
-              <p
-                className="text-[30px] bg-[#299800] bg-clip-text absolute inset-0 text-transparent"
-                style={{ width: percentage }}
-              >
-                ★★★★★
-              </p>
-            </div>
+            <Rating percentage={percentage} size="[30px]" />
           </div>
-          <div className="text-sm text-slate-500">
+          <div className="text-sm text-slate-500 font-spartan">
             Reviewed by: {anonymous ? "Anonymous" : username}
           </div>
           {/* Review Content*/}
-          <div className="font-spartan leading-tight text-lg">
+          <div className="font-spartan leading-tight text-lg my-2">
             {reviewContent}
           </div>
           {/* Tags */}
-          <div className="flex gap-2">
-            {tags?.slice(0, 3).map((tag, index) => (
-              <Chip variant="default" key={index}>
-                {tag}
-              </Chip>
-            ))}
+          <div className="flex justify-between">
+            <div className="flex gap-2">
+              {tags?.slice(0, 3).map((tag, index) => (
+                <Chip variant="default" key={index}>
+                  {tag}
+                </Chip>
+              ))}
+            </div>
+            <div className="flex gap-3">
+              {variant === "profile" && (
+                <Pencil className="cursor-not-allowed" />
+              )}
+              {variant === "profile" && (
+                <Trash2 className="cursor-not-allowed" />
+              )}
+            </div>
           </div>
         </div>
       </div>
