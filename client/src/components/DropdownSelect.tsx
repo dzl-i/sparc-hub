@@ -3,11 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
 import { ChevronDown } from "lucide-react";
-
-export interface DropdownItem {
-  id: string;
-  name: string;
-}
+import { DropdownItem } from "../../interface";
 
 interface DropdownProps {
   id: string;

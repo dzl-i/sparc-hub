@@ -22,3 +22,8 @@ export interface Review {
   tags: string[];
   reviewContent: string;
 }
+
+export interface DropdownItem {
+  id: string;
+  name: string;
+}

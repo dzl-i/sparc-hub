@@ -4,9 +4,10 @@ import Image from "next/image";
 import SearchBar from "../components/SearchBar";
 import { ReviewCard } from "@/components/ReviewCard";
 import data from "../../societyData.json";
-import { useState, useRef, useEffect, useCallback, useMemo } from "react";
-import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
+import { useState, useRef, useEffect } from "react";
+import DropdownSelect from "@/components/DropdownSelect";
 import debounce from "lodash/debounce";
+import { DropdownItem } from "../../interface";
 
 export default function Home() {
   const initialSocieties = 12;
@@ -38,79 +39,70 @@ export default function Home() {
     },
   ];
 
-  const debouncedSetInputText = useMemo(
-    () => debounce((text: string) => setInputText(text), filterDebounce),
-    []
+  const debouncedSetInputText = debounce(
+    (text: string) => setInputText(text),
+    filterDebounce
   );
 
-  const filteredData = useMemo(
-    () =>
-      data.filter(
-        (society) =>
-          society.fullTitle.toLowerCase().includes(inputText.toLowerCase()) ||
-          society.abbreviatedTitle
-            .toLowerCase()
-            .includes(inputText.toLowerCase())
-      ),
-    [inputText]
+  const filteredData = data.filter(
+    (society) =>
+      society.fullTitle.toLowerCase().includes(inputText.toLowerCase()) ||
+      society.abbreviatedTitle.toLowerCase().includes(inputText.toLowerCase())
   );
 
-  const sortedData = useMemo(
-    () =>
-      [...filteredData].sort((a, b) => {
-        if (sortOption === "A-Z") return a.fullTitle.localeCompare(b.fullTitle);
-        if (sortOption === "Z-A") return b.fullTitle.localeCompare(a.fullTitle);
+  const sortedData = [...filteredData].sort((a, b) => {
+    if (sortOption === "A-Z") return a.fullTitle.localeCompare(b.fullTitle);
+    if (sortOption === "Z-A") return b.fullTitle.localeCompare(a.fullTitle);
 
-        if (sortOption === "Rating(H-L)") {
-          // Ensure societies with no reviews are placed last
-          if (b.numReviews === 0) return -1;
-          if (a.numReviews === 0) return 1;
+    if (sortOption === "Rating(H-L)") {
+      // Ensure societies with no reviews are placed last
+      if (b.numReviews === 0) return -1;
+      if (a.numReviews === 0) return 1;
 
-          // If ratings are equal, then sort by number of reviews
-          if (b.ratingAvg !== a.ratingAvg) {
-            return b.ratingAvg - a.ratingAvg;
-          }
+      // If ratings are equal, then sort by number of reviews
+      if (b.ratingAvg !== a.ratingAvg) {
+        return b.ratingAvg - a.ratingAvg;
+      }
 
-          return b.numReviews - a.numReviews;
-        }
+      return b.numReviews - a.numReviews;
+    }
 
-        if (sortOption === "Rating(L-H)") {
-          // Ensure societies with no reviews are placed last
-          if (a.numReviews === 0) return 1;
-          if (b.numReviews === 0) return -1;
+    if (sortOption === "Rating(L-H)") {
+      // Ensure societies with no reviews are placed last
+      if (a.numReviews === 0) return 1;
+      if (b.numReviews === 0) return -1;
 
-          // If ratings are equal, then sort by number of reviews
-          if (a.ratingAvg !== b.ratingAvg) {
-            return a.ratingAvg - b.ratingAvg;
-          }
+      // If ratings are equal, then sort by number of reviews
+      if (a.ratingAvg !== b.ratingAvg) {
+        return a.ratingAvg - b.ratingAvg;
+      }
 
-          return b.numReviews - a.numReviews;
-        }
+      return b.numReviews - a.numReviews;
+    }
 
-        return 0;
-      }),
-    [sortOption, filteredData]
-  );
+    return 0;
+  });
 
   useEffect(() => {
     setVisibleSocieties(initialSocieties);
-  }, [inputText]);
-
-  const handleIntersection = useCallback(
-    (entries: IntersectionObserverEntry[]) => {
-      if (entries[0].isIntersecting && data.length >= visibleSocieties) {
-        setTimeout(() => {
-          setVisibleSocieties((prev) => prev + addedSocietiesPerLoad);
-        }, loadingDebounce);
-      }
-    },
-    [addedSocietiesPerLoad, loadingDebounce, visibleSocieties]
-  );
+  }, [inputText, sortOption]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 1.0,
-    });
+    const observer = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        if (
+          entries[0].isIntersecting &&
+          filteredData.length >= visibleSocieties
+        ) {
+          setTimeout(() => {
+            setVisibleSocieties((prev) => prev + addedSocietiesPerLoad);
+          }, loadingDebounce);
+        }
+      },
+      {
+        threshold: 1.0,
+      }
+    );
 
     if (loadMoreRef.current) {
       observer.observe(loadMoreRef.current);
@@ -121,7 +113,7 @@ export default function Home() {
         observer.unobserve(ref);
       }
     };
-  }, [handleIntersection]);
+  });
 
   return (
     <>

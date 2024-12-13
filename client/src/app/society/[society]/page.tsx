@@ -9,12 +9,23 @@ import { createRipple } from "@/components/Button";
 import { SquarePen } from "lucide-react";
 import Review from "@/components/Review";
 import ReviewSocietyModal from "@/components/ReviewSocietyModal";
-import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
+import DropdownSelect from "@/components/DropdownSelect";
 import Rating from "@/components/Rating";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Data from "../../../../reviewData.json";
+import { DropdownItem } from "../../../../interface";
 
 export default function SocietyPage() {
+  const initialReviews = 3;
+  const addedReviewsPerLoad = 3;
+  const loadingDebounce = 100;
+
+  const loadMoreRef = useRef<HTMLDivElement | null>(null);
+  const [visibleReviews, setVisibleReviews] = useState(initialReviews);
+  const [sortOption, setSortOption] = useState("Recent");
+  const [isOpen, setIsOpen] = useState(false); // Controls modal visibility
+  const [isAnimating, setIsAnimating] = useState(false); // Controls animation state
+
   const sortReviewsData: DropdownItem[] = [
     {
       id: "Recent",
@@ -29,16 +40,6 @@ export default function SocietyPage() {
       name: "Rating (Low to High)",
     },
   ];
-
-  const initialReviews = 3;
-  const addedReviewsPerLoad = 3;
-  const loadingDebounce = 100;
-
-  const loadMoreRef = useRef<HTMLDivElement | null>(null);
-  const [visibleReviews, setVisibleReviews] = useState(initialReviews);
-  const [sortOption, setSortOption] = useState("Recent");
-  const [isOpen, setIsOpen] = useState(false); // Controls modal visibility
-  const [isAnimating, setIsAnimating] = useState(false); // Controls animation state
 
   const handleOpenModal = () => {
     setIsOpen(true);
@@ -63,30 +64,24 @@ export default function SocietyPage() {
     instagramUrl: "https://instagram.com/aiesecinunsw",
   };
 
-  const data = useMemo(
-    () =>
-      Data.map((review) => ({
-        ...review,
-        date: new Date(review.date),
-      })),
-    []
-  );
-
-  const handleIntersection = useCallback(
-    (entries: IntersectionObserverEntry[]) => {
-      if (entries[0].isIntersecting && Data.length >= visibleReviews) {
-        setTimeout(() => {
-          setVisibleReviews((prev) => prev + addedReviewsPerLoad);
-        }, loadingDebounce);
-      }
-    },
-    [loadingDebounce, visibleReviews]
-  );
+  const data = Data.map((review) => ({
+    ...review,
+    date: new Date(review.date),
+  }));
 
   useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 1.0,
-    });
+    const observer = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        if (entries[0].isIntersecting && Data.length >= visibleReviews) {
+          setTimeout(() => {
+            setVisibleReviews((prev) => prev + addedReviewsPerLoad);
+          }, loadingDebounce);
+        }
+      },
+      {
+        threshold: 1.0,
+      }
+    );
 
     if (loadMoreRef.current) {
       observer.observe(loadMoreRef.current);
@@ -97,31 +92,27 @@ export default function SocietyPage() {
         observer.unobserve(ref);
       }
     };
-  }, [handleIntersection]);
+  });
 
-  const sortedReviews = useMemo(
-    () =>
-      [...data].sort((a, b) => {
-        if (sortOption === "Recent") {
-          return b.date.getTime() - a.date.getTime();
-        } else if (sortOption === "Rating(H-L)") {
-          if (b.starRating === a.starRating) {
-            // If rating the same, sort by most recent
-            return b.date.getTime() - a.date.getTime();
-          }
-          return b.starRating - a.starRating;
-        } else if (sortOption === "Rating(L-H)") {
-          if (a.starRating === b.starRating) {
-            // If rating the same, sort by most recent
-            return b.date.getTime() - a.date.getTime();
-          }
-          return a.starRating - b.starRating;
-        }
+  const sortedReviews = [...data].sort((a, b) => {
+    if (sortOption === "Recent") {
+      return b.date.getTime() - a.date.getTime();
+    } else if (sortOption === "Rating(H-L)") {
+      if (b.starRating === a.starRating) {
+        // If rating the same, sort by most recent
+        return b.date.getTime() - a.date.getTime();
+      }
+      return b.starRating - a.starRating;
+    } else if (sortOption === "Rating(L-H)") {
+      if (a.starRating === b.starRating) {
+        // If rating the same, sort by most recent
+        return b.date.getTime() - a.date.getTime();
+      }
+      return a.starRating - b.starRating;
+    }
 
-        return 0;
-      }),
-    [sortOption]
-  );
+    return 0;
+  });
 
   const percentage = ((societyData.avgStar / 5) * 100).toFixed(1) + "%";
 
