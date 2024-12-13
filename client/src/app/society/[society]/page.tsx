@@ -6,6 +6,7 @@ import Chip from "@/components/Chip";
 import { createRipple } from "@/components/Button";
 import { SquarePen } from "lucide-react";
 import Review from "@/components/Review";
+import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
 import Rating from "@/components/Rating";
 
 export default function SocietyPage() {
@@ -54,6 +55,21 @@ export default function SocietyPage() {
   ];
 
   const percentage = ((societyData.avgStar / 5) * 100).toFixed(1) + "%";
+
+  const sortReviewsData: DropdownItem[] = [
+    {
+      id: 'Recent',
+      name: 'Most Recent',
+    },
+    {
+      id: 'Rating(H-L)',
+      name: 'Rating (High to Low)',
+    },
+    {
+      id: 'Rating(L-H)',
+      name: 'Rating (Low to High)',
+    },
+  ];
 
   return (
     <>
@@ -169,12 +185,15 @@ export default function SocietyPage() {
             <div className="flex items-center">
               <h1 className="text-4xl font-lalezar">Reviews</h1>
             </div>
-            <button
-              className="flex gap-1 bg-lightGreen px-4 py-2 rounded-lg relative overflow-hidden text-xl font-lalezar"
-              onClick={createRipple}
-            >
-              <SquarePen /> Add Review
-            </button>
+            <div className="flex flex-row gap-2 items-center">
+              <DropdownSelect id="sort-reviews" selectedId="Recent" data={sortReviewsData} width="260px" variant="societyPage"></DropdownSelect>
+              <button
+                className="flex gap-1 bg-lightGreen px-4 py-2 rounded-lg relative overflow-hidden text-xl font-spartan"
+                onClick={createRipple}
+              >
+                <SquarePen /> Add Review
+              </button>
+            </div>
           </div>
           <div className="grid grid-cols-1 gap-5">
             {fakeReviewDataArray.map((review, index) => (
