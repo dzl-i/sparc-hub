@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { FaDiscord, FaFacebook, FaInstagram } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
@@ -6,10 +9,26 @@ import Chip from "@/components/Chip";
 import { createRipple } from "@/components/Button";
 import { SquarePen } from "lucide-react";
 import Review from "@/components/Review";
+import ReviewSocietyModal from "@/components/ReviewSocietyModal";
 import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
 import Rating from "@/components/Rating";
 
 export default function SocietyPage() {
+  const [isOpen, setIsOpen] = useState(false); // Controls modal visibility
+  const [isAnimating, setIsAnimating] = useState(false); // Controls animation state
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+    setIsAnimating(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsAnimating(false);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 300); // Wait for animation to complete
+  };
+
   const societyData = {
     avgStar: 4.5,
     topTags: ["Engaging", "Friendly", "Epic"],
@@ -84,7 +103,7 @@ export default function SocietyPage() {
         style={{ width: "100%", height: "auto" }}
       />
       <div className="grid grid-cols-2 w-full px-20 gap-20 font-spartan">
-        <div className="flex flex-col sticky top-0 pt-10 rounded-lg max-h-screen overflow-auto">
+        <div className="flex flex-col sticky top-0 pt-10 rounded-lg max-h-screen">
           <div className="flex flex-row gap-5">
             <div className="flex flex-col gap-3 basis-2/12 items-center">
               <Image
@@ -189,7 +208,10 @@ export default function SocietyPage() {
               <DropdownSelect id="sort-reviews" selectedId="Recent" data={sortReviewsData} width="260px" variant="societyPage"></DropdownSelect>
               <button
                 className="flex gap-1 bg-lightGreen px-4 py-2 rounded-lg relative overflow-hidden text-xl font-spartan"
-                onClick={createRipple}
+                onClick={(e) => {
+                  createRipple(e);
+                  handleOpenModal();
+                }}
               >
                 <SquarePen /> Add Review
               </button>
@@ -211,6 +233,63 @@ export default function SocietyPage() {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {isOpen && (
+        <div
+          className={`overflow-auto fixed inset-0 z-50 transition-opacity duration-300 ${
+            isAnimating ? "bg-opacity-50 bg-black" : "bg-opacity-0"
+          }`}
+          onClick={handleCloseModal}
+        >
+          <div
+            className="flex items-center justify-center min-h-full py-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div
+              className={`rounded-lg shadow-md ${
+                isAnimating ? "animate-fade-in" : "animate-fade-out"
+              }`}
+            >
+              <ReviewSocietyModal
+                name="Software Development Society"
+                logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
+                onClose={handleCloseModal}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Animation Styles */}
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        @keyframes fade-out {
+          from {
+            opacity: 1;
+            transform: scale(1);
+          }
+          to {
+            opacity: 0;
+            transform: scale(0.95);
+          }
+        }
+        .animate-fade-in {
+          animation: fade-in 0.3s ease-out;
+        }
+        .animate-fade-out {
+          animation: fade-out 0.3s ease-out;
+        }
+      `}</style>
     </>
   );
 }
