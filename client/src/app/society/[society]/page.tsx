@@ -10,6 +10,8 @@ import { createRipple } from "@/components/Button";
 import { SquarePen } from "lucide-react";
 import Review from "@/components/Review";
 import ReviewSocietyModal from "@/components/ReviewSocietyModal";
+import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
+import Rating from "@/components/Rating";
 
 export default function SocietyPage() {
   const [isOpen, setIsOpen] = useState(false); // Controls modal visibility
@@ -27,15 +29,66 @@ export default function SocietyPage() {
     }, 300); // Wait for animation to complete
   };
 
-  const Top3tags = ["Engaging", "Friendly", "Epic"];
-  const avgStar = 4.5;
-  const percentage = ((avgStar / 5) * 100).toFixed(1) + "%";
-  const reviews = 12;
-  const websiteUrl = "https://unswavsoc.com";
-  const facebookUrl = "https://www.facebook.com/DataSoc";
-  const discordUrl = "https://discord.gg/CWnTGNZzKU";
-  const emailUrl = "unsw@180dc.org";
-  const instagramUrl = "https://instagram.com/aiesecinunsw";
+  const societyData = {
+    avgStar: 4.5,
+    topTags: ["Engaging", "Friendly", "Epic"],
+    reviews: 12,
+    websiteUrl: "https://unswavsoc.com",
+    facebookUrl: "https://www.facebook.com/DataSoc",
+    discordUrl: "https://discord.gg/CWnTGNZzKU",
+    emailUrl: "unsw@180dc.org",
+    instagramUrl: "https://instagram.com/aiesecinunsw",
+  };
+
+  const fakeReviewDataArray = [
+    {
+      anonymous: true,
+      username: "anonymous_user1",
+      title: "Great Experience!",
+      starRating: 5,
+      date: new Date("2023-10-01"),
+      tags: ["Helpful", "Friendly", "Organized"],
+      reviewContent:
+        "We are the Software Development Society, a place for imaginative and inventive students dedicated to crafting exceptional products for the benefit of the community! Within our society, you'll find over five teams of enthusiastic students diligently working on a wide array of web apps, ranging from academic degree planners to platforms that display available campus facilities. Our primary goal is to develop solutions that enhance the lives of university students in their daily routines.",
+    },
+    {
+      anonymous: false,
+      username: "user2",
+      title: "Amazing Society!",
+      starRating: 4,
+      date: new Date("2023-09-15"),
+      tags: ["Engaging", "Friendly", "Epic"],
+      reviewContent:
+        "This society is amazing! The events are well-organized and the members are very friendly. I highly recommend joining!",
+    },
+    {
+      anonymous: true,
+      username: "anonymous_user3",
+      title: "Good but can improve",
+      starRating: 3,
+      date: new Date("2023-08-20"),
+      tags: ["Helpful", "Community"],
+      reviewContent:
+        "The society is good overall, but there are some areas that can be improved. The events are helpful, but sometimes they feel a bit disorganized.",
+    },
+  ];
+
+  const percentage = ((societyData.avgStar / 5) * 100).toFixed(1) + "%";
+
+  const sortReviewsData: DropdownItem[] = [
+    {
+      id: 'Recent',
+      name: 'Most Recent',
+    },
+    {
+      id: 'Rating(H-L)',
+      name: 'Rating (High to Low)',
+    },
+    {
+      id: 'Rating(L-H)',
+      name: 'Rating (Low to High)',
+    },
+  ];
 
   return (
     <>
@@ -62,45 +115,45 @@ export default function SocietyPage() {
                 height={120}
               />
               <div className="flex justify-center items-center gap-2 flex-wrap w-24">
-                {discordUrl && (
+                {societyData.discordUrl && (
                   <a
-                    href={discordUrl}
+                    href={societyData.discordUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaDiscord size={"1.5em"} className="cursor-pointer" />
                   </a>
                 )}
-                {instagramUrl && (
+                {societyData.instagramUrl && (
                   <a
-                    href={instagramUrl}
+                    href={societyData.instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaInstagram size={"1.5em"} className="cursor-pointer" />
                   </a>
                 )}
-                {emailUrl && (
+                {societyData.emailUrl && (
                   <a
-                    href={`mailto:${emailUrl}`}
+                    href={`mailto:${societyData.emailUrl}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <MdEmail size={"1.5em"} className="cursor-pointer" />
                   </a>
                 )}
-                {facebookUrl && (
+                {societyData.facebookUrl && (
                   <a
-                    href={facebookUrl}
+                    href={societyData.facebookUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaFacebook size={"1.5em"} className="cursor-pointer" />
                   </a>
                 )}
-                {websiteUrl && (
+                {societyData.websiteUrl && (
                   <a
-                    href={websiteUrl}
+                    href={societyData.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -117,17 +170,9 @@ export default function SocietyPage() {
                 Software Development Society
               </h1>
               <div className="flex flex-row gap-0.5">
-                <div className="relative inline-block text-slate-400">
-                  <p className="text-2xl">★★★★★</p>
-                  <p
-                    className="text-2xl bg-[#299800] bg-clip-text absolute inset-0 text-transparent"
-                    style={{ width: percentage }}
-                  >
-                    ★★★★★
-                  </p>
-                </div>
+                <Rating percentage={percentage} />
                 <p className="text-sm text-slate-800 px-1 pt-1">
-                  {reviews} Reviews
+                  {societyData.reviews} Reviews
                 </p>
               </div>
               <p className="text-lg line-clamp-10">
@@ -146,7 +191,7 @@ export default function SocietyPage() {
           <div className="mt-4">
             <h2 className="text-lg font-lalezar">Top 3 Tags</h2>
             <div className="flex flex-row gap-8 mt-2">
-              {Top3tags.map((tag, index) => (
+              {societyData.topTags.map((tag, index) => (
                 <Chip variant="top3" key={index}>
                   {tag}
                 </Chip>
@@ -159,141 +204,32 @@ export default function SocietyPage() {
             <div className="flex items-center">
               <h1 className="text-4xl font-lalezar">Reviews</h1>
             </div>
-            <button
-              className="flex gap-1 bg-lightGreen px-4 py-2 rounded-lg relative overflow-hidden text-xl font-lalezar"
-              onClick={(e) => {
-                createRipple(e);
-                handleOpenModal();
-              }}
-            >
-              <SquarePen /> Add Review
-            </button>
+            <div className="flex flex-row gap-2 items-center">
+              <DropdownSelect id="sort-reviews" selectedId="Recent" data={sortReviewsData} width="260px" variant="societyPage"></DropdownSelect>
+              <button
+                className="flex gap-1 bg-lightGreen px-4 py-2 rounded-lg relative overflow-hidden text-xl font-spartan"
+                onClick={(e) => {
+                  createRipple(e);
+                  handleOpenModal();
+                }}
+              >
+                <SquarePen /> Add Review
+              </button>
+            </div>
           </div>
           <div className="grid grid-cols-1 gap-5">
-            <Review
-              anonymous={false}
-              username="z5583784"
-              title="Best society ever"
-              starRating={4}
-              date={new Date()}
-              tags={["Engaging", "Friendly", "Epic"]}
-              reviewContent=" We are the Software Development Society, a place for imaginative
-                and inventive students dedicated to crafting exceptional
-                products for the benefit of the community! Within our society,
-                you'll find over five teams of enthusiastic students diligently
-                working on a wide array of web apps, ranging from academic
-                degree planners to platforms that display available campus
-                facilities.
-
-
-
-                Our primary goal is to develop solutions that
-                enhance the lives of university students in their daily
-                routines.
-
-
-                "
-            />
-            <Review
-              anonymous={false}
-              username="z5583784"
-              title="Best society ever"
-              starRating={4}
-              date={new Date()}
-              reviewContent=" We are the Software Development Society, a place for imaginative
-                and inventive students dedicated to crafting exceptional
-                products for the benefit of the community! Within our society,
-                you'll find over five teams of enthusiastic students diligently
-                working on a wide array of web apps, ranging from academic
-                degree planners to platforms that display available campus
-                facilities.
-
-
-
-                Our primary goal is to develop solutions that
-                enhance the lives of university students in their daily
-                routines."
-            />
-            <Review
-              anonymous={false}
-              username="z5583784"
-              title="Best society ever"
-              starRating={4}
-              date={new Date()}
-              reviewContent=" We are the Software Development Society, a place for imaginative
-                and inventive students dedicated to crafting exceptional
-                products for the benefit of the community! Within our society,
-                you'll find over five teams of enthusiastic students diligently
-                working on a wide array of web apps, ranging from academic
-                degree planners to platforms that display available campus
-                facilities.
-
-
-
-                Our primary goal is to develop solutions that
-                enhance the lives of university students in their daily
-                routines."
-            />
-            <Review
-              anonymous={false}
-              username="z5583784"
-              title="Best society ever"
-              starRating={4}
-              date={new Date()}
-              reviewContent=" We are the Software Development Society, a place for imaginative
-                and inventive students dedicated to crafting exceptional
-                products for the benefit of the community! Within our society,
-                you'll find over five teams of enthusiastic students diligently
-                working on a wide array of web apps, ranging from academic
-                degree planners to platforms that display available campus
-                facilities.
-
-
-
-                Our primary goal is to develop solutions that
-                enhance the lives of university students in their daily
-                routines."
-            />
-            <Review
-              anonymous={false}
-              username="z5583784"
-              title="Best society ever"
-              starRating={4}
-              date={new Date()}
-              reviewContent=" We are the Software Development Society, a place for imaginative
-                and inventive students dedicated to crafting exceptional
-                products for the benefit of the community! Within our society,
-                you'll find over five teams of enthusiastic students diligently
-                working on a wide array of web apps, ranging from academic
-                degree planners to platforms that display available campus
-                facilities.
-
-
-
-                Our primary goal is to develop solutions that
-                enhance the lives of university students in their daily
-                routines."
-            />
-            <Review
-              anonymous={true}
-              username="z5583784"
-              title="Best society ever"
-              starRating={4}
-              date={new Date()}
-              reviewContent=" We are the Software Development Society, a place for imaginative
-                and inventive students dedicated to crafting exceptional
-                products for the benefit of the community! Within our society,
-                you'll find over five teams of enthusiastic students diligently
-                working on a wide array of web apps, ranging from academic
-                degree planners to platforms that display available campus
-                facilities.
-
-
-
-                Our primary goal is to develop solutions that
-                enhance the lives of university students in their daily
-                routines."
-            />
+            {fakeReviewDataArray.map((review, index) => (
+              <Review
+                key={index}
+                anonymous={review.anonymous}
+                username={review.username}
+                title={review.title}
+                starRating={review.starRating as 1 | 2 | 3 | 4 | 5}
+                date={review.date}
+                tags={review.tags}
+                reviewContent={review.reviewContent}
+              />
+            ))}
           </div>
         </div>
       </div>
