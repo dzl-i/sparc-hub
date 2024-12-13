@@ -6,17 +6,16 @@ type SearchBarProps = {
   setInputText: React.Dispatch<React.SetStateAction<string>>;
 };
 
-
 function SearchBar({ inputText, setInputText }: SearchBarProps) {
   const [localInput, setLocalInput] = useState(inputText);
-  
+  const filterDataDebounce = 100;
+
   // Debouncing
   useEffect(() => {
     const timer = setTimeout(() => {
       setInputText(localInput);
-    }, 300); 
-  
-    return () => clearTimeout(timer); 
+    }, filterDataDebounce);
+    return () => clearTimeout(timer);
   }, [localInput, setInputText]);
 
   return (
@@ -29,9 +28,7 @@ function SearchBar({ inputText, setInputText }: SearchBarProps) {
           value={localInput}
           onChange={(e) => setLocalInput(e.target.value)}
         />
-        <SearchIcon
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
-        />
+        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
       </div>
     </>
   );
