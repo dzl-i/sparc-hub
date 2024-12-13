@@ -12,17 +12,6 @@ export default function RegisterPage() {
 
   const router = useRouter();
 
-  const handleGoBack = () => {
-    const referrer = document.referrer;
-    const isInternalReferrer = referrer.includes(window.location.hostname);
-
-    if (window.history.length > 1 && isInternalReferrer) {
-      router.back();
-    } else {
-      router.push("/");
-    }
-  };
-
   useEffect(() => {
     setErrorMsg("");
   }, [zid, zpass, confirmZpass]);
@@ -57,7 +46,7 @@ export default function RegisterPage() {
   return (
     <>
       <div className="flex h-screen w-screen justify-center items-center">
-        <div className="flex flex-col justify-center w-[400px] h-[450px] bg-[#b7e6a5b0] px-8 rounded-lg shadow-lg border border-slate-500">
+        <div className="w-[400px] h-[450px] bg-[#b7e6a5b0] p-10 rounded-lg shadow-2xl">
           <h1 className="text-center font-lalezar text-textGreen text-4xl mb-2">
             Register
           </h1>
@@ -125,7 +114,7 @@ export default function RegisterPage() {
               <button
                 type="button"
                 className="text-md font-semibold underline"
-                onClick={handleGoBack}
+                onClick={() => router.push("/login")}
               >
                 Back
               </button>
