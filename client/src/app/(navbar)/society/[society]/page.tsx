@@ -1,5 +1,6 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import { MdEmail } from "react-icons/md";
 import { FaDiscord, FaFacebook, FaInstagram } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
@@ -17,6 +18,7 @@ import { DropdownItem } from "../../../../../interface";
 import { debounce } from "lodash";
 
 export default function SocietyPage() {
+  const { society } = useParams();
   const initialReviews = 3;
   const addedReviewsPerLoad = 3;
   const loadingDebounce = 100;
@@ -289,8 +291,7 @@ export default function SocietyPage() {
               }`}
             >
               <ReviewSocietyModal
-                name="Software Development Society"
-                logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
+                societyId={society as string}
                 onClose={handleCloseModal}
               />
             </div>
