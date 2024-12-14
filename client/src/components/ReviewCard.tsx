@@ -5,6 +5,7 @@ import Rating from "./Rating";
 
 interface ReviewCardProps {
   title: string;
+  id: string;
   description: string;
   logo?: string;
   tags?: string[];
@@ -18,12 +19,18 @@ export function ReviewCard({
   logo = "https://cdn.linkupevents.com/arc_logo.png",
   tags = [],
   avgStar = 0,
+  id,
   reviews = 0,
 }: ReviewCardProps) {
   const percentage = ((avgStar / 5) * 100).toFixed(1) + "%";
 
   return (
-    <Link href={`/society/${encodeURIComponent(title)}`}>
+    <Link
+      href={{
+        pathname: "/society",
+        query: { id },
+      }}
+    >
       <div className="bg-white shadow-xl p-5 rounded-xl md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-64 sm:h-52 hover:bg-gray-50 transition-colors duration-150 ease-in-out">
         <div className="flex gap-4">
           <div className="basis-3/12 landmd:basis-2/12 sm:basis-4/12">
@@ -46,7 +53,7 @@ export function ReviewCard({
               </div>
             </div>
             <hr className="bg-black h-0.5 mb-2" />
-            <p className="font-spartan text-md line-clamp-3">{description}</p>
+            <p className="font-spartan text-md line-clamp-5">{description}</p>
           </div>
         </div>
         <div className="flex gap-3 sm:hidden justify-center">

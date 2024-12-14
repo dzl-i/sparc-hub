@@ -24,7 +24,7 @@ function Review({
   reviewContent,
   date,
   anonymous,
-  tags,
+  tags = [],
   variant = "default",
 }: ReviewProps) {
   const percentage = (starRating / 5) * 100 + "%";

@@ -12,12 +12,14 @@ interface ReviewSocietyModalProps {
   name: string;
   logo?: string;
   onClose: () => void;
+  id: string;
 }
 
 function ReviewSocietyModal({
   name,
   logo = "https://cdn.linkupevents.com/arc_logo.png",
   onClose,
+  id
 }: ReviewSocietyModalProps) {
   const [rating, setRating] = useState<number>(0);
   const [reviewTitle, setReviewTitle] = useState<string>("");
@@ -57,6 +59,7 @@ function ReviewSocietyModal({
     console.log(tags);
     console.log(anonymous);
     console.log(new Date());
+    console.log(id);
   };
 
   return (
