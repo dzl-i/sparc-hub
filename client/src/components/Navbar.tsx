@@ -51,24 +51,26 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            {signedin ? (
-              <Link href="/logout">
-                <Tooltip message={"Logout"}>
-                  <LogOut
-                    className="hover:scale-105 transition-transform cursor-pointer"
-                    onClick={handleSignout}
-                  />
-                </Tooltip>
-              </Link>
-            ) : (
-              <Link href="/login">
-                <Tooltip message={"Login"}>
-                  <LogIn
-                    className="hover:scale-105 transition-transform cursor-pointer"
-                    onClick={handleSignin}
-                  />
-                </Tooltip>
-              </Link>
+            { signedin ? (
+            <Link href="/">
+              <Tooltip message={"Logout"}>
+                <LogOut
+                  className="hover:scale-105 transition-transform cursor-pointer"
+                  onClick={handleSignout}
+                />
+              </Tooltip>
+            </Link>
+            ) :
+
+            (
+            <Link href="/login">
+              <Tooltip message={"Login"}>
+                <LogIn
+                  className="hover:scale-105 transition-transform cursor-pointer"
+                  onClick={handleSignin}
+                />
+              </Tooltip>
+            </Link>
             )}
           </li>
         </ul>
