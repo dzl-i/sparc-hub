@@ -2,7 +2,7 @@
 import Review from "@/components/Review";
 import Image from "next/image";
 import converter from "number-to-words";
-import Data from "../../../reviewData.json";
+import Data from "../../../../reviewData.json";
 import { useEffect, useRef, useState } from "react";
 import { debounce } from "lodash";
 

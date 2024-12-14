@@ -3,11 +3,11 @@
 import Image from "next/image";
 import SearchBar from "../../components/SearchBar";
 import { ReviewCard } from "@/components/ReviewCard";
-import data from "../../societyData.json";
+import data from "../../../societyData.json";
 import { useState, useRef, useEffect } from "react";
 import DropdownSelect from "@/components/DropdownSelect";
 import debounce from "lodash/debounce";
-import { DropdownItem } from "../../interface";
+import { DropdownItem } from "../../../interface";
 
 export default function Home() {
   const initialSocieties = 12;

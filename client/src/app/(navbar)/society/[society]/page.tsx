@@ -12,8 +12,8 @@ import ReviewSocietyModal from "@/components/ReviewSocietyModal";
 import DropdownSelect from "@/components/DropdownSelect";
 import Rating from "@/components/Rating";
 import { useEffect, useRef, useState } from "react";
-import Data from "../../../../reviewData.json";
-import { DropdownItem } from "../../../../interface";
+import Data from "../../../../../reviewData.json";
+import { DropdownItem } from "../../../../../interface";
 import { debounce } from "lodash";
 
 export default function SocietyPage() {
