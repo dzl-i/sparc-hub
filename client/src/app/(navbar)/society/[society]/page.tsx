@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { FaDiscord, FaFacebook, FaInstagram } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
@@ -10,12 +9,38 @@ import { createRipple } from "@/components/Button";
 import { SquarePen } from "lucide-react";
 import Review from "@/components/Review";
 import ReviewSocietyModal from "@/components/ReviewSocietyModal";
-import DropdownSelect, { DropdownItem } from "@/components/DropdownSelect";
+import DropdownSelect from "@/components/DropdownSelect";
 import Rating from "@/components/Rating";
+import { useEffect, useRef, useState } from "react";
+import Data from "../../../../../reviewData.json";
+import { DropdownItem } from "../../../../../interface";
+import { debounce } from "lodash";
 
 export default function SocietyPage() {
+  const initialReviews = 3;
+  const addedReviewsPerLoad = 3;
+  const loadingDebounce = 100;
+
+  const loadMoreRef = useRef<HTMLDivElement | null>(null);
+  const [visibleReviews, setVisibleReviews] = useState(initialReviews);
+  const [sortOption, setSortOption] = useState("Recent");
   const [isOpen, setIsOpen] = useState(false); // Controls modal visibility
   const [isAnimating, setIsAnimating] = useState(false); // Controls animation state
+
+  const sortReviewsData: DropdownItem[] = [
+    {
+      id: "Recent",
+      name: "Most Recent",
+    },
+    {
+      id: "Rating(H-L)",
+      name: "Rating (High to Low)",
+    },
+    {
+      id: "Rating(L-H)",
+      name: "Rating (Low to High)",
+    },
+  ];
 
   const handleOpenModal = () => {
     setIsOpen(true);
@@ -40,55 +65,59 @@ export default function SocietyPage() {
     instagramUrl: "https://instagram.com/aiesecinunsw",
   };
 
-  const fakeReviewDataArray = [
-    {
-      anonymous: true,
-      username: "anonymous_user1",
-      title: "Great Experience!",
-      starRating: 5,
-      date: new Date("2023-10-01"),
-      tags: ["Helpful", "Friendly", "Organized"],
-      reviewContent:
-        "We are the Software Development Society, a place for imaginative and inventive students dedicated to crafting exceptional products for the benefit of the community! Within our society, you'll find over five teams of enthusiastic students diligently working on a wide array of web apps, ranging from academic degree planners to platforms that display available campus facilities. Our primary goal is to develop solutions that enhance the lives of university students in their daily routines.",
-    },
-    {
-      anonymous: false,
-      username: "user2",
-      title: "Amazing Society!",
-      starRating: 4,
-      date: new Date("2023-09-15"),
-      tags: ["Engaging", "Friendly", "Epic"],
-      reviewContent:
-        "This society is amazing! The events are well-organized and the members are very friendly. I highly recommend joining!",
-    },
-    {
-      anonymous: true,
-      username: "anonymous_user3",
-      title: "Good but can improve",
-      starRating: 3,
-      date: new Date("2023-08-20"),
-      tags: ["Helpful", "Community"],
-      reviewContent:
-        "The society is good overall, but there are some areas that can be improved. The events are helpful, but sometimes they feel a bit disorganized.",
-    },
-  ];
+  const data = Data.map((review) => ({
+    ...review,
+    date: new Date(review.date),
+  }));
+
+  const debouncedLoadMore = debounce(() => {
+    setVisibleReviews((prev) => prev + addedReviewsPerLoad);
+  }, loadingDebounce);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        if (entries[0].isIntersecting && Data.length >= visibleReviews) {
+          debouncedLoadMore();
+        }
+      },
+      {
+        threshold: 1.0,
+      }
+    );
+
+    if (loadMoreRef.current) {
+      observer.observe(loadMoreRef.current);
+    }
+    const ref = loadMoreRef.current;
+    return () => {
+      if (ref) {
+        observer.unobserve(ref);
+      }
+    };
+  });
+
+  const sortedReviews = [...data].sort((a, b) => {
+    if (sortOption === "Recent") {
+      return b.date.getTime() - a.date.getTime();
+    } else if (sortOption === "Rating(H-L)") {
+      if (b.starRating === a.starRating) {
+        // If rating the same, sort by most recent
+        return b.date.getTime() - a.date.getTime();
+      }
+      return b.starRating - a.starRating;
+    } else if (sortOption === "Rating(L-H)") {
+      if (a.starRating === b.starRating) {
+        // If rating the same, sort by most recent
+        return b.date.getTime() - a.date.getTime();
+      }
+      return a.starRating - b.starRating;
+    }
+
+    return 0;
+  });
 
   const percentage = ((societyData.avgStar / 5) * 100).toFixed(1) + "%";
-
-  const sortReviewsData: DropdownItem[] = [
-    {
-      id: 'Recent',
-      name: 'Most Recent',
-    },
-    {
-      id: 'Rating(H-L)',
-      name: 'Rating (High to Low)',
-    },
-    {
-      id: 'Rating(L-H)',
-      name: 'Rating (Low to High)',
-    },
-  ];
 
   return (
     <>
@@ -205,7 +234,14 @@ export default function SocietyPage() {
               <h1 className="text-4xl font-lalezar">Reviews</h1>
             </div>
             <div className="flex flex-row gap-2 items-center">
-              <DropdownSelect id="sort-reviews" selectedId="Recent" data={sortReviewsData} width="260px" variant="societyPage"></DropdownSelect>
+              <DropdownSelect
+                id="sort-reviews"
+                selectedId={sortOption}
+                data={sortReviewsData}
+                width="260px"
+                variant="societyPage"
+                onSelect={(id) => setSortOption(id)}
+              />
               <button
                 className="flex gap-1 bg-lightGreen px-4 py-2 rounded-lg relative overflow-hidden text-xl font-spartan"
                 onClick={(e) => {
@@ -218,7 +254,7 @@ export default function SocietyPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-5">
-            {fakeReviewDataArray.map((review, index) => (
+            {sortedReviews.slice(0, visibleReviews).map((review, index) => (
               <Review
                 key={index}
                 anonymous={review.anonymous}
@@ -231,6 +267,7 @@ export default function SocietyPage() {
               />
             ))}
           </div>
+          <div ref={loadMoreRef} className="h-5"></div>
         </div>
       </div>
 

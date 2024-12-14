@@ -55,7 +55,10 @@ function Review({
               </div>
             </div>
             {/* Stars */}
-            <Rating percentage={percentage} size="[30px]" />
+            <Rating
+              percentage={percentage}
+              size="4xl"
+            />
           </div>
           <div className="text-sm text-slate-500 font-spartan">
             Reviewed by: {anonymous ? "Anonymous" : username}

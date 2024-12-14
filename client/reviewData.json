@@ -1,0 +1,92 @@
+[
+  {
+    "anonymous": true,
+    "username": "anonymous_user1",
+    "title": "Great Experience!",
+    "starRating": 5,
+    "date": "2023-10-01T00:00:00.000Z",
+    "tags": ["Helpful", "Friendly", "Organized"],
+    "reviewContent": "We are the Software Development Society, a place for imaginative and inventive students dedicated to crafting exceptional products for the benefit of the community! Within our society, you'll find over five teams of enthusiastic students diligently working on a wide array of web apps, ranging from academic degree planners to platforms that display available campus facilities. Our primary goal is to develop solutions that enhance the lives of university students in their daily routines."
+  },
+  {
+    "anonymous": false,
+    "username": "user2",
+    "title": "Amazing Society!",
+    "starRating": 4,
+    "date": "2023-09-15T00:00:00.000Z",
+    "tags": ["Engaging", "Friendly", "Epic"],
+    "reviewContent": "This society is amazing! The events are well-organized and the members are very friendly. I highly recommend joining!"
+  },
+  {
+    "anonymous": true,
+    "username": "anonymous_user3",
+    "title": "Good but can improve",
+    "starRating": 3,
+    "date": "2023-08-20T00:00:00.000Z",
+    "tags": ["Helpful", "Community"],
+    "reviewContent": "The society is good overall, but there are some areas that can be improved. The events are helpful, but sometimes they feel a bit disorganized."
+  },
+  {
+    "anonymous": false,
+    "username": "user4",
+    "title": "Fantastic Events!",
+    "starRating": 5,
+    "date": "2023-07-10T00:00:00.000Z",
+    "tags": ["Exciting", "Well-organized", "Fun"],
+    "reviewContent": "The events organized by this society are fantastic! They are always exciting and well-organized. I had a lot of fun attending them."
+  },
+  {
+    "anonymous": true,
+    "username": "anonymous_user5",
+    "title": "Great Community",
+    "starRating": 4,
+    "date": "2023-06-25T00:00:00.000Z",
+    "tags": ["Community", "Supportive", "Friendly"],
+    "reviewContent": "The community in this society is great. Everyone is very supportive and friendly. It's a great place to meet new people and make friends."
+  },
+  {
+    "anonymous": false,
+    "username": "user6",
+    "title": "Needs Improvement",
+    "starRating": 2,
+    "date": "2023-05-15T00:00:00.000Z",
+    "tags": ["Disorganized", "Unclear"],
+    "reviewContent": "The society needs improvement. The events are often disorganized and the communication is unclear. I hope they can improve in the future."
+  },
+  {
+    "anonymous": true,
+    "username": "anonymous_user7",
+    "title": "Very Helpful",
+    "starRating": 5,
+    "date": "2023-04-05T00:00:00.000Z",
+    "tags": ["Helpful", "Informative", "Supportive"],
+    "reviewContent": "The society is very helpful. The members are always willing to provide support and the events are very informative. I learned a lot from them."
+  },
+  {
+    "anonymous": false,
+    "username": "user8",
+    "title": "Great Learning Experience",
+    "starRating": 4,
+    "date": "2023-03-20T00:00:00.000Z",
+    "tags": ["Educational", "Engaging", "Valuable"],
+    "reviewContent": "I had a great learning experience with this society. The events are educational and engaging. They provide valuable knowledge and skills."
+  },
+  {
+    "anonymous": true,
+    "username": "anonymous_user9",
+    "title": "Friendly Members",
+    "starRating": 5,
+    "date": "2024-02-10T00:00:00.000Z",
+    "tags": ["Friendly", "Welcoming", "Inclusive"],
+    "reviewContent": "The members of this society are very friendly and welcoming. They make everyone feel included and valued. It's a great place to be."
+  },
+  {
+    "anonymous": false,
+    "username": "user10",
+    "title": "Good but Expensive",
+    "starRating": 3,
+    "date": "2023-01-05T00:00:00.000Z",
+    "tags": ["Expensive", "Good Quality"],
+    "reviewContent": "The society is good, but the events are a bit expensive. The quality is good, but I hope they can make it more affordable for everyone."
+  }
+]
