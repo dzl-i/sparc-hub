@@ -1,0 +1,1 @@
+fn(Extension<Pool<Postgres>>, axum::extract::Path<std::string::String>, {type error}, axum::Json<CreateReviewRequest>) -> impl std::future::Future<Output = Result<axum::Json<Review>, AppError>> {create_review_handler}

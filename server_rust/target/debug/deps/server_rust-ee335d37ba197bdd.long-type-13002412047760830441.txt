@@ -1,0 +1,1 @@
+fn(Extension<Pool<Postgres>>, AuthUser) -> impl std::future::Future<Output = Result<axum::Json<{type error}>, AppError>> {get_user_details_handler}
