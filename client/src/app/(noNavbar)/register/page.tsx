@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { createRipple } from "@/components/Button";
 import { useEffect, useState } from "react";
-import { zidChecker, passwordRegex } from "@/constants";
+import { zidChecker, passwordRegex } from "../../../../constants";
 
 export default function RegisterPage() {
   const [zid, setZid] = useState("");

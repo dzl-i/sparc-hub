@@ -1,26 +1,36 @@
 "use client";
 
 import { MdEmail } from "react-icons/md";
-import { FaDiscord, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaDiscord, FaFacebook } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
 import Image from "next/image";
-import Chip from "@/components/Chip";
 import { createRipple } from "@/components/Button";
 import { SquarePen } from "lucide-react";
-import Review from "@/components/Review";
 import ReviewSocietyModal from "@/components/ReviewSocietyModal";
 import DropdownSelect from "@/components/DropdownSelect";
 import Rating from "@/components/Rating";
 import { useEffect, useRef, useState } from "react";
-import Data from "../../../../../reviewData.json";
-import { DropdownItem } from "../../../../../interface";
+import Data from "../../../../reviewData.json";
+import {
+  DropdownItem,
+  Review as Reviews,
+  Society,
+} from "../../../../interface";
 import { debounce } from "lodash";
+import Review from "@/components/Review";
 
-export default function SocietyPage() {
+interface SocietyPageProps {
+  society: Society;
+  reviewData: Reviews[];
+}
+
+export default function SingleSocietyClient({
+  society,
+  reviewData,
+}: SocietyPageProps) {
   const initialReviews = 3;
   const addedReviewsPerLoad = 3;
   const loadingDebounce = 100;
-
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
   const [visibleReviews, setVisibleReviews] = useState(initialReviews);
   const [sortOption, setSortOption] = useState("Recent");
@@ -54,22 +64,6 @@ export default function SocietyPage() {
     }, 300); // Wait for animation to complete
   };
 
-  const societyData = {
-    avgStar: 4.5,
-    topTags: ["Engaging", "Friendly", "Epic"],
-    reviews: 12,
-    websiteUrl: "https://unswavsoc.com",
-    facebookUrl: "https://www.facebook.com/DataSoc",
-    discordUrl: "https://discord.gg/CWnTGNZzKU",
-    emailUrl: "unsw@180dc.org",
-    instagramUrl: "https://instagram.com/aiesecinunsw",
-  };
-
-  const data = Data.map((review) => ({
-    ...review,
-    date: new Date(review.date),
-  }));
-
   const debouncedLoadMore = debounce(() => {
     setVisibleReviews((prev) => prev + addedReviewsPerLoad);
   }, loadingDebounce);
@@ -90,6 +84,7 @@ export default function SocietyPage() {
       observer.observe(loadMoreRef.current);
     }
     const ref = loadMoreRef.current;
+
     return () => {
       if (ref) {
         observer.unobserve(ref);
@@ -97,27 +92,27 @@ export default function SocietyPage() {
     };
   });
 
-  const sortedReviews = [...data].sort((a, b) => {
+  const sortedReviews = [...reviewData].sort((a, b) => {
     if (sortOption === "Recent") {
-      return b.date.getTime() - a.date.getTime();
+      return b.created_at.getTime() - a.created_at.getTime();
     } else if (sortOption === "Rating(H-L)") {
-      if (b.starRating === a.starRating) {
+      if (b.rating === a.rating) {
         // If rating the same, sort by most recent
-        return b.date.getTime() - a.date.getTime();
+        return b.created_at.getTime() - a.created_at.getTime();
       }
-      return b.starRating - a.starRating;
+      return b.rating - a.rating;
     } else if (sortOption === "Rating(L-H)") {
-      if (a.starRating === b.starRating) {
+      if (a.rating === b.rating) {
         // If rating the same, sort by most recent
-        return b.date.getTime() - a.date.getTime();
+        return b.created_at.getTime() - a.created_at.getTime();
       }
-      return a.starRating - b.starRating;
+      return a.rating - b.rating;
     }
 
     return 0;
   });
 
-  const percentage = ((societyData.avgStar / 5) * 100).toFixed(1) + "%";
+  const percentage = ((society.average_rating / 5) * 100).toFixed(1) + "%";
 
   return (
     <>
@@ -131,58 +126,59 @@ export default function SocietyPage() {
         height={0}
         style={{ width: "100%", height: "auto" }}
       />
+
       <div className="grid grid-cols-2 w-full px-20 gap-20 font-spartan">
         <div className="flex flex-col sticky top-0 pt-10 rounded-lg max-h-screen">
           <div className="flex flex-row gap-5">
             <div className="flex flex-col gap-3 basis-2/12 items-center">
               <Image
                 priority
-                src={"https://cdn.linkupevents.com/arc_logo.png"}
+                src={society.icon}
                 alt="Society Logo"
                 className="rounded-full"
                 width={140}
                 height={120}
               />
               <div className="flex justify-center items-center gap-2 flex-wrap w-24">
-                {societyData.discordUrl && (
+                {society.discord && (
                   <a
-                    href={societyData.discordUrl}
+                    href={society.discord}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaDiscord size={"1.5em"} className="cursor-pointer" />
                   </a>
                 )}
-                {societyData.instagramUrl && (
+                {/* {society.instagram && (
+                    <a
+                      href={society.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaInstagram size={"1.5em"} className="cursor-pointer" />
+                    </a>
+                  )} */}
+                {society.email && (
                   <a
-                    href={societyData.instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaInstagram size={"1.5em"} className="cursor-pointer" />
-                  </a>
-                )}
-                {societyData.emailUrl && (
-                  <a
-                    href={`mailto:${societyData.emailUrl}`}
+                    href={`mailto:${society.email}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <MdEmail size={"1.5em"} className="cursor-pointer" />
                   </a>
                 )}
-                {societyData.facebookUrl && (
+                {society.facebook && (
                   <a
-                    href={societyData.facebookUrl}
+                    href={society.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaFacebook size={"1.5em"} className="cursor-pointer" />
                   </a>
                 )}
-                {societyData.websiteUrl && (
+                {society.website && (
                   <a
-                    href={societyData.websiteUrl}
+                    href={society.website}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -195,37 +191,25 @@ export default function SocietyPage() {
               </div>
             </div>
             <div className="flex flex-col basis-9/12">
-              <h1 className="text-4xl font-lalezar">
-                Software Development Society
-              </h1>
+              <h1 className="text-4xl font-lalezar">{society.name}</h1>
               <div className="flex flex-row gap-0.5">
                 <Rating percentage={percentage} />
                 <p className="text-sm text-slate-800 px-1 pt-1">
-                  {societyData.reviews} Reviews
+                  {society.total_reviews} Reviews
                 </p>
               </div>
-              <p className="text-lg line-clamp-10">
-                We are the Software Development Society, a place for imaginative
-                and inventive students dedicated to crafting exceptional
-                products for the benefit of the community! Within our society,
-                you&apos;ll find over five teams of enthusiastic students
-                diligently working on a wide array of web apps, ranging from
-                academic degree planners to platforms that display available
-                campus facilities. Our primary goal is to develop solutions that
-                enhance the lives of university students in their daily
-                routines.
-              </p>
+              <p className="text-lg line-clamp-10">{society.description}</p>
             </div>
           </div>
           <div className="mt-4">
-            <h2 className="text-lg font-lalezar">Top 3 Tags</h2>
+            {/* <h2 className="text-lg font-lalezar">Top 3 Tags</h2>
             <div className="flex flex-row gap-8 mt-2">
               {societyData.topTags.map((tag, index) => (
                 <Chip variant="top3" key={index}>
                   {tag}
                 </Chip>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="pb-5 pt-10">
@@ -254,16 +238,16 @@ export default function SocietyPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-5">
-            {sortedReviews.slice(0, visibleReviews).map((review, index) => (
+            {sortedReviews.slice(0, visibleReviews).map((review) => (
               <Review
-                key={index}
+                key={review.id}
                 anonymous={review.anonymous}
-                username={review.username}
+                username={review.user_id}
                 title={review.title}
-                starRating={review.starRating as 1 | 2 | 3 | 4 | 5}
-                date={review.date}
+                starRating={review.rating as 1 | 2 | 3 | 4 | 5}
+                date={review.created_at}
                 tags={review.tags}
-                reviewContent={review.reviewContent}
+                reviewContent={review.content}
               />
             ))}
           </div>
@@ -292,6 +276,7 @@ export default function SocietyPage() {
                 name="Software Development Society"
                 logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
                 onClose={handleCloseModal}
+                id={society.id}
               />
             </div>
           </div>
