@@ -10,7 +10,9 @@ interface ReviewPageProps {
 export default async function ReviewPage({
   searchParams: { id },
 }: ReviewPageProps) {
-  const societyResp = await fetch(`http://127.0.0.1:8080/societies/${id}`);
+  const societyResp = await fetch(`http://127.0.0.1:8080/societies/${id}`, {
+    cache: "no-store",
+  });
   const reviewResp = await fetch(
     `http://127.0.0.1:8080/societies/${id}/reviews`,
     {

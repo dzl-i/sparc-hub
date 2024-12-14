@@ -36,18 +36,20 @@ function Navbar() {
               </Tooltip>
             </Link>
           </li>
-          <li>
-            <Link
-              href={{
-                pathname: "/profile",
-                query: { token },
-              }}
-            >
-              <Tooltip message={"View Profile"}>
-                <CircleUserRound className="hover:scale-105 transition-transform cursor-pointer" />
-              </Tooltip>
-            </Link>
-          </li>
+          {user && (
+            <li>
+              <Link
+                href={{
+                  pathname: "/profile",
+                  query: { token },
+                }}
+              >
+                <Tooltip message={"View Profile"}>
+                  <CircleUserRound className="hover:scale-105 transition-transform cursor-pointer" />
+                </Tooltip>
+              </Link>
+            </li>
+          )}
           <li>
             {user ? (
               <Link href="/">
