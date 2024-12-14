@@ -1,5 +1,6 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import { MdEmail } from "react-icons/md";
 import { FaDiscord, FaFacebook } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
@@ -273,10 +274,8 @@ export default function SingleSocietyClient({
               }`}
             >
               <ReviewSocietyModal
-                name="Software Development Society"
-                logo="https://cdn.linkupevents.com/society/Software+Development+Society.png"
+                society={society}
                 onClose={handleCloseModal}
-                id={society.id}
               />
             </div>
           </div>
