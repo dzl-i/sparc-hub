@@ -1,8 +1,16 @@
-use axum::{routing::get, Extension, Router};
+use axum::{
+    http::{
+        header::{AUTHORIZATION, CONTENT_TYPE},
+        Method,
+    },
+    routing::get,
+    Extension, Router,
+};
 use handlers::{
     auth::auth_routes, review::review_routers, society::society_routes, user::user_routes,
 };
 use sqlx::postgres::PgPoolOptions;
+use tower_http::cors::{Any, Cors, CorsLayer};
 
 // mod
 mod error;
@@ -16,6 +24,11 @@ async fn main() {
     dotenv::dotenv().ok();
     let address = "127.0.0.1:8080";
     let database_url = std::env::var("DATABASE_URL").expect("DATABASE_URL must be set");
+
+    let cors = CorsLayer::new()
+        .allow_methods([Method::GET, Method::POST, Method::PATCH, Method::DELETE])
+        .allow_origin(Any)
+        .allow_headers([AUTHORIZATION, CONTENT_TYPE]);
 
     let pool = PgPoolOptions::new()
         .max_connections(5)
@@ -33,7 +46,8 @@ async fn main() {
         .merge(user_routes())
         .merge(society_routes())
         .merge(review_routers())
-        .layer(Extension(pool));
+        .layer(Extension(pool))
+        .layer(cors);
 
     // run our app with hyper, listening globally on port 3000
     let listener = tokio::net::TcpListener::bind(address).await.unwrap();
