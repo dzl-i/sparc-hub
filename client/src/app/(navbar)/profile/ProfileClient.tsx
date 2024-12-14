@@ -1,7 +1,7 @@
 "use client";
 import Review from "@/components/Review";
 import Image from "next/image";
-// import converter from "number-to-words";
+import converter from "number-to-words";
 // import Data from "../../../../reviewData.json";
 import { useEffect, useRef, useState } from "react";
 import { debounce } from "lodash";
@@ -91,14 +91,15 @@ export default function ProfileClient({
             {/* <p>
               <span className="font-semibold text-textGreen">Name:</span>{" "}
               {userData.name}
-            </p>
+            </p> */}
             <p>
               <span className="font-semibold text-textGreen">
                 Degree / Year:
               </span>{" "}
-              {userData.degree} {converter.toOrdinal(userData.Year)} Year
+              {userDetailData.degree}{" "}
+              {converter.toOrdinal(userDetailData.year).toUpperCase()} YEAR
             </p>
-            <p>
+            {/* <p>
               <span className="font-semibold text-textGreen">Description:</span>{" "}
               Happy to be here!
             </p> */}

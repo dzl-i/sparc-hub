@@ -27,8 +27,8 @@ export interface Review {
 export interface User {
   zid: string;
   description?: string;
-  degree?: string;
-  year?: number;
+  degree: string;
+  year: number;
 }
 
 export interface DropdownItem {

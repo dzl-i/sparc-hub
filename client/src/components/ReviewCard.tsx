@@ -31,7 +31,7 @@ export function ReviewCard({
         query: { id },
       }}
     >
-      <div className="bg-white shadow-xl p-5 rounded-xl md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-64 sm:h-52 hover:bg-gray-50 transition-colors duration-150 ease-in-out">
+      <div className="bg-white shadow-xl hover:scale-105 transition-transform duration-300  p-5 rounded-xl md:basis-full basis-cardWidth flex flex-col justify-between cursor-pointer h-64 sm:h-52 hover:bg-gray-50 ease-in-out">
         <div className="flex gap-4">
           <div className="basis-3/12 landmd:basis-2/12 sm:basis-4/12">
             <Image

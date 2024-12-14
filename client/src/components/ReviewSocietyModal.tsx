@@ -8,6 +8,7 @@ import Button from "./Button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Society } from "../../interface";
+import { useAuth } from "@/app/context/AuthContext";
 
 interface ReviewSocietyModalProps {
   society: Society;
@@ -21,6 +22,7 @@ function ReviewSocietyModal({ society, onClose }: ReviewSocietyModalProps) {
   const [tags, setTags] = useState<string[]>([]);
   const [anonymous, setAnonymous] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<string>("");
+  const { token } = useAuth();
 
   useEffect(() => {
     if (rating !== 0 || reviewTitle !== "" || reviewContent !== "") {
@@ -52,7 +54,7 @@ function ReviewSocietyModal({ society, onClose }: ReviewSocietyModalProps) {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ6aWQiOiJuZXd1c2VyIiwiYWRtaW4iOmZhbHNlLCJleHAiOjE3MzQyODA4NzR9.JwKXb7vSUFLVSbvEn3pYBKzJyFfZVwn9FMWag5ngYXA`,
+            Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({
             title: reviewTitle,

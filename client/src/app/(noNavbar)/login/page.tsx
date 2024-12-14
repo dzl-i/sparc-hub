@@ -2,14 +2,42 @@
 import { useRouter } from "next/navigation";
 import { createRipple } from "@/components/Button";
 import { useEffect, useState } from "react";
+import { useAuth } from "@/app/context/AuthContext";
 
 export default function LoginPage() {
+  const { login } = useAuth();
   const [zid, setZid] = useState("");
-  const [zpass, setZpass] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const zidChecker = /^z\d{7}$/;
   const router = useRouter();
+
+  const loginUser = async (loginData: { zid: string }) => {
+    console.log(loginData);
+    try {
+      const response = await fetch("http://localhost:8080/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(loginData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Login failed");
+      }
+
+      const token = await response.json();
+
+      login(String(token));
+      return String(token);
+    } catch (error) {
+      console.error("Login error:", error);
+      throw error;
+    }
+  };
 
   const handleGoBack = () => {
     const referrer = document.referrer;
@@ -24,14 +52,12 @@ export default function LoginPage() {
 
   useEffect(() => {
     setErrorMsg("");
-  }, [zid, zpass]);
+  }, [zid]);
 
-  const submit = (zid: string, zpass: string) => {
+  const submit = async (zid: string) => {
     let error = "";
     if (zid === "") {
       error = "Zid cannot be empty";
-    } else if (zpass === "") {
-      error = "zpass cannot be empty";
     } else if (!zid.match(zidChecker)) {
       error = "Zid incorrect format!";
     }
@@ -39,11 +65,15 @@ export default function LoginPage() {
     setErrorMsg(error);
     if (error) return;
 
-    // send request to backend
-    console.log(zid);
-    console.log(zpass);
-
-    handleGoBack();
+    try {
+      setIsLoading(true);
+      await loginUser({ zid });
+      router.push("/");
+    } catch (error) {
+      setErrorMsg(error instanceof Error ? error.message : "Login failed");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -71,32 +101,17 @@ export default function LoginPage() {
                   onChange={(e) => setZid(e.target.value)}
                 />
               </div>
-              <div>
-                <label
-                  className="block text-lg font-spartan font-bold mb-2"
-                  htmlFor="zpass"
-                >
-                  Password
-                </label>
-                <input
-                  className="w-full py-2 px-2 rounded bg-slate-100 border-black border leading-tight focus:outline-none focus:shadow-outline"
-                  id="zpass"
-                  placeholder="zpass"
-                  type="password"
-                  value={zpass}
-                  onChange={(e) => setZpass(e.target.value)}
-                />
-              </div>
               {errorMsg && <p className="text-md text-red-800">{errorMsg}</p>}
               <button
                 type="button"
-                className="rounded-lg text-lg bg-lightGreen border border-black h-10 font-semibold relative overflow-hidden hover:bg-lightGreen hover:brightness-95	"
-                onClick={(e) => {
+                disabled={isLoading}
+                className="rounded-lg text-lg bg-lightGreen border border-black h-10 font-semibold relative overflow-hidden hover:bg-lightGreen hover:brightness-95 disabled:opacity-50"
+                onClick={async (e) => {
                   createRipple(e);
-                  submit(zid, zpass);
+                  await submit(zid);
                 }}
               >
-                Login
+                {isLoading ? "Logging in..." : "Login"}
               </button>
               <div className="flex flex-col gap-1">
                 <button

@@ -1,6 +1,4 @@
 "use client";
-
-import { useParams } from "next/navigation";
 import { MdEmail } from "react-icons/md";
 import { FaDiscord, FaFacebook } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
@@ -19,6 +17,8 @@ import {
 } from "../../../../interface";
 import { debounce } from "lodash";
 import Review from "@/components/Review";
+import { useAuth } from "@/app/context/AuthContext";
+import { useRouter } from "next/navigation";
 
 interface SocietyPageProps {
   society: Society;
@@ -29,6 +29,9 @@ export default function SingleSocietyClient({
   society,
   reviewData,
 }: SocietyPageProps) {
+  const { user } = useAuth();
+  const router = useRouter();
+
   const initialReviews = 3;
   const addedReviewsPerLoad = 3;
   const loadingDebounce = 100;
@@ -54,6 +57,9 @@ export default function SingleSocietyClient({
   ];
 
   const handleOpenModal = () => {
+    if (!user) {
+      router.push("/login");
+    }
     setIsOpen(true);
     setIsAnimating(true);
   };

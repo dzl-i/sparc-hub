@@ -2,20 +2,13 @@
 
 import { Handshake, CircleUserRound, LogIn, LogOut } from "lucide-react";
 import Tooltip from "./Tooltip";
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useAuth } from "@/app/context/AuthContext";
 
 function Navbar() {
-  const [signedin, setSignedin] = useState(false);
+  const { user, logout, token } = useAuth();
 
-  const handleSignin = () => {
-    setSignedin(true);
-  };
-
-  const handleSignout = () => {
-    setSignedin(false);
-  };
   return (
     <div>
       <nav className="flex h-screen sticky top-0 justify-between flex-col bg-white py-4 w-20 shadow-lg">
@@ -44,33 +37,33 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/profile">
+            <Link
+              href={{
+                pathname: "/profile",
+                query: { token },
+              }}
+            >
               <Tooltip message={"View Profile"}>
                 <CircleUserRound className="hover:scale-105 transition-transform cursor-pointer" />
               </Tooltip>
             </Link>
           </li>
           <li>
-            { signedin ? (
-            <Link href="/">
-              <Tooltip message={"Logout"}>
-                <LogOut
-                  className="hover:scale-105 transition-transform cursor-pointer"
-                  onClick={handleSignout}
-                />
-              </Tooltip>
-            </Link>
-            ) :
-
-            (
-            <Link href="/login">
-              <Tooltip message={"Login"}>
-                <LogIn
-                  className="hover:scale-105 transition-transform cursor-pointer"
-                  onClick={handleSignin}
-                />
-              </Tooltip>
-            </Link>
+            {user ? (
+              <Link href="/">
+                <Tooltip message={"Logout"}>
+                  <LogOut
+                    onClick={logout}
+                    className="hover:scale-105 transition-transform cursor-pointer"
+                  />
+                </Tooltip>
+              </Link>
+            ) : (
+              <Link href="/login">
+                <Tooltip message={"Login"}>
+                  <LogIn className="hover:scale-105 transition-transform cursor-pointer" />
+                </Tooltip>
+              </Link>
             )}
           </li>
         </ul>
