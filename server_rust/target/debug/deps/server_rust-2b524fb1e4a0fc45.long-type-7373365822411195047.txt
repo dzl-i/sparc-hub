@@ -1,1 +1,0 @@
-fn(Extension<Pool<Postgres>>, AuthUser, axum::Json<{type error}>) -> impl std::future::Future<Output = Result<axum::Json<std::string::String>, AppError>> {set_admin_handler}
