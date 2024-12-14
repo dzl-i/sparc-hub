@@ -45,7 +45,7 @@ function Navbar() {
           </li>
           <li>
             { signedin ? (
-            <Link href="/logout">
+            <Link href="/">
               <Tooltip message={"Logout"}>
                 <LogOut
                   className="hover:scale-105 transition-transform cursor-pointer"
