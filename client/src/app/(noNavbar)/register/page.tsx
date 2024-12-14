@@ -115,8 +115,7 @@ export default function RegisterPage() {
       // If successful, redirect to login
       router.push("/login");
     } catch (error) {
-      // @ts-expect-error
-      // it works so ehsdasd
+      // @ts-expect-error typescript is angrey about message
       setErrorMsg(error.message);
     }
   };
