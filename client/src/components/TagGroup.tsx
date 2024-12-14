@@ -47,7 +47,7 @@ function TagGroup({ tags, setTags }: TagGroupProps) {
             ))}
           </div>
           <div className="bg-[hsl(50,21%,95%)] px-2 text-[12px] absolute left-2 -top-2 font-spartan text-gray-500">
-            Tags - Pick up to 3
+            Tags - Select up to 3
           </div>
         </div>
       </div>
