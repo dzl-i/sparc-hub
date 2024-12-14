@@ -3,7 +3,10 @@ use sqlx::PgPool;
 
 use crate::{
     error::AppError,
-    models::review::{CreateReviewRequest, Review},
+    models::{
+        auth::AuthUser,
+        review::{CreateReviewRequest, Review},
+    },
 };
 
 pub async fn create_review(
@@ -174,4 +177,55 @@ pub async fn get_zid_reviews(pool: &PgPool, zid: String) -> Result<Json<Vec<Revi
 
     tx.commit().await?;
     Ok(Json(reviews))
+}
+
+pub async fn delete_user_review(
+    pool: &PgPool,
+    review_id: String,
+    auth_user: AuthUser,
+) -> Result<Json<String>, AppError> {
+    let mut tx = pool.begin().await?;
+
+    // First check if user exists
+    let user_exists = sqlx::query!(
+        r#"SELECT EXISTS(SELECT 1 FROM "User" WHERE zid = $1) as exists"#,
+        auth_user.zid
+    )
+    .fetch_optional(&mut *tx)
+    .await?
+    .ok_or_else(|| AppError::NotFound("User not found".into()));
+
+    // check if review was made by the user
+    let review = sqlx::query!(
+        r#"
+        SELECT * FROM "Review" 
+        WHERE id = $1 AND user_id = $2
+        "#,
+        review_id,
+        auth_user.zid
+    )
+    .fetch_optional(&mut *tx)
+    .await?
+    .ok_or_else(|| AppError::NotFound("Review not found or not owned by user".into()))?;
+
+    sqlx::query!(
+        r#"DELETE FROM "TagsOnReviews" WHERE review_id = $1 "#,
+        review_id
+    )
+    .execute(&mut *tx)
+    .await?;
+
+    sqlx::query!(
+        r#"
+        DELETE FROM "Review"
+        WHERE id = $1 AND user_id = $2
+        "#,
+        review_id,
+        auth_user.zid
+    )
+    .execute(&mut *tx)
+    .await?;
+
+    tx.commit().await?;
+    Ok(Json("Review successfully deleted".to_string()))
 }

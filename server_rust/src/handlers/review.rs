@@ -1,6 +1,6 @@
 use axum::{
     extract::Path,
-    routing::{get, post},
+    routing::{delete, get, post},
     Extension, Json, Router,
 };
 use sqlx::PgPool;
@@ -21,6 +21,7 @@ pub fn review_routers() -> Router {
             post(create_review_handler).get(get_all_society_review),
         )
         .route("/users/me/reviews", get(get_user_review))
+        .route("/reviews/:review_id", delete(delete_review_handler))
 }
 
 pub async fn create_review_handler(
@@ -45,4 +46,12 @@ pub async fn get_user_review(
     auth_user: AuthUser,
 ) -> Result<Json<Vec<Review>>, AppError> {
     review::get_user_reviews(&pool, auth_user.zid).await
+}
+
+pub async fn delete_review_handler(
+    Extension(pool): Extension<PgPool>,
+    Path(review_id): Path<String>,
+    auth_user: AuthUser,
+) -> Result<Json<String>, AppError> {
+    review::delete_user_review(&pool, review_id, auth_user).await
 }
