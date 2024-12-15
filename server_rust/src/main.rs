@@ -26,7 +26,7 @@ async fn main() {
         .ok()
         .and_then(|p| p.parse::<u16>().ok())
         .unwrap_or(8080);
-    let address = format!("127.0.0.1:{}", port);
+    let address = format!("0.0.0.0:{}", port);
 
     let database_url = std::env::var("DATABASE_URL").expect("DATABASE_URL must be set");
 
