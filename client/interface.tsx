@@ -1,26 +1,34 @@
 export interface Society {
-  fullTitle: string;
-  abbreviatedTitle: string;
+  id: string;
+  name: string;
+  abbreviated_name: string;
   description: string;
-  logo: string;
-  emailUrl: string;
-  facebookUrl: string;
-  websiteUrl: string;
-  discordUrl: string;
-  instagramUrl: string;
-  tags: string[];
-  numReviews: number;
-  ratingAvg: number;
+  icon: string;
+  email: string;
+  facebook: string;
+  website: string;
+  discord: string;
+  instagramUrl?: string;
+  total_reviews: number;
+  average_rating: number;
 }
 
 export interface Review {
+  id: string;
   anonymous: boolean;
-  username: string;
+  user_id: string;
   title: string;
-  starRating: number;
-  date: Date;
+  rating: number;
+  created_at: Date;
   tags: string[];
-  reviewContent: string;
+  content: string;
+}
+
+export interface User {
+  zid: string;
+  description?: string;
+  degree: string;
+  year: number;
 }
 
 export interface DropdownItem {

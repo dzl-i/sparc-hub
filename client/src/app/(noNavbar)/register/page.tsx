@@ -2,13 +2,11 @@
 import { useRouter } from "next/navigation";
 import { createRipple } from "@/components/Button";
 import { useEffect, useState } from "react";
-import { zidChecker, passwordRegex } from "@/constants";
+import { zidChecker } from "../../../../constants";
 import DropdownSelect from "@/components/DropdownSelect";
 
 export default function RegisterPage() {
   const [zid, setZid] = useState("");
-  const [zpass, setZpass] = useState("");
-  const [confirmZpass, setConfirmZpass] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
   const [selectedDegree, setSelectedDegree] = useState("");
@@ -70,7 +68,7 @@ export default function RegisterPage() {
 
   useEffect(() => {
     setErrorMsg("");
-  }, [zid, zpass, confirmZpass]);
+  }, [zid]);
 
   const submit = async (zid: string) => {
     let error = "";
@@ -116,7 +114,8 @@ export default function RegisterPage() {
 
       // If successful, redirect to login
       router.push("/login");
-    } catch (error: any) {
+    } catch (error) {
+      // @ts-expect-error typescript is angrey about message
       setErrorMsg(error.message);
     }
   };

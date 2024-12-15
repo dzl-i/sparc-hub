@@ -24,7 +24,7 @@ function Review({
   reviewContent,
   date,
   anonymous,
-  tags,
+  tags = [],
   variant = "default",
 }: ReviewProps) {
   const percentage = (starRating / 5) * 100 + "%";
@@ -57,7 +57,7 @@ function Review({
             {/* Stars */}
             <Rating
               percentage={percentage}
-              size="4xl"
+              size="2xl"
             />
           </div>
           <div className="text-sm text-slate-500 font-spartan">
