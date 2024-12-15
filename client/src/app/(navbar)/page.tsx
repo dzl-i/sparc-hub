@@ -1,7 +1,7 @@
 import SocietyClient from "./SocietyClient";
 
 export default async function HomePage() {
-  const response = await fetch(`http://127.0.0.1:8080/societies`, {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/societies`, {
     cache: "no-store",
   });
   const data = await response.json();
