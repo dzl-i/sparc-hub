@@ -22,7 +22,12 @@ mod services;
 async fn main() {
     // build our application with a single route
     dotenv::dotenv().ok();
-    let address = "127.0.0.1:8080";
+    let port = std::env::var("PORT")
+        .ok()
+        .and_then(|p| p.parse::<u16>().ok())
+        .unwrap_or(8080);
+    let address = format!("127.0.0.1:{}", port);
+
     let database_url = std::env::var("DATABASE_URL").expect("DATABASE_URL must be set");
 
     let cors = CorsLayer::new()
