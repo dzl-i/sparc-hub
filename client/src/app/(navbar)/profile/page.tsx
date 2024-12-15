@@ -10,14 +10,14 @@ interface ProfilePageProps {
 export default async function ProfilePage({
   searchParams: { token },
 }: ProfilePageProps) {
-  const userReviewResp = await fetch(`http://127.0.0.1:8080/users/me/reviews`, {
+  const userReviewResp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/me/reviews`, {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
     cache: "no-store",
   });
-  const userDetailResp = await fetch(`http://127.0.0.1:8080/user/user_detail`, {
+  const userDetailResp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/user_detail`, {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,

@@ -49,7 +49,7 @@ function ReviewSocietyModal({ society, onClose }: ReviewSocietyModalProps) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8080/societies/${society.id}/reviews`,
+        `${process.env.NEXT_PUBLIC_API_URL}/societies/${society.id}/reviews`,
         {
           method: "POST",
           headers: {
